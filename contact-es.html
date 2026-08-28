@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacto  — El Universo de Hanna</title>
+    <meta
+      name="description"
+      content="Ponte en contacto con El Universo de Hanna: preguntas, pedidos o el programa de embajadores."
+    >
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="page-hero" aria-label="Contacto">
+        <header class="site-header">
+          <a class="brand" href="index-es.html">El Universo de Hanna</a>
+          <nav class="nav" aria-label="Navegación principal">
+            <a href="books-es.html">Libros</a>
+            <a href="videos-es.html">Videos</a>
+            <a href="characters-es.html">Personajes</a>
+            <a href="about-es.html">Autora</a>
+            <a href="ambassador-es.html">Embajadores</a>
+            <a href="contact-es.html">Contacto</a>
+          </nav>
+          <div class="lang-switch" aria-label="Idioma">
+            <a href="contact.html" lang="en" title="View in English">EN</a>
+            <span class="lang-active">ES</span>
+          </div>
+        </header>
+
+        <div class="page-hero-copy">
+          <p class="eyebrow">Contacto</p>
+          <h1>Nos encantaría saber de ti.</h1>
+          <p>
+            Preguntas sobre los libros, el programa de embajadores o cualquier
+            otra cosa del mundo de Hanna: envíanos un mensaje y te
+            responderemos pronto.
+          </p>
+        </div>
+      </section>
+
+      <section class="section" id="form">
+        <div class="section-inner">
+          <form class="form" action="https://hannasuniverse.com/contact#ContactForm" method="post" target="_blank">
+            <input type="hidden" name="form_type" value="contact">
+            <input type="hidden" name="utf8" value="✓">
+            <label>
+              Nombre
+              <input type="text" name="contact[name]" autocomplete="name">
+            </label>
+            <label>
+              Correo electrónico *
+              <input type="email" name="contact[email]" autocomplete="email" required>
+            </label>
+            <label>
+              Teléfono
+              <input type="tel" name="contact[phone]" autocomplete="tel">
+            </label>
+            <label>
+              Comentario
+              <textarea name="contact[body]"></textarea>
+            </label>
+            <button class="button button-primary" type="submit">Enviar mensaje</button>
+          </form>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <p class="brand">El Universo de Hanna</p>
+            <p>
+              Un mundo creativo y centrado en la fe donde los niños crecen a
+              través del aprendizaje, las emociones y la fortaleza espiritual.
+            </p>
+            <form class="newsletter" action="https://hannasuniverse.com/contact#newsletter-form" method="post" target="_blank">
+              <input type="hidden" name="form_type" value="customer">
+              <input type="hidden" name="utf8" value="✓">
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <input type="email" name="contact[email]" placeholder="Tu correo" aria-label="Correo electrónico" required>
+              <button class="button" type="submit">Suscribirse</button>
+            </form>
+          </div>
+          <nav class="footer-links" aria-label="Pie de página">
+            <p class="footer-heading">Explora</p>
+            <a href="books-es.html">Colección de Hanna</a>
+            <a href="books-es.html#english">Libros en inglés</a>
+            <a href="books-es.html#spanish">Libros en español</a>
+            <a href="videos-es.html">Videos</a>
+            <a href="characters-es.html">Conoce a los personajes</a>
+            <a href="about-es.html">Sobre la autora</a>
+            <a href="ambassador-es.html">Programa de embajadores</a>
+            <a href="contact-es.html">Contacto</a>
+          </nav>
+          <div class="footer-social">
+            <p class="footer-heading">Síguenos</p>
+            <a href="https://www.youtube.com/@Hannasuniverse1" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.instagram.com/hannasuniverse1/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@hannasuniverse1" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://hannasuniverse.com/policies/privacy-policy" target="_blank" rel="noopener">Política de privacidad</a>
+          </div>
+        </div>
+        <p class="footer-copy">© 2026 Hanna's Universe</p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
