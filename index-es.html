@@ -8,28 +8,33 @@
       name="description"
       content="Una tierna página de bienvenida al mundo de cuentos de El Universo de Hanna."
     >
+    <link rel="icon" href="assets/sello.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main class="page">
       <section class="hero" id="welcome" aria-label="Welcome">
         <header class="site-header">
-          <a class="brand" href="#welcome">El Universo de Hanna</a>
+          <a class="brand" href="#welcome"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">El Universo de Hanna</a>
           <nav class="nav" aria-label="Navegación principal">
             <a href="books-es.html">Libros</a>
+            <a href="ebooks-es.html">E-books</a>
             <a href="videos-es.html">Videos</a>
             <a href="characters-es.html">Personajes</a>
             <a href="about-es.html">Autora</a>
+            <a href="about-es.html#charlas">Charlas</a>
             <a href="ambassador-es.html">Embajadores</a>
             <a href="contact-es.html">Contacto</a>
           </nav>
           <div class="lang-switch" aria-label="Idioma">
             <a href="index.html" lang="en" title="View in English">EN</a>
             <span class="lang-active">ES</span>
+            <a href="index-pt.html" lang="pt" title="Ver em português">PT</a>
           </div>
         </header>
 
         <div class="hero-copy">
+          <img class="hero-seal" src="assets/sello-grande.png" alt="Hanna's Universe" width="220" height="220">
           <p class="eyebrow">Bienvenidos a</p>
           <h1>El Universo de Hanna</h1>
           <p>
@@ -63,6 +68,93 @@
             Distintas edades. Un mismo propósito: acompañar con ternura,
             intención y cuidado cada etapa del crecimiento.
           </p>
+        </div>
+      </section>
+
+      <section class="books section" id="books">
+        <div class="section-inner">
+          <div class="section-heading">
+            <p class="eyebrow">Colección de Hanna</p>
+            <h2>Libros destacados.</h2>
+          </div>
+
+          <div class="book-grid">
+            <article class="book-card">
+              <a class="book-cover" href="product-promises-of-god-es.html">
+                <img src="assets/books/promises-of-god.png" alt="Promises of God , portada del libro">
+              </a>
+              <div class="book-meta">
+                <span class="badge">Inglés</span>
+                <h3><a href="product-promises-of-god-es.html">Promises of God</a></h3>
+                <p>
+                  Un devocional de amor, cuidado y esperanza para niños y
+                  familias.
+                </p>
+                <div class="book-buy">
+                  <span class="price">$13.99</span>
+                  <a class="button button-primary" href="https://hannasuniverse.com/products/devotional-2" target="_blank" rel="noopener">Comprar</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <a class="book-cover" href="product-21-day-devotional-es.html">
+                <img src="assets/books/21-day-devotional.png" alt="Hanna's Universe 21-Day Devotional , portada del libro">
+              </a>
+              <div class="book-meta">
+                <span class="badge">Inglés</span>
+                <h3><a href="product-21-day-devotional-es.html">A 21-Day Devotional for Kids</a></h3>
+                <p>
+                  Historias de fe, oración y amistad: un viaje de tres semanas
+                  por el Universo de Hanna.
+                </p>
+                <div class="book-buy">
+                  <span class="price">$12.99</span>
+                  <a class="button button-primary" href="https://hannasuniverse.com/products/hannas-devotional" target="_blank" rel="noopener">Comprar</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <a class="book-cover" href="product-trilingual-vol1-es.html">
+                <img src="assets/books/trilingual-vol1.png" alt="Hanna's Trilingual World Volume 1 , portada del libro">
+              </a>
+              <div class="book-meta">
+                <span class="badge">EN · ES · KO</span>
+                <h3><a href="product-trilingual-vol1-es.html">Trilingual World, Vol. 1: Hanna at School</a></h3>
+                <p>
+                  Una aventura trilingüe para colorear en inglés, español y
+                  coreano.
+                </p>
+                <div class="book-buy">
+                  <span class="price">$13.99</span>
+                  <a class="button button-primary" href="https://hannasuniverse.com/products/hannas-volume-1" target="_blank" rel="noopener">Comprar</a>
+                </div>
+              </div>
+            </article>
+
+            <article class="book-card">
+              <a class="book-cover" href="product-coloring-book-es.html">
+                <img src="assets/books/coloring-book.png" alt="Hanna and Her Friends coloring , portada del libro">
+              </a>
+              <div class="book-meta">
+                <span class="badge">Inglés</span>
+                <h3><a href="product-coloring-book-es.html">Hanna and Her Friends</a></h3>
+                <p>
+                  Un libro para colorear tierno y mágico con Hanna y toda su
+                  pequeña pandilla.
+                </p>
+                <div class="book-buy">
+                  <span class="price">$8.99</span>
+                  <a class="button button-primary" href="https://hannasuniverse.com/products/hanna-and-her-friends-cute-and-magical-coloring-book" target="_blank" rel="noopener">Comprar</a>
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="teaser-actions">
+            <a class="button button-secondary" href="books-es.html">Ver la colección completa</a>
+          </div>
         </div>
       </section>
 
@@ -223,93 +315,6 @@
         </div>
       </section>
 
-      <section class="books section" id="books">
-        <div class="section-inner">
-          <div class="section-heading">
-            <p class="eyebrow">Colección de Hanna</p>
-            <h2>Libros destacados.</h2>
-          </div>
-
-          <div class="book-grid">
-            <article class="book-card">
-              <a class="book-cover" href="product-promises-of-god-es.html">
-                <img src="assets/books/promises-of-god.png" alt="Promises of God , portada del libro">
-              </a>
-              <div class="book-meta">
-                <span class="badge">Inglés</span>
-                <h3><a href="product-promises-of-god-es.html">Promises of God</a></h3>
-                <p>
-                  Un devocional de amor, cuidado y esperanza para niños y
-                  familias.
-                </p>
-                <div class="book-buy">
-                  <span class="price">$13.99</span>
-                  <a class="button button-primary" href="https://hannasuniverse.com/products/devotional-2" target="_blank" rel="noopener">Comprar</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <a class="book-cover" href="product-21-day-devotional-es.html">
-                <img src="assets/books/21-day-devotional.png" alt="Hanna's Universe 21-Day Devotional , portada del libro">
-              </a>
-              <div class="book-meta">
-                <span class="badge">Inglés</span>
-                <h3><a href="product-21-day-devotional-es.html">A 21-Day Devotional for Kids</a></h3>
-                <p>
-                  Historias de fe, oración y amistad: un viaje de tres semanas
-                  por el Universo de Hanna.
-                </p>
-                <div class="book-buy">
-                  <span class="price">$3.99 <small>e-book · $12.99 impreso</small></span>
-                  <a class="button button-primary" href="https://hannasuniverse.com/products/hannas-devotional" target="_blank" rel="noopener">Comprar</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <a class="book-cover" href="product-trilingual-vol1-es.html">
-                <img src="assets/books/trilingual-vol1.png" alt="Hanna's Trilingual World Volume 1 , portada del libro">
-              </a>
-              <div class="book-meta">
-                <span class="badge">EN · ES · KO</span>
-                <h3><a href="product-trilingual-vol1-es.html">Trilingual World, Vol. 1: Hanna at School</a></h3>
-                <p>
-                  Una aventura trilingüe para colorear en inglés, español y
-                  coreano.
-                </p>
-                <div class="book-buy">
-                  <span class="price">$13.99</span>
-                  <a class="button button-primary" href="https://hannasuniverse.com/products/hannas-volume-1" target="_blank" rel="noopener">Comprar</a>
-                </div>
-              </div>
-            </article>
-
-            <article class="book-card">
-              <a class="book-cover" href="product-coloring-book-es.html">
-                <img src="assets/books/coloring-book.png" alt="Hanna and Her Friends coloring , portada del libro">
-              </a>
-              <div class="book-meta">
-                <span class="badge">Inglés</span>
-                <h3><a href="product-coloring-book-es.html">Hanna and Her Friends</a></h3>
-                <p>
-                  Un libro para colorear tierno y mágico con Hanna y toda su
-                  pequeña pandilla.
-                </p>
-                <div class="book-buy">
-                  <span class="price">$8.99</span>
-                  <a class="button button-primary" href="https://hannasuniverse.com/products/hanna-and-her-friends-cute-and-magical-coloring-book" target="_blank" rel="noopener">Comprar</a>
-                </div>
-              </div>
-            </article>
-          </div>
-
-          <div class="teaser-actions">
-            <a class="button button-secondary" href="books-es.html">Ver la colección completa</a>
-          </div>
-        </div>
-      </section>
-
       <section class="author-teaser section" id="author">
         <div class="section-inner about-split">
           <div class="author-photo">
@@ -320,7 +325,7 @@
             <h2>Conoce a Rosalina Rangel.</h2>
             <p>
               Escritora, educadora multilingüe y creadora de El Universo de
-              Hanna. Con más de una década de experiencia docente en seis
+              Hanna. Con casi treinta años de experiencia docente en seis
               países, Rosalina combina el rigor académico con el apoyo
               emocional, la creatividad y la fe.
             </p>
@@ -336,7 +341,7 @@
       <footer class="site-footer">
         <div class="footer-inner">
           <div class="footer-brand">
-            <p class="brand">El Universo de Hanna</p>
+            <p class="brand"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">El Universo de Hanna</p>
             <p>
               Un mundo creativo y centrado en la fe donde los niños crecen a
               través del aprendizaje, las emociones y la fortaleza espiritual.
@@ -354,9 +359,12 @@
             <a href="books-es.html">Colección de Hanna</a>
             <a href="books-es.html#english">Libros en inglés</a>
             <a href="books-es.html#spanish">Libros en español</a>
+            <a href="books-es.html#portuguese">Libros en portugués</a>
+            <a href="ebooks-es.html">E-books</a>
             <a href="videos-es.html">Videos</a>
             <a href="characters-es.html">Conoce a los personajes</a>
             <a href="about-es.html">Sobre la autora</a>
+            <a href="about-es.html#charlas">Charlas y talleres</a>
             <a href="ambassador-es.html">Programa de embajadores</a>
             <a href="contact-es.html">Contacto</a>
           </nav>
@@ -365,6 +373,8 @@
             <a href="https://www.youtube.com/@Hannasuniverse1" target="_blank" rel="noopener">YouTube</a>
             <a href="https://www.instagram.com/hannasuniverse1/" target="_blank" rel="noopener">Instagram</a>
             <a href="https://www.tiktok.com/@hannasuniverse1" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=61564731688310" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.linkedin.com/in/rosalina-rangel-0690b3353/" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://hannasuniverse.com/policies/privacy-policy" target="_blank" rel="noopener">Política de privacidad</a>
           </div>
         </div>

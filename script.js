@@ -1,8 +1,19 @@
 const cards = document.querySelectorAll(".flip-card");
 
+// Only one card open at a time: opening a card closes the others.
+function flipCard(card) {
+  const opening = !card.classList.contains("is-flipped");
+
+  cards.forEach((other) => {
+    other.classList.remove("is-flipped");
+  });
+
+  card.classList.toggle("is-flipped", opening);
+}
+
 cards.forEach((card) => {
   card.addEventListener("click", () => {
-    card.classList.toggle("is-flipped");
+    flipCard(card);
   });
 
   card.addEventListener("keydown", (event) => {
@@ -11,7 +22,7 @@ cards.forEach((card) => {
     }
 
     event.preventDefault();
-    card.classList.toggle("is-flipped");
+    flipCard(card);
   });
 });
 
@@ -56,7 +67,7 @@ if (chips.length > 0) {
     });
   });
 
-  const hashFilters = { "#english": "en", "#spanish": "es", "#trilingual": "tri" };
+  const hashFilters = { "#english": "en", "#spanish": "es", "#portuguese": "pt", "#trilingual": "tri" };
 
   function applyHashFilter() {
     const filter = hashFilters[window.location.hash];

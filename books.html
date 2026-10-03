@@ -8,24 +8,28 @@
       name="description"
       content="Devotionals, coloring books, and trilingual adventures from Hanna's Universe, in English, Spanish, and Korean."
     >
+    <link rel="icon" href="assets/sello.png">
     <link rel="stylesheet" href="styles.css">
   </head>
   <body>
     <main class="page">
       <section class="page-hero" aria-label="Hanna's Collection">
         <header class="site-header">
-          <a class="brand" href="index.html">Hanna's Universe</a>
+          <a class="brand" href="index.html"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">Hanna's Universe</a>
           <nav class="nav" aria-label="Primary navigation">
             <a href="books.html">Books</a>
+            <a href="ebooks.html">E-books</a>
             <a href="videos.html">Videos</a>
             <a href="characters.html">Characters</a>
             <a href="about.html">Author</a>
+            <a href="about.html#talks">Talks</a>
             <a href="ambassador.html">Ambassador</a>
             <a href="contact.html">Contact</a>
           </nav>
           <div class="lang-switch" aria-label="Language">
             <span class="lang-active">EN</span>
             <a href="books-es.html" lang="es" title="Ver en español">ES</a>
+            <a href="books-pt.html" lang="pt" title="Ver em português">PT</a>
           </div>
         </header>
 
@@ -45,10 +49,50 @@
             <button class="chip is-active" type="button" data-filter="all">All Books</button>
             <button class="chip" type="button" data-filter="en">English</button>
             <button class="chip" type="button" data-filter="es">Español</button>
+            <button class="chip" type="button" data-filter="pt">Português</button>
             <button class="chip" type="button" data-filter="tri">Trilingual</button>
           </div>
 
           <div class="book-grid">
+            <article class="book-card" data-lang="es">
+              <a class="book-cover" href="product-equipa-tus-hijos-para-la-vida.html">
+                <img src="assets/books/equipa-tus-hijos-para-la-vida.jpg" alt="Equipa tus hijos para la vida book cover">
+              </a>
+              <div class="book-meta">
+                <span class="badge">Español</span>
+                <h3><a href="product-equipa-tus-hijos-para-la-vida.html">Equipa tus hijos para la vida</a></h3>
+                <p>Cómo desarrollar desde hoy autonomía, responsabilidad y criterio mientras dejas de hacerlo todo por ellos.</p>
+                <div class="book-buy">
+                  <span class="price">Coming October 9, 2026</span>
+                </div>
+              </div>
+            </article>
+            <article class="book-card" data-lang="en">
+              <a class="book-cover" href="product-equip-your-kids-for-life.html">
+                <img src="assets/books/equip-your-kids-for-life.jpg" alt="Equip Your Kids for Life book cover">
+              </a>
+              <div class="book-meta">
+                <span class="badge">English</span>
+                <h3><a href="product-equip-your-kids-for-life.html">Equip Your Kids for Life</a></h3>
+                <p>How to Build Independence, Responsibility, and Good Judgment, Starting Today, While Doing Less for Them.</p>
+                <div class="book-buy">
+                  <span class="price">Coming October 9, 2026</span>
+                </div>
+              </div>
+            </article>
+            <article class="book-card" data-lang="pt">
+              <a class="book-cover" href="product-equipe-seus-filhos-para-a-vida.html">
+                <img src="assets/books/equipe-seus-filhos-para-a-vida.jpg" alt="Equipe seus filhos para a vida book cover">
+              </a>
+              <div class="book-meta">
+                <span class="badge">Português</span>
+                <h3><a href="product-equipe-seus-filhos-para-a-vida.html">Equipe seus filhos para a vida</a></h3>
+                <p>Como desenvolver, desde hoje, autonomia, responsabilidade e discernimento enquanto você deixa de fazer tudo por eles.</p>
+                <div class="book-buy">
+                  <span class="price">Coming October 9, 2026</span>
+                </div>
+              </div>
+            </article>
             <article class="book-card" data-lang="en">
               <a class="book-cover" href="product-promises-of-god.html">
                 <img src="assets/books/promises-of-god.png" alt="Promises of God book cover">
@@ -79,7 +123,7 @@
                   through Hanna's Universe.
                 </p>
                 <div class="book-buy">
-                  <span class="price">$3.99 <small>e-book · $12.99 paper</small></span>
+                  <span class="price">$12.99</span>
                   <a class="button button-primary" href="https://hannasuniverse.com/products/hannas-devotional" target="_blank" rel="noopener">Buy</a>
                 </div>
               </div>
@@ -151,15 +195,15 @@
                   fe, oración y amistad.
                 </p>
                 <div class="book-buy">
-                  <span class="price">$10.99</span>
-                  <a class="button button-primary" href="https://hannasuniverse.com/products/el-universo-de-hanna-un-devocional-cristiano-de-21-dias-para-ninos-spanish-edition" target="_blank" rel="noopener">Comprar</a>
+                  <span class="price">$14.99</span>
+                  <a class="button button-primary" href="https://www.amazon.com/dp/B0GZX192QX" target="_blank" rel="noopener">Comprar</a>
                 </div>
               </div>
             </article>
 
             <article class="book-card" data-lang="es">
               <a class="book-cover" href="product-promesas-de-dios.html">
-                <img src="assets/books/promesas-de-dios.png" alt="Promesas de Dios book cover">
+                <img src="assets/books/promesas-de-dios.jpg" alt="Promesas de Dios book cover">
               </a>
               <div class="book-meta">
                 <span class="badge">Español</span>
@@ -174,6 +218,40 @@
                 </div>
               </div>
             </article>
+            <article class="book-card" data-lang="es">
+              <a class="book-cover" href="product-la-esencia-de-criar.html">
+                <img src="assets/books/la-esencia-de-criar.jpg" alt="La Esencia de Criar book cover">
+              </a>
+              <div class="book-meta">
+                <span class="badge">Español</span>
+                <h3><a href="product-la-esencia-de-criar.html">La Esencia de Criar</a></h3>
+                <p>
+                  Cómo cultivar hábitos saludables y bienestar emocional en la
+                  infancia para toda la vida.
+                </p>
+                <div class="book-buy">
+                  <span class="price">$17.99</span>
+                  <a class="button button-primary" href="https://www.amazon.com/dp/B0GXN8KYPS" target="_blank" rel="noopener">Comprar</a>
+                </div>
+              </div>
+            </article>
+            <article class="book-card" data-lang="en">
+              <a class="book-cover" href="product-the-essence-of-raising-children.html">
+                <img src="assets/books/the-essence-of-raising-children.jpg" alt="The Essence of Raising Children book cover">
+              </a>
+              <div class="book-meta">
+                <span class="badge">English</span>
+                <h3><a href="product-the-essence-of-raising-children.html">The Essence of Raising Children</a></h3>
+                <p>
+                  Conscious parenting, habits, and emotional health to shape
+                  the heart of our children.
+                </p>
+                <div class="book-buy">
+                  <span class="price">$17.99</span>
+                  <a class="button button-primary" href="https://www.amazon.com/dp/B0GYCSZG16" target="_blank" rel="noopener">Buy</a>
+                </div>
+              </div>
+            </article>
           </div>
         </div>
       </section>
@@ -181,7 +259,7 @@
       <footer class="site-footer">
         <div class="footer-inner">
           <div class="footer-brand">
-            <p class="brand">Hanna's Universe</p>
+            <p class="brand"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">Hanna's Universe</p>
             <p>
               A creative and faith-centered world where children grow through
               learning, emotions, and spiritual strength.
@@ -199,9 +277,12 @@
             <a href="books.html">Hanna's Collection</a>
             <a href="books.html#english">English Books</a>
             <a href="books.html#spanish">Spanish Books</a>
+            <a href="books.html#portuguese">Portuguese Books</a>
+            <a href="ebooks.html">E-books</a>
             <a href="videos.html">Videos</a>
             <a href="characters.html">Meet the Characters</a>
             <a href="about.html">About the Author</a>
+            <a href="about.html#talks">Talks &amp; Workshops</a>
             <a href="ambassador.html">Ambassador Program</a>
             <a href="contact.html">Contact</a>
           </nav>
@@ -210,6 +291,8 @@
             <a href="https://www.youtube.com/@Hannasuniverse1" target="_blank" rel="noopener">YouTube</a>
             <a href="https://www.instagram.com/hannasuniverse1/" target="_blank" rel="noopener">Instagram</a>
             <a href="https://www.tiktok.com/@hannasuniverse1" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=61564731688310" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.linkedin.com/in/rosalina-rangel-0690b3353/" target="_blank" rel="noopener">LinkedIn</a>
             <a href="https://hannasuniverse.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
           </div>
         </div>
