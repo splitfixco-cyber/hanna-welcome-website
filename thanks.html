@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thank you — Hanna's Universe</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="assets/sello.png">
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <main class="page">
+      <section class="page-hero" aria-label="Thank you">
+        <header class="site-header">
+          <a class="brand" href="index.html"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">Hanna's Universe</a>
+          <nav class="nav" aria-label="Primary navigation">
+            <a href="books.html">Books</a>
+            <a href="ebooks.html">E-books</a>
+            <a href="videos.html">Videos</a>
+            <a href="characters.html">Characters</a>
+            <a href="about.html">Author</a>
+            <a href="about.html#talks">Talks</a>
+            <a href="ambassador.html">Ambassador</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </header>
+
+        <div class="page-hero-copy">
+          <p class="eyebrow">Thank you · Gracias · Obrigado</p>
+          <h1 id="thanks-title">Your e-book is ready.</h1>
+          <p id="thanks-book"></p>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner thanks-inner">
+
+          <!-- State: checking the order with Stripe -->
+          <div id="state-checking" class="thanks-state">
+            <p>Confirming your payment… · Confirmando tu pago… · Confirmando seu pagamento…</p>
+          </div>
+
+          <!-- State: paid, file available -->
+          <div id="state-ready" class="thanks-state" hidden>
+            <p class="thanks-download">
+              <a id="download-link" class="button button-primary" href="#">Download your e-book</a>
+            </p>
+            <div class="thanks-lang" lang="en">
+              <h2>Thank you for your purchase!</h2>
+              <p>Tap the button above to download your e-book now. We also emailed it to the address you used at checkout, together with this link, so you can download it again any time.</p>
+            </div>
+            <div class="thanks-lang" lang="es">
+              <h2>¡Gracias por tu compra!</h2>
+              <p>Toca el botón de arriba para descargar tu e-book ahora. También lo enviamos al correo que usaste al pagar, junto con este enlace, para que puedas descargarlo de nuevo cuando quieras.</p>
+            </div>
+            <div class="thanks-lang" lang="pt">
+              <h2>Obrigada pela sua compra!</h2>
+              <p>Toque no botão acima para baixar seu e-book agora. Também enviamos para o e-mail usado no pagamento, junto com este link, para você baixar de novo quando quiser.</p>
+            </div>
+          </div>
+
+          <!-- State: paid, but the file is not uploaded yet / download failed -->
+          <div id="state-pending" class="thanks-state" hidden>
+            <div class="thanks-lang" lang="en">
+              <h2>Thank you for your purchase!</h2>
+              <p>Your payment went through. We will send your e-book to the email address you used at checkout within a few hours.</p>
+              <p>Did not receive it? Write to us from the <a href="contact.html">contact page</a>.</p>
+            </div>
+            <div class="thanks-lang" lang="es">
+              <h2>¡Gracias por tu compra!</h2>
+              <p>Tu pago se realizó con éxito. Te enviaremos tu e-book al correo que usaste al pagar en unas horas.</p>
+              <p>¿No lo recibiste? Escríbenos desde la <a href="contact-es.html">página de contacto</a>.</p>
+            </div>
+            <div class="thanks-lang" lang="pt">
+              <h2>Obrigada pela sua compra!</h2>
+              <p>Seu pagamento foi aprovado. Enviaremos seu e-book para o e-mail usado no pagamento em algumas horas.</p>
+              <p>Não recebeu? Fale conosco pela <a href="contact-pt.html">página de contato</a>.</p>
+            </div>
+          </div>
+
+          <!-- State: no / unknown / unpaid session -->
+          <div id="state-invalid" class="thanks-state" hidden>
+            <div class="thanks-lang" lang="en">
+              <h2>We could not find that order.</h2>
+              <p>If you just paid, please use the link in your confirmation email. Otherwise write to us from the <a href="contact.html">contact page</a> and we will sort it out.</p>
+            </div>
+            <div class="thanks-lang" lang="es">
+              <h2>No encontramos ese pedido.</h2>
+              <p>Si acabas de pagar, usa el enlace de tu correo de confirmación. Si no, escríbenos desde la <a href="contact-es.html">página de contacto</a> y lo resolvemos.</p>
+            </div>
+            <div class="thanks-lang" lang="pt">
+              <h2>Não encontramos esse pedido.</h2>
+              <p>Se você acabou de pagar, use o link do seu e-mail de confirmação. Caso contrário, fale conosco pela <a href="contact-pt.html">página de contato</a> e resolvemos.</p>
+            </div>
+          </div>
+
+          <p class="thanks-back"><a href="ebooks.html">← E-books</a></p>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <p class="brand"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">Hanna's Universe</p>
+            <p>
+              A creative and faith-centered world where children grow through
+              learning, emotions, and spiritual strength.
+            </p>
+          </div>
+          <nav class="footer-links" aria-label="Footer">
+            <p class="footer-heading">Explore</p>
+            <a href="books.html">Hanna's Collection</a>
+            <a href="ebooks.html">E-books</a>
+            <a href="videos.html">Videos</a>
+            <a href="characters.html">Meet the Characters</a>
+            <a href="about.html">About the Author</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="footer-social">
+            <p class="footer-heading">Follow</p>
+            <a href="https://www.youtube.com/@Hannasuniverse1" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.instagram.com/hannasuniverse1/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@hannasuniverse1" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=61564731688310" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://hannasuniverse.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+          </div>
+        </div>
+        <p class="footer-copy">© 2026 Hanna's Universe</p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+    <script>
+      (function () {
+        var titles = {
+          'the-essence-of-raising-children': 'The Essence of Raising Children',
+          'la-esencia-de-criar': 'La Esencia de Criar',
+          'a-essencia-de-criar-filhos': 'A Essência de Criar Filhos',
+          'equip-your-kids-for-life': 'Equip Your Kids for Life',
+          'equipa-tus-hijos-para-la-vida': 'Equipa tus hijos para la vida',
+          'equipe-seus-filhos-para-a-vida': 'Equipe seus filhos para a vida'
+        };
+        var params = new URLSearchParams(location.search);
+        var sid = params.get('session_id');
+        var book = params.get('book');
+        var bookEl = document.getElementById('thanks-book');
+        if (book && titles[book]) bookEl.textContent = titles[book];
+
+        function show(id) {
+          ['state-checking', 'state-ready', 'state-pending', 'state-invalid'].forEach(function (s) {
+            document.getElementById(s).hidden = (s !== id);
+          });
+        }
+
+        if (!sid) { show('state-invalid'); return; }
+
+        var downloadUrl = '/api/download?session_id=' + encodeURIComponent(sid);
+        fetch(downloadUrl + '&check=1', { cache: 'no-store' })
+          .then(function (r) { return r.json().then(function (d) { return { status: r.status, data: d }; }); })
+          .then(function (res) {
+            var d = res.data || {};
+            if (d.ok && d.ready) {
+              if (d.title) bookEl.textContent = d.title;
+              document.getElementById('download-link').setAttribute('href', downloadUrl);
+              show('state-ready');
+            } else if (d.ok) {
+              if (d.title) bookEl.textContent = d.title;
+              show('state-pending');
+            } else if (d.error === 'not_found' || d.error === 'unpaid' || d.error === 'missing_session') {
+              show('state-invalid');
+            } else {
+              show('state-pending');
+            }
+          })
+          .catch(function () { show('state-pending'); });
+
+      })();
+    </script>
+  </body>
+</html>

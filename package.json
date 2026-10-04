@@ -1,0 +1,17 @@
+{
+  "name": "hanna-welcome-website",
+  "private": true,
+  "type": "module",
+  "description": "Hanna's Universe website. Static pages plus two Vercel functions for e-book delivery (Stripe Payment Links).",
+  "scripts": {
+    "upload-ebooks": "node scripts/upload-ebooks.mjs"
+  },
+  "dependencies": {
+    "@vercel/blob": "^2.8.0",
+    "nodemailer": "^6.9.16",
+    "stripe": "^17.7.0"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}

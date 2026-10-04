@@ -1562,3 +1562,22 @@ h2 {
   margin: 4px 0 14px;
   color: #f3c74f;
 }
+
+/* Thank-you page (Stripe Payment Links redirect) */
+.thanks-inner {
+  max-width: 44rem;
+}
+.thanks-lang + .thanks-lang {
+  margin-top: 1.75rem;
+  padding-top: 1.75rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.08);
+}
+.thanks-download {
+  margin: 0 0 1.75rem;
+}
+.thanks-download .button {
+  font-size: 1.05rem;
+}
+.thanks-back {
+  margin-top: 2rem;
+}
