@@ -1575,8 +1575,18 @@ h2 {
 .thanks-download {
   margin: 0 0 1.75rem;
 }
+.thanks-download {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
 .thanks-download .button {
   font-size: 1.05rem;
+}
+.thanks-formats {
+  font-size: 0.9rem;
+  opacity: 0.75;
+  margin: -0.75rem 0 1.75rem;
 }
 .thanks-back {
   margin-top: 2rem;

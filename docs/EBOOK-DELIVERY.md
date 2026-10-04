@@ -14,7 +14,7 @@ The catalog (slug, title, language) lives in `lib/ebooks.js`. Slugs must match t
 
 ## E-book files
 
-The GitHub repo is public, so **never commit the e-book files**. They live in the project's private Vercel Blob store, named `ebooks/<slug>.pdf` (or `.epub`).
+The GitHub repo is public, so **never commit the e-book files**. They live in the project's private Vercel Blob store (`hanna-ebooks`), named `ebooks/<slug>.pdf` and/or `ebooks/<slug>.epub`. When both exist the buyer gets a button for each; the email attaches the PDF if it is under 20 MB, otherwise the EPUB, and always includes the download link.
 
 Upload or replace them from a folder outside the repo:
 

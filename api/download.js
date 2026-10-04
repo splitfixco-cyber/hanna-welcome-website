@@ -1,14 +1,16 @@
-// GET /api/download?session_id=cs_...            -> streams the purchased e-book
-// GET /api/download?session_id=cs_...&check=1    -> JSON: is this order paid, and which book is it
+// GET /api/download?session_id=cs_...&format=pdf   -> streams the purchased e-book (format: pdf | epub; default PDF, else EPUB)
+// GET /api/download?session_id=cs_...&check=1      -> JSON: is this order paid, which book, which formats are available
 // The session id is the proof of purchase: it is only known to the buyer (Stripe redirect + email).
-import { resolveOrder, fetchEbookFile, isSessionId, json } from '../lib/ebooks.js';
+import { resolveOrder, fetchEbookFile, availableFormats, isSessionId, json, FORMATS } from '../lib/ebooks.js';
 
 export async function GET(request) {
   const url = new URL(request.url);
   const sessionId = url.searchParams.get('session_id');
   const check = url.searchParams.has('check');
+  const format = url.searchParams.get('format') || undefined;
 
   if (!isSessionId(sessionId)) return json({ ok: false, error: 'missing_session' }, 400);
+  if (format && !FORMATS.includes(format)) return json({ ok: false, error: 'bad_format' }, 400);
 
   let order;
   try {
@@ -22,19 +24,18 @@ export async function GET(request) {
   if (!order.book) return json({ ok: false, error: 'unknown_book', slug: order.slug }, 404);
 
   if (check) {
-    let ready = false;
+    let formats = [];
     try {
-      const file = await fetchEbookFile(order.slug);
-      if (file) { ready = true; await file.stream.cancel().catch(() => {}); }
+      formats = await availableFormats(order.slug);
     } catch (err) {
       console.error('blob check failed', err);
     }
-    return json({ ok: true, ready, slug: order.slug, title: order.book.title, lang: order.book.lang });
+    return json({ ok: true, ready: formats.length > 0, formats, slug: order.slug, title: order.book.title, lang: order.book.lang });
   }
 
   let file;
   try {
-    file = await fetchEbookFile(order.slug);
+    file = await fetchEbookFile(order.slug, format);
   } catch (err) {
     console.error('blob fetch failed', err);
     return json({ ok: false, error: 'storage_error' }, 502);

@@ -2,7 +2,7 @@
 // On checkout.session.completed (paid), email the buyer their e-book: the file attached when it is small
 // enough, and always a download link that keeps working (thanks.html with their session id).
 import nodemailer from 'nodemailer';
-import { stripe, resolveOrder, fetchEbookFile, thanksUrl, json } from '../lib/ebooks.js';
+import { stripe, resolveOrder, fetchEbookFile, thanksUrl, json, FORMATS } from '../lib/ebooks.js';
 
 const MAX_ATTACH_BYTES = 20 * 1024 * 1024; // Gmail/Outlook reject larger attachments; fall back to link only
 
@@ -36,13 +36,17 @@ export async function POST(request) {
     return json({ received: true, skipped: 'no_email' });
   }
 
+  // Attach the PDF when it is small enough, otherwise the EPUB; otherwise link only.
   let attachment = null;
   try {
-    const file = await fetchEbookFile(order.slug);
-    if (file && (!file.size || file.size <= MAX_ATTACH_BYTES)) {
+    for (const format of FORMATS) {
+      const file = await fetchEbookFile(order.slug, format);
+      if (!file) continue;
+      if (file.size && file.size > MAX_ATTACH_BYTES) { await file.stream.cancel().catch(() => {}); continue; }
       const buf = Buffer.from(await new Response(file.stream).arrayBuffer());
       if (buf.length <= MAX_ATTACH_BYTES) {
         attachment = { filename: file.filename, content: buf, contentType: file.contentType };
+        break;
       }
     }
   } catch (err) {
@@ -87,7 +91,7 @@ const COPY = {
     hi: (n) => (n ? `Hi ${n},` : 'Hello,'),
     thanks: (t) => `Thank you for your purchase of <b>${t}</b>.`,
     attached: 'Your e-book is attached to this email.',
-    link: 'You can also download it any time from this link:',
+    link: 'You can also download it any time, in PDF or EPUB, from this link:',
     button: 'Download your e-book',
     keep: 'Keep this email: the link keeps working if you need the file again.',
     help: 'Questions? Just reply to this email.',
@@ -98,7 +102,7 @@ const COPY = {
     hi: (n) => (n ? `Hola ${n},` : 'Hola,'),
     thanks: (t) => `Gracias por comprar <b>${t}</b>.`,
     attached: 'Tu e-book va adjunto en este correo.',
-    link: 'También puedes descargarlo cuando quieras desde este enlace:',
+    link: 'También puedes descargarlo cuando quieras, en PDF o EPUB, desde este enlace:',
     button: 'Descargar tu e-book',
     keep: 'Guarda este correo: el enlace seguirá funcionando si necesitas el archivo de nuevo.',
     help: '¿Preguntas? Responde a este correo.',
@@ -109,7 +113,7 @@ const COPY = {
     hi: (n) => (n ? `Olá ${n},` : 'Olá,'),
     thanks: (t) => `Obrigada por comprar <b>${t}</b>.`,
     attached: 'Seu e-book está anexado a este e-mail.',
-    link: 'Você também pode baixá-lo quando quiser por este link:',
+    link: 'Você também pode baixá-lo quando quiser, em PDF ou EPUB, por este link:',
     button: 'Baixar seu e-book',
     keep: 'Guarde este e-mail: o link continua funcionando se precisar do arquivo de novo.',
     help: 'Dúvidas? É só responder a este e-mail.',

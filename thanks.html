@@ -43,8 +43,10 @@
           <!-- State: paid, file available -->
           <div id="state-ready" class="thanks-state" hidden>
             <p class="thanks-download">
-              <a id="download-link" class="button button-primary" href="#">Download your e-book</a>
+              <a id="download-pdf" class="button button-primary" href="#" hidden>Download PDF</a>
+              <a id="download-epub" class="button button-primary" href="#" hidden>Download EPUB</a>
             </p>
+            <p class="thanks-formats">PDF: any phone, tablet or computer · EPUB: Apple Books, Kindle app, Google Play Books</p>
             <div class="thanks-lang" lang="en">
               <h2>Thank you for your purchase!</h2>
               <p>Tap the button above to download your e-book now. We also emailed it to the address you used at checkout, together with this link, so you can download it again any time.</p>
@@ -160,7 +162,10 @@
             var d = res.data || {};
             if (d.ok && d.ready) {
               if (d.title) bookEl.textContent = d.title;
-              document.getElementById('download-link').setAttribute('href', downloadUrl);
+              (d.formats || []).forEach(function (f) {
+                var a = document.getElementById('download-' + f);
+                if (a) { a.setAttribute('href', downloadUrl + '&format=' + f); a.hidden = false; }
+              });
               show('state-ready');
             } else if (d.ok) {
               if (d.title) bookEl.textContent = d.title;
