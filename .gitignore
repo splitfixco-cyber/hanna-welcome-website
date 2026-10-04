@@ -1,11 +1,7 @@
 .DS_Store
 
 # local secrets & tooling
-.env
-.env.*
-!.env.example
 node_modules/
 .vercel/
-
-.vercel
 .env*
+!.env.example
