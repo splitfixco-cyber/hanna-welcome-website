@@ -1556,3 +1556,9 @@ h2 {
   gap: 0 clamp(12px, 1.9vw, 26px);
   font-size: 0.92rem;
 }
+
+.bundle-card .price {
+  display: block;
+  margin: 4px 0 14px;
+  color: #f3c74f;
+}
