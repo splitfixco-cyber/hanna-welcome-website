@@ -419,6 +419,9 @@ p{margin:0}
 .grupo button[aria-pressed="true"]{background:var(--amarillo);color:var(--cielo)}
 .grupo button:focus-visible{outline:2px solid var(--amarillo);outline-offset:2px}
 .grupo button:disabled{opacity:.35;cursor:default}
+.grupo .volver{font-family:var(--f-rotulo);font-weight:500;font-size:14px;color:var(--amarillo);text-decoration:none;border-radius:99px;padding:8px 16px;min-height:36px;display:flex;align-items:center;gap:6px}
+.grupo .volver:hover{background:#ffffff14}
+.grupo .volver:focus-visible{outline:2px solid var(--amarillo);outline-offset:2px}
 .grupo .flecha{font-size:20px;line-height:1;padding:6px 14px}
 .grupo .donde{font-family:var(--f-rotulo);font-weight:500;font-size:13px;color:#dfe7f5;min-width:112px;text-align:center;font-variant-numeric:tabular-nums}
 .solo-hojear{display:none}
@@ -481,6 +484,7 @@ p{margin:0}
 </style>
 
 <nav class="barra" aria-label="Idioma y lectura / Language and reading">
+<div class="grupo"><a class="volver" id="volver" href="../index-es.html" data-href-es="../index-es.html" data-href-en="../index.html">← <span data-es="Volver a la web" data-en="Back to website">Volver a la web</span></a></div>
 <div class="grupo"><button type="button" id="b-es" data-l="es" aria-pressed="true">Español</button><button type="button" id="b-en" data-l="en" aria-pressed="false">English</button></div>
 <div class="grupo"><button type="button" id="m-hojear" data-m="hojear" aria-pressed="true"><span data-es="Hojear" data-en="Flip through">Hojear</span></button><button type="button" id="m-todas" data-m="todas" aria-pressed="false"><span data-es="Ver todas" data-en="See all">Ver todas</span></button></div>
 <div class="grupo solo-hojear"><button type="button" class="flecha" id="atras" aria-label="Página anterior">‹</button><span class="donde" id="donde" aria-live="polite">Portada</span><button type="button" class="flecha" id="adelante" aria-label="Página siguiente">›</button></div>
@@ -1267,6 +1271,7 @@ p{margin:0}
     document.querySelectorAll('[data-es]').forEach(function(e){e.textContent=e.getAttribute('data-'+idioma)});
     document.getElementById('atras').setAttribute('aria-label',idioma==='en'?'Previous page':'Página anterior');
     document.getElementById('adelante').setAttribute('aria-label',idioma==='en'?'Next page':'Página siguiente');
+    var v=document.getElementById('volver');v.href=v.getAttribute('data-href-'+idioma);
     document.documentElement.lang=idioma;
     document.title="Hey! by Hanna's Universe";
   }
