@@ -1553,7 +1553,7 @@ h2 {
 }
 
 .nav {
-  gap: 0 clamp(12px, 1.9vw, 26px);
+  gap: 0 clamp(10px, 1.3vw, 20px);
   font-size: 0.92rem;
 }
 

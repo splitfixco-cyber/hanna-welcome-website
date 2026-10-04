@@ -1,0 +1,1295 @@
+<!doctype html><html><head><meta charset=utf8><title>Hey! by Hanna's Universe · Revista gratis</title><meta name=description content="Hey! by Hanna's Universe: revista mensual gratis para papás, maestros y niños, de Rosalina Rangel."><link rel=icon href="img/sello.png"><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500;1,600&family=Literata:ital,opsz,wght@0,7..72,400;0,7..72,600;1,7..72,400&family=Jost:wght@400;500;600;700&family=Gochi+Hand&family=Caveat:wght@500;700&display=swap">
+<style>
+/* Revista impresa: hojas carta de papel sobre el cielo azul de Hanna's Universe. Un solo aspecto a propósito (papel), igual en tema claro y oscuro. */
+:root{
+  --cielo:#14264a;      /* azul de la noche, alrededor de las hojas */
+  --cielo-2:#1f3868;
+  --papel:#fffdf8;      /* hoja */
+  --celeste:#eaf1fb;    /* recuadros */
+  --tinta:#1b2433;      /* texto */
+  --tinta-suave:#4b566a;
+  --oro:#a8761a;        /* dorado del sello */
+  --oro-vivo:#d9a534;
+  --amarillo:#f3c74f;   /* camiseta de Hanna */
+  --linea:#d8dfeb;
+  --f-cabecera:"Cinzel Decorative", "Trajan Pro", Georgia, serif;
+  --f-titulo:"Cormorant Garamond", Garamond, Georgia, serif;
+  --f-texto:"Literata", Georgia, "Times New Roman", serif;
+  --f-rotulo:"Jost", "Futura", "Avenir Next", "Segoe UI", sans-serif;
+  --f-mano:"Gochi Hand", "Comic Sans MS", "Chalkboard SE", cursive;
+  --f-cuaderno:"Caveat", "Segoe Print", "Bradley Hand", cursive;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+body{background:var(--cielo);color:var(--tinta);font-family:var(--f-texto);font-size:15px;line-height:1.55;
+  background-image:radial-gradient(1.5px 1.5px at 12% 18%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 72% 9%,#fff9 50%,transparent 51%),radial-gradient(1.5px 1.5px at 88% 44%,#fff6 50%,transparent 51%),radial-gradient(1px 1px at 33% 71%,#fff8 50%,transparent 51%),radial-gradient(1px 1px at 58% 88%,#fff7 50%,transparent 51%);
+  background-size:420px 420px}
+.revista{display:flex;flex-direction:column;align-items:center;gap:36px;padding:32px 16px 56px}
+.aviso{max-width:816px;width:100%;color:#dfe7f5;font-family:var(--f-rotulo);font-weight:600;font-size:14px;text-align:center;text-wrap:balance}
+.aviso b{color:var(--amarillo)}
+
+/* ---- la hoja ---- */
+.pagina{background:var(--papel);width:100%;max-width:816px;position:relative;overflow:hidden;
+  box-shadow:0 18px 40px #0006;display:flex;flex-direction:column;padding:40px 28px 56px}
+.folio{position:absolute;left:0;right:0;bottom:18px;display:flex;justify-content:space-between;padding-inline:28px;
+  font-family:var(--f-rotulo);font-weight:500;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-suave)}
+.folio span:last-child{color:var(--oro)}
+@media (min-width:880px){
+  .pagina{width:816px;height:1056px;padding:56px 56px 64px}
+  .folio{padding-inline:56px;bottom:26px}
+}
+
+.seccion{font-family:var(--f-rotulo);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);
+  display:flex;align-items:center;gap:10px}
+.seccion::after{content:"";flex:1;height:2px;background:linear-gradient(90deg,var(--oro-vivo),transparent)}
+h1,h2,h3{font-family:var(--f-titulo);font-weight:600;margin:0;text-wrap:balance;color:var(--cielo)}
+h2{font-size:clamp(36px,6.8vw,50px);line-height:1.02;letter-spacing:-.005em;margin-top:14px}
+h3{font-size:23px;line-height:1.15}
+p{margin:0}
+.entrada{font-size:18px;line-height:1.5;color:var(--tinta);margin-top:14px;max-width:60ch}
+.firma{font-family:var(--f-rotulo);font-weight:700;font-size:12.5px;color:var(--tinta-suave);margin-top:12px}
+.cuerpo{display:flex;flex-direction:column;gap:12px}
+.cols{display:grid;grid-template-columns:1fr;gap:22px;margin-top:22px}
+@media (min-width:880px){.cols{grid-template-columns:1fr 1fr;gap:32px}}
+.cols>*{min-width:0}
+.recuadro{background:var(--celeste);border-radius:4px;padding:18px 20px;display:flex;flex-direction:column;gap:10px}
+.recuadro h3{font-size:21px}
+.versiculo{border-left:3px solid var(--oro-vivo);padding:4px 0 4px 16px;font-style:italic;color:var(--cielo);font-size:16px}
+.versiculo cite{display:block;font-style:normal;font-family:var(--f-rotulo);font-weight:500;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--oro);margin-top:6px}
+.lista{margin:0;padding:0;list-style:none;display:flex;flex-direction:column;gap:8px}
+.lista li{display:flex;gap:10px;align-items:baseline}
+.lista li::before{content:"";flex:none;width:13px;height:13px;border:2px solid var(--oro);border-radius:3px;transform:translateY(2px)}
+.ab{font-weight:600;color:var(--cielo)}
+
+/* ---- portada: franja azul y dorada arriba, sello al centro, temas a los lados ---- */
+.portada{padding:0!important;background:var(--papel)}
+.franja{background:var(--cielo);padding:22px 28px 20px;border-bottom:6px solid var(--oro-vivo);box-shadow:0 4px 0 var(--papel),0 7px 0 var(--oro);position:relative;z-index:1}
+.franja .fila{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;font-family:var(--f-rotulo);font-weight:500;font-size:11.5px;letter-spacing:.14em;text-transform:uppercase;color:#cdd8ec}
+.franja .gratis{color:var(--cielo);background:var(--amarillo);padding:3px 10px;border-radius:99px;letter-spacing:.1em}
+.titulo-grande{font-family:var(--f-cabecera);font-weight:600;color:var(--oro-vivo);font-size:clamp(54px,15vw,124px);line-height:1;text-align:center;margin-top:10px;text-shadow:0 3px 0 #7a540f}
+.subtitulo{font-family:var(--f-cabecera);font-weight:700;color:#f6e3b0;font-size:clamp(19px,4.6vw,34px);letter-spacing:.06em;margin-top:6px;display:flex;align-items:center;justify-content:center;gap:16px;text-align:center}
+.subtitulo::before,.subtitulo::after{content:"";height:2px;width:clamp(24px,8vw,70px);background:var(--oro-vivo);flex:none}
+.tapa{flex:1;display:grid;grid-template-columns:1fr;gap:24px;padding:34px 28px 22px;align-items:center;background:radial-gradient(circle at 50% 46%,var(--celeste),var(--papel) 62%)}
+.tapa>*{min-width:0}
+.sello-g{width:min(330px,82%);justify-self:center;order:-1;filter:drop-shadow(0 12px 24px #14264a59)}
+.temas{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:22px}
+.temas li{display:flex;flex-direction:column;gap:4px;padding-bottom:16px;border-bottom:1px solid var(--linea)}
+.temas li:last-child{border-bottom:0;padding-bottom:0}
+.temas b{font-family:var(--f-rotulo);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--oro)}
+.temas span{font-family:var(--f-titulo);font-weight:600;font-size:22px;line-height:1.22;color:var(--cielo);text-wrap:balance}
+.tema-semana{display:flex;flex-direction:column;align-items:center;gap:8px;padding:6px 28px 74px;text-align:center}
+.tema{color:var(--oro);font-family:var(--f-rotulo);font-weight:600;font-size:12px;letter-spacing:.24em;text-transform:uppercase;display:flex;align-items:center;gap:12px}
+.tema::before,.tema::after{content:"";width:34px;height:1px;background:var(--oro-vivo)}
+.tema-semana p{text-wrap:balance;max-width:20ch;font-family:var(--f-titulo);font-weight:600;font-size:clamp(34px,6.4vw,50px);line-height:1.05;color:var(--cielo)}
+.tema-semana em{font-style:italic;color:var(--oro)}
+.portada .folio{bottom:0;padding-block:13px;background:var(--cielo);border-top:3px solid var(--oro-vivo);color:#cdd8ec}
+.portada .folio span:last-child{color:var(--amarillo)}
+@media (min-width:880px){
+  .franja{padding:30px 56px 26px}
+  .tapa{grid-template-columns:1fr 330px 1fr;gap:30px;padding:40px 44px 20px}
+  .sello-g{order:0;width:330px}
+  .temas.izq{text-align:right}
+  .temas.izq li{align-items:flex-end}
+  .portada .folio{bottom:0}
+}
+
+/* ---- carta ---- */
+.carta{display:grid;grid-template-columns:1fr;gap:28px;margin-top:22px}
+@media (min-width:880px){.carta{grid-template-columns:1.25fr .95fr;gap:40px}}
+.carta>*{min-width:0}
+.carta .texto{display:flex;flex-direction:column;gap:12px;font-size:16px}
+.carta .adios{font-family:var(--f-mano);font-size:30px;color:var(--oro);line-height:1;margin-top:6px}
+.indice{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
+.indice li{display:grid;grid-template-columns:34px 1fr;gap:10px;padding:6px 0;border-bottom:1px solid var(--linea)}
+.indice .n{font-family:var(--f-titulo);font-weight:600;font-size:30px;color:var(--oro);line-height:1;font-variant-numeric:tabular-nums}
+.indice b{display:block;font-family:var(--f-rotulo);font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--tinta-suave)}
+.indice span{font-family:var(--f-titulo);font-weight:600;color:var(--cielo);font-size:19px;line-height:1.25}
+.imprime{margin-top:16px;display:flex;gap:14px;align-items:center;background:var(--celeste);padding:14px 16px;border-radius:4px;font-size:14px}
+.imprime img{height:72px;flex:none}
+
+/* ---- pasos (maestros) ---- */
+.pasos{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px;counter-reset:p}
+.pasos li{display:grid;grid-template-columns:40px 1fr;gap:12px;counter-increment:p}
+.pasos li::before{content:counter(p);font-family:var(--f-titulo);font-weight:700;font-size:24px;color:var(--cielo);background:var(--amarillo);width:36px;height:36px;border-radius:50%;display:grid;place-items:center}
+.pasos b{display:block;font-family:var(--f-texto);font-weight:600;color:var(--cielo)}
+
+/* ---- fe ---- */
+.fe-verso{margin-top:22px;background:var(--cielo);color:#fff;padding:30px 28px;border-radius:4px;position:relative;overflow:hidden}
+.fe-verso p{font-family:var(--f-titulo);font-weight:600;font-style:italic;font-size:clamp(32px,6.2vw,46px);line-height:1.12;color:#fff;max-width:18ch}
+.fe-verso cite{display:block;font-style:normal;font-family:var(--f-rotulo);font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--amarillo);margin-top:14px}
+.fe-verso img{position:absolute;right:18px;bottom:-6px;height:170px}
+.oracion{font-family:var(--f-texto);font-style:italic;font-size:17px;line-height:1.6;color:var(--cielo)}
+
+/* ---- moda ---- */
+.muestras{display:flex;gap:8px;flex-wrap:wrap;margin-top:6px}
+.muestra{display:flex;flex-direction:column;gap:4px;font-family:var(--f-rotulo);font-weight:700;font-size:10.5px;color:var(--tinta-suave);width:64px}
+.muestra i{display:block;height:44px;border-radius:3px;border:1px solid #0000001a}
+.tendencias{display:grid;grid-template-columns:1fr;gap:16px}
+@media (min-width:560px){.tendencias{grid-template-columns:1fr 1fr}}
+.tendencia{display:flex;flex-direction:column;gap:6px;border-top:2px solid var(--cielo);padding-top:10px}
+.tendencia b{font-family:var(--f-rotulo);font-weight:600;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--oro)}
+.look{display:grid;grid-template-columns:120px 1fr;gap:16px;align-items:center;background:var(--celeste);padding:14px 18px;border-radius:4px}
+.look img{height:170px;justify-self:center}
+.fuente{font-family:var(--f-rotulo);font-size:10.5px;color:var(--tinta-suave)}
+
+/* ---- historieta ---- */
+.vinetas{display:grid;grid-template-columns:1fr;gap:12px;margin-top:18px;flex:1}
+@media (min-width:560px){.vinetas{grid-template-columns:1fr 1fr}}
+@media (min-width:880px){.vinetas{grid-template-rows:repeat(3,1fr)}}
+.vineta{position:relative;border:3px solid var(--tinta);border-radius:6px;overflow:hidden;min-height:250px;display:flex;align-items:flex-end;justify-content:center;gap:4px;padding:0 10px}
+.vineta .piso{position:absolute;left:0;right:0;bottom:0;height:22%;background:#0000000d;border-top:2px solid #00000014}
+.vineta img{position:relative;object-fit:contain;margin-bottom:6px}
+.vineta .h{height:170px}.vineta .a{height:112px}
+.v1{background:#fdf1c9}.v2{background:#e3ecf8}.v3{background:#f6e4d2}.v4{background:#e8e5f5}.v5{background:#fdf1c9}.v6{background:#dcebf8}
+.narr{position:absolute;top:0;left:0;background:var(--amarillo);font-family:var(--f-rotulo);font-weight:500;font-size:11.5px;padding:5px 10px;border-right:3px solid var(--tinta);border-bottom:3px solid var(--tinta);color:var(--tinta);z-index:2}
+.globo{position:absolute;background:#fff;border:2.5px solid var(--tinta);border-radius:18px;padding:7px 12px;font-family:var(--f-mano);font-size:18px;line-height:1.15;color:var(--tinta);max-width:62%;z-index:2}
+.globo::after{content:"";position:absolute;bottom:-11px;width:16px;height:16px;background:#fff;border-right:2.5px solid var(--tinta);border-bottom:2.5px solid var(--tinta)}
+.globo.izq::after{left:26px;transform:rotate(45deg) skew(12deg,12deg)}
+.globo.der::after{right:26px;transform:rotate(45deg) skew(12deg,12deg)}
+.idea{position:absolute;top:46%;left:12px;background:#fff;border:2px dashed var(--oro);border-radius:10px;padding:6px 10px;font-family:var(--f-mano);font-size:16px;line-height:1.2;color:var(--cielo);z-index:2}
+
+/* ---- pintar ---- */
+.pintar{padding-bottom:78px!important}
+.pintar svg{width:100%;height:auto;flex:1;display:block}
+.nombre{font-family:var(--f-rotulo);font-weight:700;font-size:13px;color:var(--tinta-suave);display:flex;gap:10px;align-items:center;margin-top:10px}
+.nombre i{flex:1;border-bottom:1.5px solid var(--tinta-suave);height:16px}
+
+/* ---- anuncios ---- */
+.anuncio-libro{margin-top:18px;display:grid;grid-template-columns:1fr;gap:22px;background:var(--cielo);color:#fff;padding:26px;border-radius:4px}
+@media (min-width:560px){.anuncio-libro{grid-template-columns:150px 1fr}}
+.anuncio-libro img{width:150px;box-shadow:0 8px 20px #0007}
+.anuncio-libro h3{color:#fff;font-size:32px}
+.anuncio-libro p{color:#dfe7f5}
+.anuncio-libro .fecha{font-family:var(--f-rotulo);font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:var(--cielo);background:var(--amarillo);padding:5px 11px;border-radius:3px;align-self:flex-start}
+.anuncio-libro div{display:flex;flex-direction:column;gap:10px}
+.espacios{display:grid;grid-template-columns:repeat(auto-fit,minmax(120px,1fr));gap:10px;margin-top:14px}
+.espacio .precio{white-space:nowrap;font-family:var(--f-texto)!important;font-weight:600!important;font-size:21px;font-variant-numeric:lining-nums tabular-nums}
+.espacio .antes{font-family:var(--f-texto)!important;font-size:16px!important;font-weight:400!important}
+.espacio{border:2px dashed var(--oro);border-radius:4px;padding:12px 11px;display:flex;flex-direction:column;gap:4px;align-items:flex-start}
+.espacio .precio{font-family:var(--f-titulo);font-weight:600;font-size:36px;color:var(--cielo);line-height:1;font-variant-numeric:tabular-nums}
+.espacio .precio small{font-family:var(--f-rotulo);font-size:12px;color:var(--tinta-suave);font-weight:700}
+.espacio b{font-family:var(--f-rotulo);font-weight:600;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--oro)}
+.espacio span{font-size:13px;color:var(--tinta-suave)}
+.contacto{margin-top:16px;display:flex;flex-wrap:wrap;gap:8px 22px;font-family:var(--f-rotulo);font-weight:700;font-size:14px;color:var(--cielo)}
+.contacto span{color:var(--tinta-suave);font-weight:600}
+.pie-revista{margin-top:auto;display:flex;align-items:center;gap:14px;border-top:1px solid var(--linea);padding-top:14px;font-size:13.5px;color:var(--tinta-suave)}
+.pie-revista img{width:56px;height:56px;flex:none}
+
+
+/* ---- moda en dos páginas ---- */
+.foto{margin:0;display:flex;flex-direction:column;gap:6px;min-width:0}
+.foto img{width:100%;display:block;object-fit:cover;border-radius:2px}
+.foto figcaption{font-family:var(--f-rotulo);font-size:11px;color:var(--tinta-suave);letter-spacing:.03em}
+.foto-grande img{height:280px;object-position:center 30%}
+.foto-media img{height:280px}
+.moda-par{display:grid;grid-template-columns:1fr;gap:24px;align-items:start}
+.moda-par>*{min-width:0}
+.moda-par .tendencia{border-top:2px solid var(--cielo);padding-top:10px}
+/* ---- pautas: espacios para anunciantes ---- */
+.pauta{border:1.5px dashed var(--oro);background:repeating-linear-gradient(135deg,#a8761a0d 0 10px,transparent 10px 20px);border-radius:3px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;text-align:center;padding:12px 16px}
+.pauta b{font-family:var(--f-rotulo);font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--oro)}
+.pauta span{font-family:var(--f-titulo);font-weight:600;font-size:24px;line-height:1.1;color:var(--cielo)}
+.pauta small{font-family:var(--f-rotulo);font-size:11.5px;color:var(--tinta-suave)}
+.pauta.banda{min-height:92px;margin-top:auto}
+.pauta.cuarto{min-height:100px;margin-top:12px}
+/* ---- novela por entregas ---- */
+.capitulo{font-family:var(--f-titulo);font-style:italic;font-weight:600;font-size:22px;color:var(--oro);margin-top:12px}
+.novela h2{margin-top:2px}
+.ilustracion{margin-top:16px;height:270px;border:1.5px dashed var(--linea);border-radius:3px;display:grid;place-items:center;font-family:var(--f-rotulo);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave);background:var(--celeste)}
+.novela-texto{flex-shrink:0;margin-top:18px;column-gap:30px;font-size:16.5px;line-height:1.62}
+.novela-texto p+p{text-indent:1.4em}
+.novela-texto:not(.sigue) p:not(.pendiente):first-child::first-letter{float:left;font-family:var(--f-titulo);font-weight:700;font-size:100px;line-height:.78;padding:6px 10px 0 0;color:var(--oro)}
+.pendiente{color:var(--tinta-suave);font-style:italic;break-inside:avoid}
+.continuara{text-align:right;font-family:var(--f-titulo);font-style:italic;font-weight:600;font-size:20px;color:var(--oro);margin-top:4px}
+@media (min-width:560px){.moda-par{grid-template-columns:1fr 1fr}}
+@media (min-width:880px){.novela-texto{columns:2}}
+
+/* ---- cuaderno de recetas de la señora Smith ---- */
+.entrega{font-family:var(--f-rotulo);font-weight:600;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--tinta-suave);margin-top:4px}
+.hoja-cuaderno{margin-top:20px;background-color:#fbf3df;background-image:linear-gradient(90deg,transparent 54px,#c0504d55 54px,#c0504d55 56px,transparent 56px),repeating-linear-gradient(180deg,transparent 0 31px,#5b7fb84d 31px 32px);background-position:0 0,0 22px;padding:26px 26px 26px 74px;box-shadow:0 10px 24px #3b2a1033,0 1px 0 #e6d6b2;transform:rotate(-.6deg);position:relative;border-radius:2px}
+.hoja-cuaderno::before,.hoja-cuaderno::after{content:"";position:absolute;top:-12px;width:96px;height:26px;background:#f3e3b8cc;box-shadow:0 1px 3px #0002}
+.hoja-cuaderno::before{left:30px;transform:rotate(-5deg)}
+.hoja-cuaderno::after{right:30px;transform:rotate(4deg)}
+.mano{font-family:var(--f-cuaderno);color:#3a3f74;line-height:32px}
+.titulo-receta{font-size:38px;font-weight:700;line-height:1.1;margin-bottom:6px}
+.nota-smith{font-size:23px}
+.receta-cols{display:grid;grid-template-columns:1fr;gap:6px 28px;margin-top:8px}
+.receta-cols>*{min-width:0}
+.receta-cols h3{font-family:var(--f-cuaderno);font-weight:700;font-size:27px;color:#7a2e2a;line-height:32px}
+.renglones{margin:0;padding:0;list-style:none;font-family:var(--f-cuaderno);font-size:23px;color:#3a3f74;line-height:32px;min-height:192px}
+.hoja-cuaderno .pendiente{font-family:var(--f-cuaderno);font-style:normal;font-size:22px;color:#6b6f8f;line-height:32px}
+.firma-smith{text-align:right;font-family:var(--f-cuaderno);font-size:26px;color:#7a2e2a;margin-top:6px}
+@media (min-width:560px){.receta-cols{grid-template-columns:1fr 1.3fr}}
+
+/* ---- mujeres con propósito: entrevista a dos páginas ---- */
+.foto-invitada{margin-top:18px;flex:1;min-height:300px;border:1.5px dashed var(--oro);background:var(--celeste);display:grid;place-items:center;text-align:center;font-family:var(--f-rotulo);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--tinta-suave);padding:16px}
+.invitada{margin-top:18px}
+.invitada .quien{font-family:var(--f-rotulo);font-weight:500;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--oro);margin-top:6px}
+.cita-grande{font-family:var(--f-titulo);font-style:italic;font-weight:600;font-size:30px;line-height:1.15;color:var(--cielo);margin-top:16px;padding-left:18px;border-left:3px solid var(--oro-vivo);max-width:30ch}
+.entrevista{display:flex;flex-direction:column;gap:16px;margin-top:18px}
+.pregunta{font-family:var(--f-titulo);font-weight:700;font-size:21px;line-height:1.2;color:var(--cielo)}
+.respuesta{margin-top:4px;color:var(--tinta-suave);font-style:italic;font-size:14.5px}
+.cuenta-tu-historia{display:grid;grid-template-columns:1fr;gap:14px;margin-top:auto}
+.cuenta-tu-historia>*{min-width:0}
+@media (min-width:560px){.cuenta-tu-historia{grid-template-columns:1fr 1fr}}
+/* ---- precios de lanzamiento ---- */
+.oferta{margin-top:16px;display:inline-flex;align-self:flex-start;gap:10px;align-items:center;background:var(--cielo);color:var(--amarillo);font-family:var(--f-rotulo);font-weight:600;font-size:12px;letter-spacing:.16em;text-transform:uppercase;padding:7px 14px;border-radius:3px}
+.espacio .antes{font-family:var(--f-titulo);font-weight:600;font-size:20px;line-height:1;color:var(--tinta-suave);text-decoration:line-through;text-decoration-color:#c0504d;text-decoration-thickness:2px;font-variant-numeric:tabular-nums}
+.novela-texto.sigue p:first-child{text-indent:0}
+/* ---- página hecha de una sola imagen (historieta ilustrada) ---- */
+.pagina.pagina-imagen{padding:0!important;background:#fdf8ee}
+.pagina-imagen img{display:block;width:100%;height:auto}
+.hojear .pagina-imagen img{height:100%;object-fit:cover}
+.folio.oculto{display:none}
+@media (min-width:880px){.pagina-imagen img{height:100%;object-fit:cover}}
+@media print{.pagina-imagen img{height:100%;object-fit:cover}}
+/* ---- imagen a doble página (moda): cada hoja muestra su mitad ---- */
+.pagina.mitad{padding:0!important;background:#f4efe6}
+.mitad img{display:block;width:100%;height:auto;max-width:none}
+@media screen and (max-width:879px){.revista:not(.hojear) .mitad-der{display:none}}
+@media (min-width:880px){.mitad img{position:absolute;top:0;height:100%;width:200%;object-fit:cover}.mitad-izq img{left:0}.mitad-der img{left:-100%}}
+@media print{.mitad img{position:absolute;top:0;height:100%;width:200%;object-fit:cover}.mitad-izq img{left:0}.mitad-der img{left:-100%}}
+.ideas{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:22px}
+.ideas .foto img{height:230px}
+.ilustracion img{width:100%;height:100%;object-fit:cover;object-position:center 45%;display:block}
+.ilustracion.completa{height:auto;border:0;padding:0;background:none;display:block}
+.ilustracion.completa img{height:auto;aspect-ratio:3/2;border-radius:2px}
+.conversar{margin-top:auto;border:2px dashed var(--oro-vivo);border-radius:6px;padding:16px 20px;display:flex;flex-direction:column;gap:6px}
+.conversar h3{font-size:22px}
+.renglones-libres{flex:1;min-height:150px;background-image:repeating-linear-gradient(180deg,transparent 0 33px,var(--linea) 33px 34px)}
+.foto-invitada.con-foto{padding:0;border:0;background:#e9e9ea;position:relative;overflow:hidden}
+.foto-invitada.con-foto img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 22%}
+.anuncio-invitado{margin-top:auto;display:flex;flex-direction:column;align-items:center;gap:6px}
+.anuncio-invitado img{width:100%;max-width:420px;display:block;border:1px solid var(--linea);box-shadow:0 6px 16px #14264a1f}
+.etiqueta-anuncio{font-family:var(--f-rotulo);font-weight:600;font-size:10.5px;letter-spacing:.2em;text-transform:uppercase;color:var(--tinta-suave)}
+.entrevista.con-respuestas{display:block;columns:2;column-gap:28px;margin-top:14px}
+.entrevista.con-respuestas>div{margin-bottom:12px}
+.entrevista.con-respuestas .pregunta{font-size:19px;break-after:avoid}
+.resp{margin-top:4px;font-size:14px;line-height:1.5}
+@media screen and (max-width:879px){.revista:not(.hojear) .entrevista.con-respuestas{columns:1}}
+/* ---- anuncios de libros de Hanna's Universe (franja) ---- */
+.pauta-libro{margin-top:auto;display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:10px 20px;min-height:96px;background:var(--cielo);border-radius:4px;text-decoration:none;color:#fff;border-bottom:4px solid var(--oro-vivo)}
+.pauta-libro img{height:84px;width:auto;border-radius:2px;box-shadow:0 4px 10px #0006}
+.pauta-libro .info{display:flex;flex-direction:column;gap:2px;min-width:0}
+.pauta-libro b{font-family:var(--f-rotulo);font-weight:600;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--amarillo)}
+.pauta-libro .t{font-family:var(--f-titulo);font-weight:600;font-size:25px;line-height:1.05;color:#fff}
+.pauta-libro .d{font-family:var(--f-texto);font-size:13px;color:#dfe7f5}
+.pauta-libro .cta{display:flex;flex-direction:column;align-items:flex-end;gap:6px}
+.pauta-libro .p{font-family:var(--f-texto);font-weight:600;font-size:20px;color:var(--amarillo);white-space:nowrap}
+.pauta-libro .c{font-family:var(--f-rotulo);font-weight:600;font-size:11px;letter-spacing:.08em;text-transform:uppercase;background:var(--amarillo);color:var(--cielo);padding:5px 10px;border-radius:99px;white-space:nowrap}
+.pauta-libro:focus-visible{outline:3px solid var(--amarillo);outline-offset:3px}
+@media screen and (max-width:559px){.revista:not(.hojear) .pauta-libro{grid-template-columns:auto 1fr}.revista:not(.hojear) .pauta-libro .cta{grid-column:1/-1;flex-direction:row;justify-content:space-between;align-items:center}}
+.anuncio-banner{margin-top:16px;display:flex;flex-direction:column;align-items:center}
+.anuncio-banner .etiqueta-anuncio{align-self:flex-start;margin-bottom:6px}
+.anuncio-banner img{width:100%;display:block}
+.banner-pie{width:100%;background:#1c1714;color:#ecd2ae;font-family:var(--f-rotulo);font-size:13.5px;letter-spacing:.04em;text-align:center;padding:8px 14px}
+.banner-pie b{font-weight:600;color:#f6e3c6}
+.mini-libro{margin-top:12px;display:grid;grid-template-columns:64px 1fr;gap:12px;align-items:center;background:var(--cielo);color:#fff;padding:10px 12px;border-radius:4px;border-bottom:3px solid var(--oro-vivo)}
+.mini-libro img{width:64px;box-shadow:0 3px 8px #0006}
+.mini-libro b{display:block;font-family:var(--f-rotulo);font-weight:600;font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--amarillo)}
+.mini-libro .t{display:block;font-family:var(--f-titulo);font-weight:600;font-size:19px;line-height:1.1;color:#fff;margin-top:2px}
+.mini-libro .d{display:block;font-size:12px;color:#dfe7f5;margin-top:3px}
+/* ---- lanzamiento de Equipa: anuncio a página completa ---- */
+.pagina.lanzamiento{padding:0!important;background:var(--cielo);color:#fff}
+.lz-estrellas{position:absolute;inset:0;background-image:radial-gradient(2px 2px at 8% 12%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 22% 30%,#fffc 50%,transparent 51%),radial-gradient(2px 2px at 64% 8%,#fff 50%,transparent 51%),radial-gradient(1.5px 1.5px at 91% 22%,#fffc 50%,transparent 51%),radial-gradient(1.5px 1.5px at 80% 58%,#fffa 50%,transparent 51%),radial-gradient(2px 2px at 14% 64%,#fffb 50%,transparent 51%),radial-gradient(1px 1px at 44% 52%,#fff9 50%,transparent 51%);background-size:360px 360px;pointer-events:none}
+.lz{position:relative;flex:1;display:flex;flex-direction:column;padding:44px 28px 70px;gap:26px}
+.lz-arriba{text-align:center;display:flex;flex-direction:column;align-items:center;gap:4px}
+.lz-arriba .tema{color:var(--oro-vivo)}
+.lz-fecha{font-family:var(--f-titulo);font-style:italic;font-weight:600;font-size:clamp(54px,12vw,96px);line-height:1;color:var(--amarillo)}
+.lz-medio{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+.lz-medio>*{min-width:0}
+.lz-libro{position:relative;justify-self:center;width:min(300px,70%)}
+.lz-libro img{display:block;width:100%;border-radius:2px 6px 6px 2px;box-shadow:0 30px 50px #000a,0 0 0 1px #ffffff22}
+.lz-libro::before{content:"";position:absolute;left:0;top:0;bottom:0;width:14px;background:linear-gradient(90deg,#0005,#fff3 40%,#0002);border-radius:2px 0 0 2px;z-index:1}
+.lz-libro::after{content:"";position:absolute;inset:-40px;background:radial-gradient(circle,#f3c74f33,transparent 65%);z-index:-1}
+.lz-texto{display:flex;flex-direction:column;gap:12px}
+.lz-texto h2{color:#fff;font-size:clamp(36px,7vw,50px);margin:0}
+.lz-sub{font-size:16px;line-height:1.45;color:#dfe7f5}
+.lz-lema{font-family:var(--f-titulo);font-style:italic;font-weight:600;font-size:27px;color:var(--amarillo)}
+.lz-lista{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:8px;font-size:14.5px;color:#eef3fb}
+.lz-lista li{display:flex;gap:10px;align-items:baseline}
+.lz-lista li::before{content:"";flex:none;width:8px;height:8px;border-radius:50%;background:var(--oro-vivo);transform:translateY(-1px)}
+.lz-abajo{margin-top:auto;display:grid;grid-template-columns:1fr;gap:18px;align-items:center;border-top:1px solid #ffffff2e;padding-top:20px}
+.lz-idiomas{display:flex;align-items:center;gap:14px}
+.lz-idiomas img{width:46px;box-shadow:0 6px 12px #0008}
+.lz-idiomas p{font-family:var(--f-rotulo);font-weight:500;font-size:13px;letter-spacing:.06em;color:#dfe7f5}
+.lz-idiomas b{display:block;font-weight:600;font-size:15px;color:#fff;letter-spacing:.02em}
+.lz-autora{display:flex;align-items:center;gap:12px;justify-self:start}
+.lz-autora img{width:62px;height:62px;border-radius:50%;object-fit:cover;object-position:center 18%;border:2px solid var(--oro-vivo)}
+.lz-autora p{font-family:var(--f-rotulo);font-size:12.5px;color:#cdd8ec;line-height:1.35}
+.lz-autora b{display:block;font-family:var(--f-titulo);font-weight:600;font-size:21px;color:#fff;letter-spacing:0}
+.lanzamiento .folio{color:#cdd8ec}
+.lanzamiento .folio span:last-child{color:var(--amarillo)}
+/* ---- nuestros anunciantes: dos espacios iguales ---- */
+.anunciantes{display:flex;flex-direction:column;gap:22px;margin-top:18px}
+.anunciante{display:flex;flex-direction:column}
+.anunciante .marco{height:302px;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:4px 4px 0 0}
+.anunciante .marco img{max-width:100%;max-height:100%;display:block}
+.anunciante .barra{background:var(--cielo);color:#fff;font-family:var(--f-rotulo);font-size:13px;letter-spacing:.03em;text-align:center;padding:9px 14px;border-radius:0 0 4px 4px;border-bottom:3px solid var(--oro-vivo)}
+.anunciante .barra b{font-weight:600;color:var(--amarillo)}
+/* ---- tarifas: miniatura del formato ---- */
+.formato{display:block;width:34px;height:44px;border:1.5px solid var(--cielo);border-radius:2px;position:relative;margin-bottom:6px;background:var(--papel)}
+.formato::after{content:"";position:absolute;left:3px;right:3px;bottom:3px;background:var(--oro-vivo)}
+.formato.f-completa::after{top:3px}
+.formato.f-media::after{height:calc(50% - 4px)}
+.formato.f-franja::after{height:7px}
+.formato.f-cuarto::after{height:calc(50% - 4px);right:50%}
+.formato.f-paquete{border-style:dashed}
+.formato.f-paquete::after{top:3px;opacity:.45}
+@media (min-width:880px){
+  .lz{padding:52px 56px 76px}
+  .lz-medio{grid-template-columns:300px 1fr;gap:40px}
+  .lz-libro{width:300px}
+  .lz-abajo{grid-template-columns:1.2fr 1fr}
+  .lz-autora{justify-self:end}
+}
+/* ---- celular ---- */
+.ampliar{display:block;position:relative;color:inherit;text-decoration:none}
+.ampliar .lupa{display:none}
+.pagina-imagen .ampliar{height:100%}
+@media (min-width:880px){.mitad .ampliar{position:absolute;inset:0;overflow:hidden}}
+@media print{.mitad .ampliar{position:absolute;inset:0;overflow:hidden}}
+@media screen and (max-width:879px){
+  .revista:not(.hojear) .ampliar .lupa{display:table;position:static;margin:10px auto 0;background:#14264ae6;color:#fff;font-family:var(--f-rotulo);font-weight:600;font-size:12px;letter-spacing:.04em;padding:6px 12px;border-radius:99px;box-shadow:0 2px 8px #0005}
+  .revista:not(.hojear) .anunciante .marco{height:auto}
+  .revista:not(.hojear) .fe-verso{padding-right:110px}
+  .revista:not(.hojear) .fe-verso img{height:120px;right:8px}
+  .revista:not(.hojear) .look{grid-template-columns:72px 1fr;gap:14px;padding:14px}
+  .revista:not(.hojear) .look img{height:120px}
+  .revista:not(.hojear) .pagina{padding-left:20px;padding-right:20px}
+  .revista:not(.hojear) .pagina-imagen,.revista:not(.hojear) .mitad,.revista:not(.hojear) .portada,.revista:not(.hojear) .lanzamiento{padding:0!important}
+  .revista:not(.hojear) .folio{padding-inline:20px}
+}
+@media print{.ampliar .lupa{display:none!important}}
+/* ---- síguenos ---- */
+.siguenos{margin-top:auto;background:var(--cielo);border-radius:6px;border-bottom:4px solid var(--oro-vivo);padding:18px 22px;display:grid;grid-template-columns:64px 1fr;gap:6px 16px;align-items:center;color:#fff}
+.sello-s{width:64px;height:64px;grid-row:span 2}
+.s-txt{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px}
+.s-txt b{font-family:var(--f-titulo);font-weight:600;font-size:26px;color:var(--amarillo)}
+.usuario{font-family:var(--f-rotulo);font-weight:600;font-size:15px;letter-spacing:.04em;color:#fff}
+.s-nota{flex-basis:100%;font-family:var(--f-rotulo);font-size:12px;color:#cdd8ec}
+.redes{display:flex;flex-wrap:wrap;gap:10px 16px}
+.red{display:flex;align-items:center;gap:7px;color:#fff;text-decoration:none;font-family:var(--f-rotulo);font-weight:500;font-size:12.5px}
+.red .ic{width:30px;height:30px;border-radius:50%;display:grid;place-items:center;flex:none;box-shadow:0 0 0 2px #ffffff26}
+.red svg{width:18px;height:18px}
+.red:focus-visible{outline:2px solid var(--amarillo);outline-offset:3px;border-radius:99px}
+.s-pie{grid-column:1/-1;margin-top:8px;padding-top:10px;border-top:1px solid #ffffff2e;font-size:13px;color:#dfe7f5}
+/* ---- impresión: hoja carta exacta ---- */
+@page{size:letter;margin:0}
+@media print{
+  body{background:#fff;background-image:none}
+  .revista{padding:0;gap:0;display:block}
+  .aviso{display:none}
+  .pagina{width:8.5in;height:11in;max-width:none;box-shadow:none;break-after:page;padding:56px 56px 64px}
+  .portada{padding:0!important}
+  .franja{padding:30px 56px 26px}
+  .tapa{grid-template-columns:1fr 330px 1fr;gap:30px;padding:40px 44px 20px}
+  .sello-g{order:0;width:330px}
+  .temas.izq{text-align:right}
+  .temas.izq li{align-items:flex-end}
+  .folio{padding-inline:56px;bottom:26px}
+  .cols{grid-template-columns:1fr 1fr;gap:32px}
+  .carta{grid-template-columns:1.25fr .95fr;gap:40px}
+  .tendencias,.vinetas{grid-template-columns:1fr 1fr}
+  .vinetas{grid-template-rows:repeat(3,1fr)}
+  .anuncio-libro{grid-template-columns:150px 1fr}
+  .moda-par{grid-template-columns:1fr 1fr}
+  .novela-texto{columns:2}
+  .receta-cols{grid-template-columns:1fr 1.3fr}
+  .cuenta-tu-historia{grid-template-columns:1fr 1fr}
+  .lz{padding:52px 56px 76px}
+  .lz-medio{grid-template-columns:300px 1fr;gap:40px}
+  .lz-libro{width:300px}
+  .lz-abajo{grid-template-columns:1.2fr 1fr}
+  .lz-autora{justify-self:end}
+  .lz-fecha{font-size:96px}
+  .lz-texto h2{font-size:50px}
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+</style>
+
+<style>
+/* barra de idioma y de lectura */
+.barra{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;display:flex;justify-content:center;flex-wrap:wrap;gap:8px;padding:12px 16px 0}
+.grupo{display:flex;align-items:center;background:#0d1a36;border:1px solid #ffffff2e;border-radius:99px;padding:4px;gap:4px;box-shadow:0 6px 18px #0006}
+.grupo button{font-family:var(--f-rotulo);font-weight:500;font-size:14px;color:#dfe7f5;background:transparent;border:0;border-radius:99px;padding:8px 16px;cursor:pointer;min-height:36px}
+.grupo button[aria-pressed="true"]{background:var(--amarillo);color:var(--cielo)}
+.grupo button:focus-visible{outline:2px solid var(--amarillo);outline-offset:2px}
+.grupo button:disabled{opacity:.35;cursor:default}
+.grupo .flecha{font-size:20px;line-height:1;padding:6px 14px}
+.grupo .donde{font-family:var(--f-rotulo);font-weight:500;font-size:13px;color:#dfe7f5;min-width:112px;text-align:center;font-variant-numeric:tabular-nums}
+.solo-hojear{display:none}
+.modo-hojear .solo-hojear{display:flex}
+/* hojear: las hojas a tamaño carta, de dos en dos, escaladas a la pantalla */
+.mesa{margin:20px auto 40px;position:relative}
+.modo-hojear .mesa{overflow:hidden;box-shadow:0 26px 60px #000a}
+.revista.hojear{display:block;padding:0;position:absolute;top:0;left:0;width:1632px;height:1056px;transform-origin:0 0}
+.hojear .aviso{display:none}
+.hojear .pagina{position:absolute;top:0;display:none;width:816px;height:1056px;max-width:none;padding:56px 56px 64px;box-shadow:none}
+.hojear .pagina.ver{display:flex}
+.hojear .pagina.izq{left:0;cursor:w-resize}
+.hojear .pagina.der{left:816px;cursor:e-resize}
+.hojear .pagina.sola{left:0}
+.hojear .pagina.sola.der{cursor:e-resize}
+.hojear .pagina.izq::after,.hojear .pagina.der:not(.sola)::after{content:"";position:absolute;top:0;bottom:0;width:46px;pointer-events:none;z-index:3}
+.hojear .pagina.izq::after{right:0;background:linear-gradient(90deg,transparent,#14264a14 60%,#14264a2e)}
+.hojear .pagina.der:not(.sola)::after{left:0;background:linear-gradient(270deg,transparent,#14264a14 60%,#14264a33)}
+.hojear .portada{padding:0!important}
+.hojear .folio{padding-inline:56px;bottom:26px}
+.hojear .portada .folio{bottom:0}
+.hojear h2{font-size:50px}
+.hojear .cols{grid-template-columns:1fr 1fr;gap:32px}
+.hojear .carta{grid-template-columns:1.25fr .95fr;gap:40px}
+.hojear .tendencias,.hojear .vinetas{grid-template-columns:1fr 1fr}
+.hojear .vinetas{grid-template-rows:repeat(3,1fr)}
+.hojear .anuncio-libro{grid-template-columns:150px 1fr}
+.hojear .moda-par{grid-template-columns:1fr 1fr}
+.hojear .novela-texto{columns:2}
+.hojear .receta-cols{grid-template-columns:1fr 1.3fr}
+.hojear .mitad img{position:absolute;top:0;height:100%;width:200%;object-fit:cover}
+.hojear .mitad-izq img{left:0}
+.hojear .mitad-der img{left:-100%}
+.hojear .mitad .ampliar{position:absolute;inset:0;overflow:hidden}
+.hojear .pagina.mitad-izq::after,.hojear .pagina.mitad-der::after{width:30px}
+.hojear .cuenta-tu-historia{grid-template-columns:1fr 1fr}
+.hojear .lz{padding:52px 56px 76px}
+.hojear .lz-medio{grid-template-columns:300px 1fr;gap:40px}
+.hojear .lz-libro{width:300px}
+.hojear .lz-abajo{grid-template-columns:1.2fr 1fr}
+.hojear .lz-autora{justify-self:end}
+.hojear .lz-fecha{font-size:96px}
+.hojear .lz-texto h2{font-size:50px}
+.hojear .franja{padding:30px 56px 26px}
+.hojear .titulo-grande{font-size:124px}
+.hojear .subtitulo{font-size:34px}
+.hojear .subtitulo::before,.hojear .subtitulo::after{width:70px}
+.hojear .tapa{grid-template-columns:1fr 330px 1fr;gap:30px;padding:40px 44px 20px}
+.hojear .sello-g{order:0;width:330px}
+.hojear .temas.izq{text-align:right}
+.hojear .temas.izq li{align-items:flex-end}
+.hojear .tema-semana p{font-size:50px}
+.hojear .fe-verso p{font-size:46px}
+.hojear.entra-der .ver{animation:entraDer .45s ease both}
+.hojear.entra-izq .ver{animation:entraIzq .45s ease both}
+@keyframes entraDer{from{opacity:.25;transform:translateX(26px)}to{opacity:1;transform:none}}
+@keyframes entraIzq{from{opacity:.25;transform:translateX(-26px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion:reduce){.hojear.entra-der .ver,.hojear.entra-izq .ver{animation:none}}
+@media print{.barra{display:none}}
+</style>
+
+<nav class="barra" aria-label="Idioma y lectura / Language and reading">
+<div class="grupo"><button type="button" id="b-es" data-l="es" aria-pressed="true">Español</button><button type="button" id="b-en" data-l="en" aria-pressed="false">English</button></div>
+<div class="grupo"><button type="button" id="m-hojear" data-m="hojear" aria-pressed="true"><span data-es="Hojear" data-en="Flip through">Hojear</span></button><button type="button" id="m-todas" data-m="todas" aria-pressed="false"><span data-es="Ver todas" data-en="See all">Ver todas</span></button></div>
+<div class="grupo solo-hojear"><button type="button" class="flecha" id="atras" aria-label="Página anterior">‹</button><span class="donde" id="donde" aria-live="polite">Portada</span><button type="button" class="flecha" id="adelante" aria-label="Página siguiente">›</button></div>
+</nav>
+<div class="mesa" id="mesa">
+<main class="revista" lang="es">
+
+<!-- 1 · PORTADA -->
+<section class="pagina pagina-imagen">
+  <a class="ampliar" href="img/portada-es.jpg" target="_blank" rel="noopener"><img src="img/portada-es.jpg" alt="Portada de Hey! by Hanna's Universe, edición de lanzamiento, número 1, gratis: una mamá y su hija preparan una mochila rosa con un conejo, un cachorro y un gato. Tema del mes: Hijos capaces, el arte de dejarlos intentar. También: Para maestros, Mujeres con propósito, Momento de fe, Novela por entregas, Moda infantil, Para los niños y el lanzamiento de Equipa tus hijos para la vida."></a>
+  <div class="folio oculto"><span>hannasuniverse.com</span><span>Número 1</span></div>
+</section>
+
+<!-- LANZAMIENTO -->
+<section class="pagina lanzamiento">
+  <div class="lz-estrellas"></div>
+  <div class="lz">
+    <div class="lz-arriba"><span class="tema">Lanzamiento</span><p class="lz-fecha">9 de octubre</p></div>
+    <div class="lz-medio">
+      <div class="lz-libro"><img src="img/equipa-grande.jpg" alt="Portada de Equipa tus hijos para la vida, de Rosalina Rangel"></div>
+      <div class="lz-texto">
+        <h2>Equipa tus hijos para la vida</h2>
+        <p class="lz-sub">Cómo desarrollar desde hoy autonomía, responsabilidad y criterio mientras dejas de hacerlo todo por ellos.</p>
+        <p class="lz-lema">Sostener hoy. Soltar mañana.</p>
+        <ul class="lz-lista"><li>Doce capítulos prácticos para el día a día de tu familia.</li><li>Cada capítulo cierra con una oración, una recompensa para ti y una escena de Hanna.</li><li>Nace de la investigación y de tres décadas en la educación.</li></ul>
+      </div>
+    </div>
+    <div class="lz-abajo">
+      <div class="lz-idiomas"><img src="img/equipa.jpg" alt="Edición en español"><img src="img/equip.jpg" alt="Edición en inglés"><img src="img/equipe.jpg" alt="Edición en portugués"><p><b>En Amazon</b>En español, inglés y portugués</p></div>
+      <div class="lz-autora"><img src="img/autora.jpg" alt="Rosalina Rangel"><p><b>Rosalina Rangel</b>Educadora y escritora · Hanna's Universe</p></div>
+    </div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>2</span></div>
+</section>
+
+<!-- 2 · CARTA E ÍNDICE -->
+<section class="pagina" id="carta">
+  <div class="seccion">Carta de Rosalina</div>
+  <h2>Bienvenidos al primer número de Hey! by Hanna's Universe</h2>
+  <div class="carta">
+    <div class="texto">
+      <p>Querida familia:</p>
+      <p>Hoy nace nuestra revista, y me alegra mucho que la tengas en tus manos. Cada mes vas a encontrar aquí algo para ti, algo para la maestra de tus hijos y algo para ellos: una historieta para leer juntos y una hoja para pintar con crayones, en la mesa de la cocina.</p>
+      <p>Este mes lanzo mi libro <i>Equipa tus hijos para la vida</i>, así que el tema de este mes es la autonomía: esas pequeñas tareas que nuestros hijos ya pueden hacer por su cuenta. Empieza con una sola. Dale tiempo. Míralo lograrlo.</p>
+      <p>Imprime las páginas de los niños, comparte la revista con otra mamá y cuéntame cómo les va. Aquí estaré el próximo mes.</p>
+      <p class="adios">Con cariño, Rosalina</p>
+    </div>
+    <div>
+      <ul class="indice">
+        <li><span class="n">4</span><div><b>Para papás</b><span>Déjalo intentar</span></div></li>
+        <li><span class="n">5</span><div><b>Para maestros</b><span>La mochila lista</span></div></li>
+        <li><span class="n">6</span><div><b>Momento de fe</b><span>Todo lo puedo</span></div></li>
+        <li><span class="n">8</span><div><b>Mujeres con propósito</b><span>Una historia de vida</span></div></li>
+        <li><span class="n">10</span><div><b>Moda infantil</b><span>Otoño suave y tejido</span></div></li>
+        <li><span class="n">13</span><div><b>Novela por entregas</b><span>Los secretos de la buhardilla</span></div></li>
+        <li><span class="n">16</span><div><b>Historieta</b><span>La mochila de Hanna</span></div></li>
+        <li><span class="n">17</span><div><b>Para pintar</b><span>Las mariposas monarca</span></div></li>
+        <li><span class="n">18</span><div><b>Anúnciate</b><span>Tarifas para tu negocio</span></div></li>
+      </ul>
+      <div class="imprime">
+        <img src="img/dogui.png" alt="Dogui, el perrito">
+        <p>Imprime las páginas 16 y 17 en hoja carta. Son para los niños, con lápices de colores y la pantalla apagada.</p>
+      </div>
+      <div class="pauta cuarto"><b>Espacio publicitario · 1/4 de página</b><span>Tu marca aquí</span><small>Ver tarifas en la página 18</small></div>
+    </div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe</span><span>3</span></div>
+</section>
+
+<!-- 3 · PAPÁS -->
+<section class="pagina" id="papas">
+  <div class="seccion">Para papás</div>
+  <h2>Déjalo intentar: tres minutos que forman su autonomía</h2>
+  <p class="entrada">Mañana, cuando tu hijo quiera abrocharse los zapatos, regálale tres minutos. En ellos prueba, se equivoca, vuelve a probar y descubre que sus manos pueden.</p>
+  <p class="firma">Por Rosalina Rangel · autora de <i>Equipa tus hijos para la vida</i></p>
+  <div class="cols">
+    <div class="cuerpo">
+      <p><span class="ab">Elige una sola tarea.</span> Esta semana basta con una: ponerse los zapatos, servir su cereal, guardar sus juguetes o preparar su mochila. Díselo con alegría: «Desde hoy, esto lo haces tú, y yo te acompaño».</p>
+      <p><span class="ab">Acompaña con las manos quietas.</span> Siéntate a su lado y míralo trabajar. Si pide ayuda, pregúntale primero: «¿Qué crees que sigue?». Muchas veces la respuesta ya está en él.</p>
+      <p><span class="ab">Celebra el esfuerzo.</span> Dile lo que viste: «Lo intentaste tres veces y lo lograste». Esa frase le enseña que la constancia da fruto, y la va a recordar la próxima vez que algo le cueste.</p>
+      <p><span class="ab">Planea el tiempo.</span> Levántense diez minutos antes. Con tiempo de sobra, la paciencia llega sola y la mañana se vuelve un rato para aprender juntos.</p>
+    </div>
+    <div class="cuerpo">
+      <div class="recuadro">
+        <h3>Para esta semana</h3>
+        <ul class="lista">
+          <li>Elige una tarea y díselo el domingo en la noche.</li>
+          <li>Dale tres minutos cada mañana.</li>
+          <li>Pregunta «¿qué crees que sigue?» antes de ayudar.</li>
+          <li>Celebra el esfuerzo con palabras concretas.</li>
+          <li>El sábado, cuéntenle a papá o a la abuela lo que aprendió.</li>
+        </ul>
+      </div>
+      <blockquote class="versiculo">Instruye al niño en su camino, y aun cuando fuere viejo no se apartará de él.<cite>Proverbios 22:6 · RVR1960</cite></blockquote>
+      <p>Cada tarea pequeña que tu hijo aprende hoy es una herramienta que llevará toda la vida. Así se equipa a un niño: con paciencia, un día a la vez.</p>
+    </div>
+  </div>
+  <a class="pauta-libro" href="https://www.amazon.com/dp/B0GZX192QX" target="_blank" rel="noopener"><img src="img/libro-devocional-es.jpg" alt="Portada del devocional El Universo de Hanna"><div class="info"><b>Ya a la venta en Amazon</b><span class="t">El Universo de Hanna</span><span class="d">Devocional de 21 días para niños de 5 a 9 años</span></div><div class="cta"><span class="p">$14.99 USD</span><span class="c">Búscalo en Amazon</span></div></a>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>4</span></div>
+</section>
+
+<!-- 4 · MAESTROS -->
+<section class="pagina" id="maestros">
+  <div class="seccion">Para maestros</div>
+  <h2>La mochila lista: una rutina de cinco pasos para el salón</h2>
+  <p class="entrada">Los últimos diez minutos del día enseñan orden, responsabilidad y compañerismo. Convierte la salida en una rutina que tus alumnos hagan por su cuenta.</p>
+  <div class="cols">
+    <ol class="pasos">
+      <li><div><b>Pon la lista a la vista.</b>Dibuja en una cartulina lo que va en la mochila: cuaderno, lápices, lonchera, botella y suéter. Con dibujos, hasta los que aún están aprendiendo a leer la siguen.</div></li>
+      <li><div><b>Usa siempre la misma señal.</b>Una canción corta anuncia que empieza la rutina. A la segunda semana, los niños se mueven solos al oírla.</div></li>
+      <li><div><b>Revisen en parejas.</b>Cada niño revisa la mochila de su compañero con la lista. Así aprenden a ayudar con respeto.</div></li>
+      <li><div><b>Dejen el lugar listo.</b>Silla arriba, mesa limpia y lápices en su caja. El salón queda preparado para mañana.</div></li>
+      <li><div><b>Cierren con una frase.</b>Cada niño completa en voz alta «Hoy aprendí…» antes de salir por la puerta.</div></li>
+    </ol>
+    <div class="cuerpo">
+      <div class="recuadro">
+        <h3>Dale un nombre a cada rol</h3>
+        <p>El guardián de la lista, el capitán del orden, el encargado de la canción. Cámbialos cada lunes para que todos pasen por cada puesto.</p>
+      </div>
+      <div class="recuadro">
+        <h3>Llévalo a casa</h3>
+        <p>Manda la misma lista impresa a las familias. Si en casa preparan la mochila la noche anterior con los mismos dibujos, el niño practica la rutina dos veces al día.</p>
+      </div>
+      <p>En este número, la historieta de la página 16 cuenta justo esta historia. Léela con tus alumnos antes de empezar la rutina.</p>
+    </div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>5</span></div>
+</section>
+
+<!-- 5 · FE -->
+<section class="pagina" id="fe">
+  <div class="seccion">Momento de fe</div>
+  <h2>Un versículo para la puerta del refrigerador</h2>
+  <div class="fe-verso">
+    <p>«Todo lo puedo en Cristo que me fortalece.»</p>
+    <cite>Filipenses 4:13 · RVR1960</cite>
+    <img src="img/sagu.png" alt="">
+  </div>
+  <div class="cols">
+    <div class="cuerpo">
+      <p><span class="ab">Escríbanlo juntos.</span> Tu hijo decora una tarjeta y tú escribes el versículo. Pónganla en la puerta del refrigerador, a la altura de sus ojos.</p>
+      <p><span class="ab">Léanlo cada mañana.</span> Antes de salir, tú empiezas la frase y él la termina. En una semana se la sabrá de memoria.</p>
+      <p><span class="ab">Úsenlo cuando algo cueste.</span> Cuando tu hijo se atore con una tarea, recuérdale en voz baja: «Todo lo puedo…». Dios le da fuerzas para intentar otra vez.</p>
+    </div>
+    <div class="cuerpo">
+      <div class="recuadro">
+        <h3>Oración para decir juntos</h3>
+        <p class="oracion">Papito Dios, gracias por mis manos y por mi cabeza que aprende. Ayúdame a intentar otra vez cuando algo me cueste. Tú estás conmigo en la escuela, en la casa y en el camino. En el nombre de Jesús, amén.</p>
+      </div>
+      <div class="recuadro">
+        <h3>El frasco del «yo puedo»</h3>
+        <p>Cada vez que tu hijo logre algo nuevo, escríbanlo en un papelito y guárdenlo en un frasco. El domingo lean todos los papelitos y den gracias a Dios por cada uno.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>6</span></div>
+</section>
+
+<!-- NUESTROS ANUNCIANTES -->
+<section class="pagina">
+  <div class="seccion">Nuestros anunciantes</div>
+  <h2 style="font-size:40px">Negocios que hacen posible esta revista</h2>
+  <p class="entrada" style="font-size:15.5px;margin-top:8px">Apóyalos: cada anuncio ayuda a que Hey! by Hanna's Universe siga llegando gratis a tu casa.</p>
+  <div class="anunciantes"><div class="anunciante"><div class="marco" style="background:#fef5f3"><img src="img/anuncio-autenticas.jpg" alt="Anuncio de Auténticas, centro de belleza: limpieza facial profunda, lifting de pestañas, depilación corporal y diseño de cejas."></div><p class="barra"><b>Auténticas, centro de belleza</b><br>Calle 18c #25-11 Acacias, Cali · WhatsApp +57 313 675 4861 · @autenticascentrodebelleza</p></div><div class="anunciante"><div class="marco" style="background:#efe3d6"><img src="img/anuncio-anamora.jpg" alt="Anuncio de Ana Mora Beauty Studio: maquillaje y peinado profesional para novias, quinceañeras y eventos sociales."></div><p class="barra"><b>Ana Mora Beauty Studio</b><br>Cali, Colombia · WhatsApp +57 320 311 3320</p></div></div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>7</span></div>
+</section>
+
+<!-- MUJERES CON PROPÓSITO -->
+<section class="pagina">
+  <div class="seccion">Mujeres con propósito</div>
+  <div class="foto-invitada con-foto"><img src="img/invitada-1.jpg" alt="Foto de la invitada de Mujeres con propósito"></div>
+  <div class="invitada">
+    <h2>María Fernanda Tascón</h2>
+    <p class="quien">Auténticas, centro de belleza · Cali, Colombia</p>
+    <p class="cita-grande">«Todo lo que uno hace con el corazón da resultado, sí o sí.»</p>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>8</span></div>
+</section>
+
+<section class="pagina">
+  <div class="seccion">Mujeres con propósito · La entrevista</div>
+  <p class="entrada" style="margin-top:12px">Cada mes, una mujer que emprende nos cuenta su historia: lo que la movió a empezar, lo que aprendió en el camino y la fe que la sostuvo.</p>
+  <div class="entrevista con-respuestas"><div><p class="pregunta">¿Cómo empezó tu emprendimiento?</p><p class="resp">Mi emprendimiento empezó como un sueño: un sueño de ser independiente, de poder tener más libertad y no limitar mis ingresos a un sueldo, y el sueño de ser una mamá presente.</p></div><div><p class="pregunta">¿Cuál fue tu momento más difícil y qué te sostuvo?</p><p class="resp">Mi momento más difícil fue empezar, porque tenía dos trabajos, uno de ocho o nueve horas, de tiempo completo, y tuve que empezar en mi apartamento, en una habitación, sin clientes, sin nombre. Empezar completamente desde cero, con muchos nervios, con muchas dudas. ¿Qué me sostuvo? Yo siempre digo que Dios es mi pilar fundamental y quien me sostiene, y la fe en lo que yo sabía que era capaz.</p></div><div><p class="pregunta">¿Qué lugar tiene la fe en tu trabajo?</p><p class="resp">Yo siento que la fe es súper indispensable, porque por la fe todos los días pienso que van a llegar clientes, que me van a recomendar. Siempre digo que sea Dios obrando por medio de mí, pero también siempre hago las cosas desde el corazón para tener los mejores resultados.</p></div><div><p class="pregunta">¿Cómo acompañas a tu familia mientras emprendes?</p><p class="resp">Emprender me permite manejar mis horarios y poder ser una mamá presente, poder estar para mi hijo, sobre todo ahorita, en esta etapa tan necesaria de ser tan bebecito. Mi esposo y yo nos turnamos el cuidado del bebé, o sea que el bebé siempre está acompañado por uno de nosotros, y eso es súper especial para mí, súper importante.</p></div><div><p class="pregunta">¿Qué le dirías a una mujer que está por empezar?</p><p class="resp">Que empiece, que arranque. Que da miedo, que no es fácil, no es un camino lineal, tiene altos y bajos, pero que definitivamente todo lo que uno hace con el corazón, con pasión, con respeto y con vocación da resultado, sí o sí. Hay que tener mucha fe, mucha constancia, mucha disciplina. Y hay que empezar, porque empezando es que se aprende, y equivocándose también: cada vez que nos equivocamos es una manera más de aprender cómo podemos hacer las cosas. Entonces, hay que hacerle.</p></div></div>
+  <div class="cuenta-tu-historia">
+    <div class="recuadro"><h3>Conoce su negocio</h3><p><b>Auténticas, centro de belleza.</b> Limpieza facial profunda, lifting de pestañas, depilación corporal y diseño de cejas.</p><p style="margin-top:6px;font-size:13.5px">Calle 18c #25-11 Acacias, Cali<br>WhatsApp +57 313 675 4861<br>Instagram @autenticascentrodebelleza</p></div>
+    <div class="recuadro"><h3>¿Tienes una historia que contar?</h3><p>Escríbenos a rlrangel.quintero@gmail.com. Tu testimonio puede inspirar a otra mujer a dar el primer paso.</p></div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>9</span></div>
+</section>
+
+<!-- 6 · MODA -->
+<section class="pagina mitad mitad-izq">
+  <a class="ampliar" href="img/moda-collage-es.jpg" target="_blank" rel="noopener"><img src="img/moda-collage-es.jpg" alt="Moda infantil, otoño 2026. Cuatro tendencias: 1, el tejido regresa; 2, colores de tierra; 3, prendas que combinan con todo; 4, zapatos que se ponen solos. Abajo, la paleta de la temporada: camel, salvia, blanco roto, gris perla, chocolate y un toque de color."><span class="lupa">Toca para ver en grande</span></a>
+  <div class="folio oculto"><span>Hey! by Hanna's Universe · Número 1</span><span>10</span></div>
+</section>
+
+<section class="pagina mitad mitad-der">
+  <img src="img/moda-collage-es.jpg" alt="">
+  <div class="folio oculto"><span>Hey! by Hanna's Universe · Número 1</span><span>11</span></div>
+</section>
+
+<section class="pagina">
+  <div class="seccion">Moda infantil · Otoño 2026</div>
+  <h2>El look de Hanna este mes</h2>
+  <div class="look" style="margin-top:18px">
+    <img src="img/hanna.png" alt="Hanna con su camiseta amarilla">
+    <div class="cuerpo" style="gap:8px">
+      <p>Camiseta amarilla, short de mezclilla y zapatos cafés de piel. Para las mañanas frías, agrégale un cárdigan tejido color camel: el amarillo se ve precioso con los tonos de tierra.</p>
+      <p><span class="ab">Tip para mamá:</span> el domingo en la noche deja lista la ropa de la semana, un conjunto por día. Las mañanas fluyen y tu hijo practica vestirse solo con lo que tú elegiste.</p>
+    </div>
+  </div>
+  <h3 style="margin-top:26px">Más ideas para vestir este otoño</h3>
+  <div class="ideas">
+    <figure class="foto"><img src="img/moda-tejido.jpg" alt="Una niña con cárdigan tejido color crema y un niño con suéter tejido café"><figcaption>Cárdigan crema y suéter tejido café.</figcaption></figure>
+    <figure class="foto"><img src="img/moda-combina.jpg" alt="Un niño pequeño con cárdigan tejido, camiseta a rayas y pantalón de cuadros"><figcaption>Cárdigan, rayas y cuadros.</figcaption></figure>
+    <figure class="foto"><img src="img/moda-tenis.jpg" alt="Tenis blancos con velcro sobre hojas de otoño"><figcaption>Tenis con velcro.</figcaption></figure>
+  </div>
+  <p class="fuente" style="margin-top:14px">Tendencias de las colecciones infantiles otoño/invierno 2026-2027 publicadas por Mundo Franquicia y General de Franquicias. Fotografías de ejemplo hechas con inteligencia artificial.</p>
+  <a class="pauta-libro" href="https://www.amazon.com/dp/B0GXZ3T1JF" target="_blank" rel="noopener"><img src="img/libro-promesas-es.jpg" alt="Portada de Promesas de Dios"><div class="info"><b>Ya a la venta en Amazon</b><span class="t">Promesas de Dios</span><span class="d">Para niños de 4 a 9 años, con Hanna y sus amigos</span></div><div class="cta"><span class="p">$13.99 USD</span><span class="c">Búscalo en Amazon</span></div></a>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>12</span></div>
+</section>
+
+<!-- NOVELA INICIO -->
+<section class="pagina novela">
+  <div class="seccion">Novela por entregas</div>
+  <h2>Los secretos de la buhardilla</h2>
+  <p class="capitulo">Capítulo 1 · El cuaderno de Mrs. Smith</p>
+  <p class="entrega">Entrega 1 de 4</p>
+  <p class="firma">Por Rosalina Rangel</p>
+  <div class="ilustracion completa"><img src="img/novela-cap1-e1.jpg" alt="Ilustración: Hanna sube la escalera de caracol con la llave dorada, seguida por Michiko, Sagu y Dogui; y los cuatro amigos abren un baúl donde brilla un cuaderno viejo."></div>
+  <div class="novela-texto">
+    <p>La casa nueva aún olía a pintura fresca y a sueños cumplidos. Las paredes de la sala estaban casi desnudas, y las cajas de cartón se amontonaban formando pequeñas montañas en el suelo de madera.</p>
+    <p>En la mano, Hanna sostenía la llave dorada que acababa de encontrar en el dintel de la escalera de caracol. La tentación de subir a la prohibida buhardilla era enorme, pero antes de dar un paso en falso, miró a sus tres entrañables amigos: Michiko, Dogui y Sagu.</p>
+    <p>—No deberías subir —advirtió Michiko, cruzándose de brazos con su habitual seriedad—. Mamá fue muy clara. La norma es esperar a que se revise el espacio por seguridad. Romper una regla a escondidas no está bien.</p>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>13</span></div>
+</section>
+
+<section class="pagina novela">
+  <div class="seccion">Novela por entregas · Los secretos de la buhardilla</div>
+  <div class="novela-texto sigue">
+    <p>Dogui, en cambio, movía la cola con los ojos brillantes, asomándose al primer escalón:</p>
+    <p>—¡Pero huele a aventura, a historia vieja! ¿Qué tal si nos necesitan allá arriba?</p>
+    <p>Hanna se detuvo, sintiendo el conflicto en el pecho. Sabía que Michiko tenía razón en cuanto al respeto, pero la curiosidad la abrasaba. Fue entonces cuando Sagu, el tierno conejito del grupo, se colocó entre los dos moviendo suavemente sus largas orejas. Su presencia era el equilibrio perfecto: ni la rigidez absoluta, ni el impulso sin cuidado.</p>
+    <p>—Michiko tiene razón en cuidar el orden y el respeto a mamá —dijo Sagu con voz serena y una sonrisa tranquila—, pero Dogui también nos recuerda que la curiosidad es la forma en que el mundo nos invita a aprender. No tenemos que desobedecer, Hanna. Podemos hacer algo mejor: ir con la verdad.</p>
+    <p>Hanna parpadeó, sintiendo que la tensión se disipaba.</p>
+    <p>—¿De verdad crees que nos dejará? —preguntó con ilusión.</p>
+    <p>—Preguntar con honestidad siempre es el camino correcto —respondió Sagu asintiendo con dulzura.</p>
+    <p>Sin pensarlo más, Hanna bajó corriendo las escaleras, cruzó la sala y llegó hasta la cocina, donde mamá terminaba de limpiar.</p>
+    <p>—Mamá, mamá, por favor… encontramos esta llave dorada y la escalera de caracol lleva a la buhardilla —le rogó Hanna con los ojitos brillantes, abrazando a sus tres amigos—. Te prometo que no voy sola, voy acompañada de Dogui, Michiko y Sagu. Te lo juro, nos portaremos con muchísimo cuidado. ¿Nos dejas echar un vistazo?</p>
+    <p>Mamá se quedó mirando a Hanna, vio la sinceridad en su rostro, la compañía de sus fieles amigos y soltó una sonrisa tierna y comprensiva.</p>
+    <p>—Está bien, mi amor —cedió mamá con cariño, entregándole un trapo—. Pero con una condición: lleva este plumero para quitar el polvo y solo pueden abrir una caja. Nada de correr riesgos.</p>
+    <p>—¡Sí! ¡Gracias, mami! —gritó Hanna dando un brinco.</p>
+    <p>De regreso en la escalera, Sagu dio un pequeño saltito de alegría y movió sus orejitas, felicitándola.</p>
+    <p>—¿Ves, Hanna? Elegir la honestidad en lugar de la desobediencia nos da paz en el corazón y abre las puertas de la mejor manera. Ahora… ¡corran a la buhardilla! —exclamó Sagu con una sonrisa cómplice, sintiendo cómo el olor a guardado y a misterio flotaba en el aire—. ¡Ese polvo de los recuerdos nos está esperando, hay muchísimos secretos por descubrir!</p>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>14</span></div>
+</section>
+
+<section class="pagina novela">
+  <div class="seccion">Novela por entregas · Los secretos de la buhardilla</div>
+  <div class="novela-texto sigue">
+    <p>Con el corazón lleno de emoción, los cuatro amigos empujaron la puerta de madera. La buhardilla estaba sumida en una penumbra cálida, repleta de cajas misteriosas firmadas por la enigmática Familia Smith.</p>
+    <p>Siguiendo estrictamente la regla de mamá, Hanna se acercó con cuidado a una sola caja, la más grande y polvorienta del rincón. Con la ayuda de Dogui, que apartó un poco las telarañas con la nariz, y bajo la atenta mirada de Michiko y Sagu, levantaron la pesada tapa de cartón.</p>
+    <p>Una pequeña nube de polvo brillante flotó en el aire iluminado por el rayo de sol de la ventana. Dentro no había simples objetos viejos: había un desfile de tesoros olvidados. Vestidos de terciopelo con botones de nácar, pequeños juguetes de madera tallados a mano que parecían guardar risas de otra época, y fotografías sepia de rostros sonrientes que los miraban desde el pasado.</p>
+    <p>Pero entre todo aquello, justo en el centro, descansaba un objeto que parecía emitir un brillo propio. Era un cuaderno viejo de lomo de cuero gastado y páginas amarillentas.</p>
+    <p>Apenas Hanna estiró la mano para tocarlo, sintió una extraña y cálida corriente, como si el cuaderno mismo los estuviera llamando por su nombre desde las profundidades del tiempo. Con manos temblorosas, lo levantó y abrió la primera página. Al ver lo que estaba escrito allí, los ojos de Hanna, de Michiko, de Dogui y de Sagu se desbordaron de asombro absoluto…</p>
+    <p>—Esto no es solo papel… —susurró Hanna sin poder parpadear.</p>
+  </div>
+  <p class="continuara">La historia continúa en el número 2…</p>
+  <div class="conversar"><h3>Para conversar en familia</h3><p>¿Qué crees que encontró Hanna escrito en el cuaderno? Escríbelo o dibújalo aquí, y en el próximo número lo descubrimos.</p><div class="renglones-libres"></div></div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>15</span></div>
+</section>
+<!-- NOVELA FIN -->
+
+<!-- 7 · HISTORIETA -->
+<section class="pagina pagina-imagen">
+  <a class="ampliar" href="img/historieta-es.jpg" target="_blank" rel="noopener"><img src="img/historieta-es.jpg" alt="Historieta La mochila de Hanna, en seis viñetas: Hanna quiere preparar su mochila solita; Dogui duda; Michiko recuerda la regla; Sagu pregunta qué necesita para aprender; Hanna hace su lista; y da gracias a Papito Dios. Al pie: ¿Qué cosa puedes empezar a preparar tú solo esta semana?"><span class="lupa">Toca para ver en grande</span></a>
+  <div class="folio oculto"><span>Hey! by Hanna's Universe · Número 1</span><span>16</span></div>
+</section>
+
+<!-- 8 · PARA PINTAR -->
+<section class="pagina pintar" id="pintar">
+  <div class="seccion">Para tus hijos · Hoja para pintar</div>
+  <h2 style="font-size:40px">Las mariposas monarca viajan a México</h2>
+  <p style="margin-top:8px;font-size:14.5px">En otoño, millones de mariposas monarca vuelan desde Canadá y Estados Unidos hasta los bosques de Michoacán y el Estado de México. ¡Píntala de naranja y negro, con sus puntitos blancos!</p>
+  <svg viewBox="0 0 700 690" role="img" aria-label="Dibujo para pintar: una mariposa monarca sobre flores, con sol, nubes y un versículo" fill="none" stroke="#1b2433" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- sol -->
+    <g transform="translate(610 80)">
+      <circle r="42" fill="#fff"/>
+      <g stroke-width="3">
+        <path d="M0-58v-18M0 58v18M-58 0h-18M58 0h18M41-41l13-13M-41 41l-13 13M41 41l13 13M-41-41l-13-13"/>
+      </g>
+      <path d="M-14-6a4 4 0 1 0 0.1 0M14-6a4 4 0 1 0 0.1 0M-14 12q14 12 28 0"/>
+    </g>
+    <!-- nubes -->
+    <path fill="#fff" d="M60 110q0-30 30-30q10-26 40-20q24-12 42 12q30 0 28 30q0 20-24 20h-94q-22 0-22-12z"/>
+    <path fill="#fff" d="M430 60q0-22 22-22q10-20 32-14q18-8 30 10q22 0 20 22q0 14-18 14h-70q-16 0-16-10z"/>
+    <!-- mariposa -->
+    <g transform="translate(350 300)">
+      <g id="ala">
+        <path fill="#fff" d="M-6-30C-50-110-150-175-235-160C-270-152-262-95-235-50C-205 0-130 30-8 22Z"/>
+        <path d="M-10-24Q-110-90-222-148M-10-16Q-130-60-246-100M-10-6Q-120-20-230-52M-10 6Q-90 20-160 26"/>
+        <path fill="#fff" d="M-6 28C-90 26-175 50-190 120C-205 190-140 245-80 225C-30 208-10 130-6 50Z"/>
+        <path d="M-10 36Q-90 70-178 112M-10 44Q-80 120-150 206M-10 52Q-40 150-86 222"/>
+        <g fill="#fff" stroke-width="2.6">
+          <circle cx="-222" cy="-130" r="7"/><circle cx="-246" cy="-110" r="6"/><circle cx="-250" cy="-84" r="6"/><circle cx="-238" cy="-62" r="6"/>
+          <circle cx="-196" cy="-150" r="6"/><circle cx="-168" cy="-156" r="5"/><circle cx="-210" cy="-30" r="5"/>
+          <circle cx="-176" cy="150" r="6"/><circle cx="-168" cy="178" r="6"/><circle cx="-148" cy="204" r="6"/><circle cx="-118" cy="220" r="6"/><circle cx="-180" cy="122" r="5"/>
+        </g>
+      </g>
+      <use href="#ala" transform="scale(-1 1)"/>
+      <ellipse cx="0" cy="40" rx="13" ry="82" fill="#fff"/>
+      <circle cx="0" cy="-52" r="18" fill="#fff"/>
+      <path d="M-6-68Q-30-120-58-138M6-68Q30-120 58-138"/>
+      <circle cx="-60" cy="-140" r="7" fill="#fff"/><circle cx="60" cy="-140" r="7" fill="#fff"/>
+      <path d="M-7-56a2.5 2.5 0 1 0 .1 0M7-56a2.5 2.5 0 1 0 .1 0M-6-44q6 5 12 0"/>
+    </g>
+    <!-- colinas -->
+    <path fill="#fff" d="M0 610Q120 540 250 590Q380 640 480 580Q590 530 700 590V690H0Z"/>
+    <!-- flores -->
+    <g transform="translate(90 590)">
+      <path d="M0 12v28M0 30q-20-2-26-16"/>
+      <g fill="#fff"><ellipse cx="0" cy="-22" rx="11" ry="20"/><ellipse cx="0" cy="22" rx="11" ry="20" transform="rotate(0)"/><ellipse cx="-22" cy="0" rx="20" ry="11"/><ellipse cx="22" cy="0" rx="20" ry="11"/><ellipse cx="16" cy="-16" rx="10" ry="18" transform="rotate(45 16 -16)"/><ellipse cx="-16" cy="16" rx="10" ry="18" transform="rotate(45 -16 16)"/><ellipse cx="-16" cy="-16" rx="10" ry="18" transform="rotate(-45 -16 -16)"/><ellipse cx="16" cy="16" rx="10" ry="18" transform="rotate(-45 16 16)"/><circle r="12"/></g>
+    </g>
+    <g transform="translate(610 600) scale(.85)">
+      <path d="M0 12v28M0 30q20-2 26-16"/>
+      <g fill="#fff"><ellipse cx="0" cy="-22" rx="11" ry="20"/><ellipse cx="0" cy="22" rx="11" ry="20"/><ellipse cx="-22" cy="0" rx="20" ry="11"/><ellipse cx="22" cy="0" rx="20" ry="11"/><ellipse cx="16" cy="-16" rx="10" ry="18" transform="rotate(45 16 -16)"/><ellipse cx="-16" cy="16" rx="10" ry="18" transform="rotate(45 -16 16)"/><ellipse cx="-16" cy="-16" rx="10" ry="18" transform="rotate(-45 -16 -16)"/><ellipse cx="16" cy="16" rx="10" ry="18" transform="rotate(-45 16 16)"/><circle r="12"/></g>
+    </g>
+    <g transform="translate(470 630) scale(.6)">
+      <g fill="#fff"><ellipse cx="0" cy="-22" rx="11" ry="20"/><ellipse cx="0" cy="22" rx="11" ry="20"/><ellipse cx="-22" cy="0" rx="20" ry="11"/><ellipse cx="22" cy="0" rx="20" ry="11"/><circle r="12"/></g>
+    </g>
+    <!-- mariposa chiquita -->
+    <g transform="translate(96 470) rotate(-16) scale(.24)">
+      <use href="#ala"/><use href="#ala" transform="scale(-1 1)"/>
+      <ellipse cx="0" cy="40" rx="13" ry="82" fill="#fff"/>
+    </g>
+    <!-- versículo -->
+    <text x="350" y="672" text-anchor="middle" fill="#fff" stroke="#1b2433" stroke-width="1.6" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="28">El Señor guardará tu salida y tu entrada</text>
+  </svg>
+  <p class="fuente" style="text-align:center">Salmo 121:8 · NBLA</p>
+  <p class="nombre">Mi nombre: <i></i> Mi edad: <i style="flex:.3"></i></p>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>17</span></div>
+</section>
+
+<!-- 9 · ANUNCIOS -->
+<section class="pagina" id="anuncios">
+  <div class="seccion">Anuncios</div>
+  <h2 style="font-size:38px;margin-top:22px">Tu anuncio aquí</h2>
+  <p style="margin-top:8px;max-width:62ch">Hey! by Hanna's Universe llega cada mes a familias, maestros e iglesias. Si tu negocio acompaña a los niños y a sus familias, este es tu lugar: librerías, escuelas, ropa y juguetes, clases, emprendimientos de mamás.</p>
+  <p class="oferta">Precios de lanzamiento · 50% de descuento para los 10 primeros anunciantes</p>
+  <div class="espacios">
+    <div class="espacio"><i class="formato f-completa"></i><b>Página completa</b><span class="antes">$20 USD</span><span class="precio">$10 <small>USD</small></span><span>por número</span></div>
+    <div class="espacio"><i class="formato f-media"></i><b>Media página</b><span class="antes">$12 USD</span><span class="precio">$6 <small>USD</small></span><span>por número</span></div>
+    <div class="espacio"><i class="formato f-franja"></i><b>Franja</b><span class="antes">$8 USD</span><span class="precio">$4 <small>USD</small></span><span>al pie de un artículo</span></div>
+    <div class="espacio"><i class="formato f-cuarto"></i><b>Cuarto de página</b><span class="antes">$6 USD</span><span class="precio">$3 <small>USD</small></span><span>por número</span></div>
+    <div class="espacio"><i class="formato f-paquete"></i><b>Paquete de 3 meses</b><span class="precio">+1 <small>de regalo</small></span><span>paga tres números a precio de lanzamiento y recibe el cuarto</span></div>
+  </div>
+  <p class="fuente" style="margin-top:10px">Precios en dólares estadounidenses. Puedes pagar en tu moneda al tipo de cambio del día.</p>
+  <div class="contacto">
+    <span>Para anunciarte:</span> rlrangel.quintero@gmail.com · WhatsApp +1 (330) 623-5225
+  </div>
+  <div class="siguenos">
+    <img class="sello-s" src="img/sello.png" alt="Sello de Hanna's Universe">
+    <div class="s-txt"><b>Síguenos</b><span class="usuario">@hannasuniverse1</span><span class="s-nota">En YouTube, TikTok, Instagram y Facebook</span></div>
+    <div class="redes"><a class="red" href="https://www.youtube.com/@hannasuniverse1" target="_blank" rel="noopener" aria-label="YouTube"><span class="ic" style="background:#e62117"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5.5" width="20" height="13" rx="4" fill="#fff"/><path d="M10 9v6l5.2-3z" fill="#e62117"/></svg></span><span class="nom">YouTube</span></a><a class="red" href="https://www.tiktok.com/@hannasuniverse1" target="_blank" rel="noopener" aria-label="TikTok"><span class="ic" style="background:#111"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3h2.9c.3 2.1 1.6 3.5 3.6 3.7v3c-1.4 0-2.6-.4-3.6-1.1v6.2a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.5z" fill="#fff"/></svg></span><span class="nom">TikTok</span></a><a class="red" href="https://www.instagram.com/hannasuniverse1" target="_blank" rel="noopener" aria-label="Instagram"><span class="ic" style="background:linear-gradient(45deg,#f9a825,#e1306c 50%,#833ab4)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/></svg></span><span class="nom">Instagram</span></a><a class="red" href="https://www.facebook.com/profile.php?id=61564731688310" target="_blank" rel="noopener" aria-label="Facebook"><span class="ic" style="background:#1877f2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.7v3h2.6V21z" fill="#fff"/></svg></span><span class="nom">Facebook</span></a><a class="red" href="https://hannasuniverse.com" target="_blank" rel="noopener" aria-label="hannasuniverse.com"><span class="ic" style="background:#f3c74f"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="#14264a" stroke-width="1.8"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.2 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.2-3.5-8.5S9.6 5.9 12 3.5z" fill="none" stroke="#14264a" stroke-width="1.8"/></svg></span><span class="nom">hannasuniverse.com</span></a></div>
+    <p class="s-pie">Hey! by Hanna's Universe es gratis y sale cada mes. Compártela con otra familia y con la maestra de tus hijos.</p>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Número 1</span><span>18</span></div>
+</section>
+</main>
+
+<main class="revista" lang="en" hidden>
+
+<!-- 1 · COVER -->
+<section class="pagina pagina-imagen">
+  <a class="ampliar" href="img/portada-en.jpg" target="_blank" rel="noopener"><img src="img/portada-en.jpg" alt="Cover of Hey! by Hanna's Universe, launch edition, issue 1, free: a mother and her daughter pack a pink backpack with a bunny, a puppy and a kitten. This month's theme: Capable Kids, the art of letting them try. Also: For Teachers, Faith Moment, Women with Purpose, a serial novel, Kids' Fashion, For Kids and the new release Equip Your Kids for Life."></a>
+  <div class="folio oculto"><span>hannasuniverse.com</span><span>Issue 1</span></div>
+</section>
+
+<!-- LANZAMIENTO -->
+<section class="pagina lanzamiento">
+  <div class="lz-estrellas"></div>
+  <div class="lz">
+    <div class="lz-arriba"><span class="tema">New release</span><p class="lz-fecha">October 9</p></div>
+    <div class="lz-medio">
+      <div class="lz-libro"><img src="img/equip-grande.jpg" alt="Cover of Equip Your Kids for Life by Rosalina Rangel"></div>
+      <div class="lz-texto">
+        <h2>Equip Your Kids for Life</h2>
+        <p class="lz-sub">How to build independence, responsibility and good judgment, starting today, while doing less for them.</p>
+        <p class="lz-lema">Support today. Let go tomorrow.</p>
+        <ul class="lz-lista"><li>Twelve practical chapters for your family’s everyday life.</li><li>Each chapter closes with a prayer, a reward for you and a scene with Hanna.</li><li>Grounded in research and three decades in education.</li></ul>
+      </div>
+    </div>
+    <div class="lz-abajo">
+      <div class="lz-idiomas"><img src="img/equip.jpg" alt="English edition"><img src="img/equipa.jpg" alt="Spanish edition"><img src="img/equipe.jpg" alt="Portuguese edition"><p><b>On Amazon</b>In English, Spanish and Portuguese</p></div>
+      <div class="lz-autora"><img src="img/autora.jpg" alt="Rosalina Rangel"><p><b>Rosalina Rangel</b>Educator and author · Hanna's Universe</p></div>
+    </div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>2</span></div>
+</section>
+
+<!-- 2 · LETTER -->
+<section class="pagina">
+  <div class="seccion">A letter from Rosalina</div>
+  <h2>Welcome to the first issue of Hey! by Hanna's Universe</h2>
+  <div class="carta">
+    <div class="texto">
+      <p>Dear family,</p>
+      <p>Today our magazine is born, and I am so glad it is in your hands. Every month you will find something here for you, something for your children's teacher and something for them: a comic to read together and a coloring page to enjoy with crayons at the kitchen table.</p>
+      <p>This month I am launching my book <i>Equip Your Kids for Life</i>, so this month's theme is independence: those small tasks our children can already do on their own. Start with just one. Give them time. Watch them do it.</p>
+      <p>Print the kids' pages, share the magazine with another mom and tell me how it goes. I will be here again next month.</p>
+      <p class="adios">With love, Rosalina</p>
+    </div>
+    <div>
+      <ul class="indice">
+        <li><span class="n">4</span><div><b>For parents</b><span>Let them try</span></div></li>
+        <li><span class="n">5</span><div><b>For teachers</b><span>Backpack ready</span></div></li>
+        <li><span class="n">6</span><div><b>Faith corner</b><span>I can do all things</span></div></li>
+        <li><span class="n">8</span><div><b>Women with purpose</b><span>A story of life</span></div></li>
+        <li><span class="n">10</span><div><b>Kids' fashion</b><span>A soft, cozy fall</span></div></li>
+        <li><span class="n">13</span><div><b>Serial novel</b><span>The Secrets of the Attic</span></div></li>
+        <li><span class="n">16</span><div><b>Comic</b><span>Hanna's Backpack</span></div></li>
+        <li><span class="n">17</span><div><b>Coloring page</b><span>The monarch butterflies</span></div></li>
+        <li><span class="n">18</span><div><b>Advertise</b><span>Rates for your business</span></div></li>
+      </ul>
+      <div class="imprime">
+        <img src="img/dogui.png" alt="Dogui, the puppy">
+        <p>Print pages 16 and 17 on letter paper. They are for the kids, with colored pencils and the screen turned off.</p>
+      </div>
+      <div class="pauta cuarto"><b>Ad space · Quarter page</b><span>Your brand here</span><small>See rates on page 18</small></div>
+    </div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe</span><span>3</span></div>
+</section>
+
+<!-- 3 · PARENTS -->
+<section class="pagina">
+  <div class="seccion">For parents</div>
+  <h2>Let them try: three minutes that build independence</h2>
+  <p class="entrada">Tomorrow morning, when your child wants to tie their own shoes, give them three minutes. In those minutes they try, slip, try again and discover that their hands can do it.</p>
+  <p class="firma">By Rosalina Rangel · author of <i>Equip Your Kids for Life</i></p>
+  <div class="cols">
+    <div class="cuerpo">
+      <p><span class="ab">Choose one task.</span> One is enough this week: putting on shoes, pouring cereal, putting toys away or packing the backpack. Tell them with joy: “From today on, this is your job, and I'm right here with you.”</p>
+      <p><span class="ab">Stay close with still hands.</span> Sit beside them and watch them work. If they ask for help, ask first: “What do you think comes next?” Very often the answer is already in them.</p>
+      <p><span class="ab">Celebrate the effort.</span> Tell them what you saw: “You tried three times and you did it.” That sentence teaches them that perseverance bears fruit, and they will remember it the next time something feels hard.</p>
+      <p><span class="ab">Plan the time.</span> Get up ten minutes earlier. With time to spare, patience comes easily and the morning becomes a moment to learn together.</p>
+    </div>
+    <div class="cuerpo">
+      <div class="recuadro">
+        <h3>For this week</h3>
+        <ul class="lista">
+          <li>Choose a task and tell them on Sunday night.</li>
+          <li>Give them three minutes every morning.</li>
+          <li>Ask “what comes next?” before helping.</li>
+          <li>Praise the effort with specific words.</li>
+          <li>On Saturday, tell Dad or Grandma what they learned.</li>
+        </ul>
+      </div>
+      <blockquote class="versiculo">Train up a child in the way he should go: and when he is old, he will not depart from it.<cite>Proverbs 22:6 · KJV</cite></blockquote>
+      <p>Every small task your child learns today is a tool they will carry for life. This is how we equip a child: with patience, one day at a time.</p>
+    </div>
+  </div>
+  <a class="pauta-libro" href="https://www.amazon.com/dp/B0GC884CBN" target="_blank" rel="noopener"><img src="img/libro-devocional-en.jpg" alt="Cover of Hanna's Universe: A 21-Day Devotional for Kids"><div class="info"><b>Now on Amazon</b><span class="t">Hanna's Universe</span><span class="d">A 21-day devotional for kids</span></div><div class="cta"><span class="p">$12.99 USD</span><span class="c">Find it on Amazon</span></div></a>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>4</span></div>
+</section>
+
+<!-- 4 · TEACHERS -->
+<section class="pagina">
+  <div class="seccion">For teachers</div>
+  <h2>Backpack ready: a five-step classroom routine</h2>
+  <p class="entrada">The last ten minutes of the day teach order, responsibility and teamwork. Turn dismissal into a routine your students carry out on their own.</p>
+  <div class="cols">
+    <ol class="pasos">
+      <li><div><b>Post the list where everyone can see it.</b>Draw what goes in the backpack on a poster: notebook, pencils, lunch box, water bottle and sweater. With pictures, even early readers can follow it.</div></li>
+      <li><div><b>Always use the same signal.</b>A short song announces that the routine is starting. By the second week, the children move on their own when they hear it.</div></li>
+      <li><div><b>Check in pairs.</b>Each child checks a partner's backpack against the list. They learn to help with respect.</div></li>
+      <li><div><b>Leave the space ready.</b>Chairs up, tables clean and pencils in their box. The classroom is ready for tomorrow.</div></li>
+      <li><div><b>Close with one sentence.</b>Each child finishes “Today I learned…” out loud before walking out the door.</div></li>
+    </ol>
+    <div class="cuerpo">
+      <div class="recuadro">
+        <h3>Give every role a name</h3>
+        <p>The list keeper, the tidy captain, the song leader. Rotate them every Monday so everyone gets a turn at each job.</p>
+      </div>
+      <div class="recuadro">
+        <h3>Send it home</h3>
+        <p>Send the same printed list to families. When they pack the backpack the night before with the same pictures, the child practices the routine twice a day.</p>
+      </div>
+      <p>In this issue, the comic on page 16 tells this very story. Read it with your students before starting the routine.</p>
+    </div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>5</span></div>
+</section>
+
+<!-- 5 · FAITH -->
+<section class="pagina">
+  <div class="seccion">Faith corner</div>
+  <h2>A verse for the fridge door</h2>
+  <div class="fe-verso">
+    <p>“I can do all things through Christ which strengtheneth me.”</p>
+    <cite>Philippians 4:13 · KJV</cite>
+    <img src="img/sagu.png" alt="">
+  </div>
+  <div class="cols">
+    <div class="cuerpo">
+      <p><span class="ab">Write it together.</span> Your child decorates a card and you write the verse. Put it on the fridge door, at their eye level.</p>
+      <p><span class="ab">Read it every morning.</span> Before you leave, you start the verse and they finish it. In a week they will know it by heart.</p>
+      <p><span class="ab">Use it when something is hard.</span> When your child gets stuck on a task, remind them softly: “I can do all things…” God gives them strength to try again.</p>
+    </div>
+    <div class="cuerpo">
+      <div class="recuadro">
+        <h3>A prayer to say together</h3>
+        <p class="oracion">Father God, thank you for my hands and for my mind that learns. Help me try again when something is hard. You are with me at school, at home and on the way. In Jesus' name, amen.</p>
+      </div>
+      <div class="recuadro">
+        <h3>The “I can” jar</h3>
+        <p>Every time your child learns something new, write it on a slip of paper and put it in a jar. On Sunday, read all the slips together and thank God for each one.</p>
+      </div>
+    </div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>6</span></div>
+</section>
+
+<!-- NUESTROS ANUNCIANTES -->
+<section class="pagina">
+  <div class="seccion">Our advertisers</div>
+  <h2 style="font-size:40px">The businesses that make this magazine possible</h2>
+  <p class="entrada" style="font-size:15.5px;margin-top:8px">Support them: every ad helps Hey! by Hanna's Universe keep coming to your home for free.</p>
+  <div class="anunciantes"><div class="anunciante"><div class="marco" style="background:#fef5f3"><img src="img/anuncio-autenticas.jpg" alt="Ad for Auténticas beauty center: deep facial cleansing, lash lift, body waxing and eyebrow design."></div><p class="barra"><b>Auténticas beauty center</b><br>Calle 18c #25-11 Acacias, Cali, Colombia · WhatsApp +57 313 675 4861 · @autenticascentrodebelleza</p></div><div class="anunciante"><div class="marco" style="background:#efe3d6"><img src="img/anuncio-anamora.jpg" alt="Ad for Ana Mora Beauty Studio: professional makeup and hairstyling for brides, quinceañeras and special events."></div><p class="barra"><b>Ana Mora Beauty Studio</b><br>Cali, Colombia · WhatsApp +57 320 311 3320</p></div></div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>7</span></div>
+</section>
+
+<!-- MUJERES CON PROPÓSITO -->
+<section class="pagina">
+  <div class="seccion">Women with purpose</div>
+  <div class="foto-invitada con-foto"><img src="img/invitada-1.jpg" alt="Photo of our Women with purpose guest"></div>
+  <div class="invitada">
+    <h2>María Fernanda Tascón</h2>
+    <p class="quien">Auténticas beauty center · Cali, Colombia</p>
+    <p class="cita-grande">“Everything you do from the heart pays off, no matter what.”</p>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>8</span></div>
+</section>
+
+<section class="pagina">
+  <div class="seccion">Women with purpose · The interview</div>
+  <p class="entrada" style="margin-top:12px">Every month, a woman in business tells us her story: what moved her to begin, what she learned along the way and the faith that held her up.</p>
+  <div class="entrevista con-respuestas"><div><p class="pregunta">How did your business begin?</p><p class="resp">My business began as a dream: a dream of being independent, of having more freedom and not limiting my income to a salary, and the dream of being a present mom.</p></div><div><p class="pregunta">What was your hardest moment, and what held you up?</p><p class="resp">My hardest moment was starting, because I had two jobs, one of them eight or nine hours a day, full time, and I had to start in my apartment, in one room, with no clients and no name. Starting completely from scratch, with lots of nerves and lots of doubts. What held me up? I always say that God is my foundation and the one who holds me up, along with faith in what I knew I was capable of.</p></div><div><p class="pregunta">What place does faith have in your work?</p><p class="resp">I feel faith is absolutely essential, because by faith I believe every day that clients are going to come and recommend me. I always say: may it be God working through me. But I also always do things from the heart, to get the best results.</p></div><div><p class="pregunta">How do you care for your family while running your business?</p><p class="resp">Running my business lets me manage my own schedule and be a present mom, be there for my son, especially now, at this stage when he is still such a little baby and needs so much. My husband and I take turns caring for the baby, so he is always with one of us, and that is very special to me, very important.</p></div><div><p class="pregunta">What would you tell a woman who is about to begin?</p><p class="resp">To begin, to get started. That it is scary, that it isn’t easy, it isn’t a straight road, it has highs and lows, but that everything you do from the heart, with passion, with respect and with a sense of calling, pays off, no matter what. You need a lot of faith, a lot of perseverance, a lot of discipline. And you have to start, because by starting is how you learn, and by making mistakes too: every time we make a mistake is one more way we learn how to do things. So, go for it.</p></div></div>
+  <div class="cuenta-tu-historia">
+    <div class="recuadro"><h3>Visit her business</h3><p><b>Auténticas beauty center.</b> Deep facial cleansing, lash lift, body waxing and eyebrow design.</p><p style="margin-top:6px;font-size:13.5px">Calle 18c #25-11 Acacias, Cali, Colombia<br>WhatsApp +57 313 675 4861<br>Instagram @autenticascentrodebelleza</p></div>
+    <div class="recuadro"><h3>Do you have a story to tell?</h3><p>Write to us at rlrangel.quintero@gmail.com. Your story can inspire another woman to take her first step.</p></div>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>9</span></div>
+</section>
+
+<!-- 6 · FASHION -->
+<section class="pagina mitad mitad-izq">
+  <a class="ampliar" href="img/moda-collage-en.jpg" target="_blank" rel="noopener"><img src="img/moda-collage-en.jpg" alt="Kids' fashion, fall 2026. Four trends: 1, knits are back; 2, earth tones; 3, pieces that go with everything; 4, shoes they can put on themselves. Below, the season's color palette: camel, sage green, off-white, pearl gray, chocolate and a pop of color."><span class="lupa">Tap to view full size</span></a>
+  <div class="folio oculto"><span>Hey! by Hanna's Universe · Issue 1</span><span>10</span></div>
+</section>
+
+<section class="pagina mitad mitad-der">
+  <img src="img/moda-collage-en.jpg" alt="">
+  <div class="folio oculto"><span>Hey! by Hanna's Universe · Issue 1</span><span>11</span></div>
+</section>
+
+<section class="pagina">
+  <div class="seccion">Kids' fashion · Fall 2026</div>
+  <h2>Hanna's look this month</h2>
+  <div class="look" style="margin-top:18px">
+    <img src="img/hanna.png" alt="Hanna in her yellow T-shirt">
+    <div class="cuerpo" style="gap:8px">
+      <p>Yellow T-shirt, denim shorts and brown leather shoes. For chilly mornings, add a camel knit cardigan: yellow looks lovely with earth tones.</p>
+      <p><span class="ab">Tip for moms:</span> on Sunday night, lay out the clothes for the whole week, one outfit per day. Mornings flow, and your child practices getting dressed on their own in what you chose.</p>
+    </div>
+  </div>
+  <h3 style="margin-top:26px">More outfit ideas for this fall</h3>
+  <div class="ideas">
+    <figure class="foto"><img src="img/moda-tejido.jpg" alt="A girl in a cream knit cardigan and a boy in a brown knit sweater"><figcaption>Cream cardigan and brown knit sweater.</figcaption></figure>
+    <figure class="foto"><img src="img/moda-combina.jpg" alt="A toddler in a knit cardigan, striped T-shirt and gingham pants"><figcaption>Cardigan, stripes and gingham.</figcaption></figure>
+    <figure class="foto"><img src="img/moda-tenis.jpg" alt="White Velcro sneakers on fall leaves"><figcaption>Velcro sneakers.</figcaption></figure>
+  </div>
+  <p class="fuente" style="margin-top:14px">Trends from the fall/winter 2026-2027 children's collections reported by Mundo Franquicia and General de Franquicias. Sample photos made with artificial intelligence.</p>
+  <a class="pauta-libro" href="https://www.amazon.com/dp/B0GHR991VC" target="_blank" rel="noopener"><img src="img/libro-promesas-en.jpg" alt="Cover of Promises of God"><div class="info"><b>Now on Amazon</b><span class="t">Promises of God</span><span class="d">For kids ages 4 to 9, with Hanna and her friends</span></div><div class="cta"><span class="p">$13.99 USD</span><span class="c">Find it on Amazon</span></div></a>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>12</span></div>
+</section>
+
+<!-- NOVELA INICIO -->
+<section class="pagina novela">
+  <div class="seccion">Serial novel</div>
+  <h2>The Secrets of the Attic</h2>
+  <p class="capitulo">Chapter 1 · Mrs. Smith's Notebook</p>
+  <p class="entrega">Part 1 of 4</p>
+  <p class="firma">By Rosalina Rangel</p>
+  <div class="ilustracion completa"><img src="img/novela-cap1-e1.jpg" alt="Illustration: Hanna climbs the spiral staircase holding the golden key, followed by Michiko, Sagu and Dogui; and the four friends open a trunk where an old notebook glows."></div>
+  <div class="novela-texto">
+    <p>The new house still smelled of fresh paint and dreams come true. The living room walls were almost bare, and the cardboard boxes were piled up into little mountains on the wooden floor.</p>
+    <p>In her hand, Hanna held the golden key she had just found on the lintel of the spiral staircase. The temptation to climb up to the forbidden attic was enormous, but before taking a wrong step, she looked at her three dear friends: Michiko, Dogui and Sagu.</p>
+    <p>“You shouldn’t go up,” Michiko warned, crossing her arms with her usual seriousness. “Mom was very clear. The rule is to wait until the space has been checked for safety. Breaking a rule behind her back is not right.”</p>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>13</span></div>
+</section>
+
+<section class="pagina novela">
+  <div class="seccion">Serial novel · The Secrets of the Attic</div>
+  <div class="novela-texto sigue">
+    <p>Dogui, on the other hand, was wagging his tail with shining eyes, peeking over the first step:</p>
+    <p>“But it smells like adventure, like old stories! What if they need us up there?”</p>
+    <p>Hanna stopped, feeling the struggle in her chest. She knew Michiko was right about respect, but her curiosity was burning. That was when Sagu, the gentle little bunny of the group, stepped between the two, softly moving his long ears. His presence was the perfect balance: neither rigid rules alone nor careless impulse.</p>
+    <p>“Michiko is right to look after order and respect for Mom,” Sagu said in a calm voice with a peaceful smile, “but Dogui also reminds us that curiosity is the way the world invites us to learn. We don’t have to disobey, Hanna. We can do something better: go with the truth.”</p>
+    <p>Hanna blinked, feeling the tension fade away.</p>
+    <p>“Do you really think she’ll let us?” she asked hopefully.</p>
+    <p>“Asking honestly is always the right way,” Sagu answered, nodding sweetly.</p>
+    <p>Without thinking any more, Hanna ran down the stairs, crossed the living room and reached the kitchen, where Mom was finishing the cleaning.</p>
+    <p>“Mom, Mom, please… we found this golden key, and the spiral staircase leads to the attic,” Hanna begged with shining eyes, hugging her three friends. “I promise I won’t go alone, Dogui, Michiko and Sagu are coming with me. I swear, we’ll be very, very careful. Will you let us take a look?”</p>
+    <p>Mom looked at Hanna, saw the sincerity in her face and the company of her faithful friends, and gave a tender, understanding smile.</p>
+    <p>“All right, my love,” Mom said warmly, handing her a cloth. “But on one condition: take this feather duster to dust things off, and you may open only one box. No taking risks.”</p>
+    <p>“Yes! Thank you, Mommy!” Hanna cried, jumping for joy.</p>
+    <p>Back on the stairs, Sagu gave a little hop of happiness and wiggled his ears to congratulate her.</p>
+    <p>“See, Hanna? Choosing honesty instead of disobedience gives us peace in our hearts and opens doors in the best way. Now… run to the attic!” Sagu exclaimed with a knowing smile, sensing the smell of old, stored-away things and mystery floating in the air. “That dust of memories is waiting for us, there are so many secrets to discover!”</p>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>14</span></div>
+</section>
+
+<section class="pagina novela">
+  <div class="seccion">Serial novel · The Secrets of the Attic</div>
+  <div class="novela-texto sigue">
+    <p>Their hearts full of excitement, the four friends pushed open the wooden door. The attic lay in a warm half-light, full of mysterious boxes signed by the enigmatic Smith Family.</p>
+    <p>Following Mom’s rule to the letter, Hanna carefully approached just one box, the biggest and dustiest one in the corner. With the help of Dogui, who brushed aside a few cobwebs with his nose, and under the watchful eyes of Michiko and Sagu, they lifted the heavy cardboard lid.</p>
+    <p>A small cloud of sparkling dust floated in the air, lit by a ray of sunlight from the window. Inside there were no ordinary old things: there was a parade of forgotten treasures. Velvet dresses with mother-of-pearl buttons, little hand-carved wooden toys that seemed to hold laughter from another time, and sepia photographs of smiling faces looking at them from the past.</p>
+    <p>But among all of it, right in the middle, rested an object that seemed to give off a glow of its own. It was an old notebook with a worn leather spine and yellowed pages.</p>
+    <p>As soon as Hanna reached out to touch it, she felt a strange, warm current, as if the notebook itself were calling them by name from the depths of time. With trembling hands, she lifted it and opened the first page. When they saw what was written there, the eyes of Hanna, Michiko, Dogui and Sagu overflowed with complete amazement…</p>
+    <p>“This isn’t just paper…” Hanna whispered, unable to blink.</p>
+  </div>
+  <p class="continuara">The story continues in Issue 2…</p>
+  <div class="conversar"><h3>Family Talk</h3><p>What do you think Hanna found written in the notebook? Write it or draw it here, and we will find out in the next issue.</p><div class="renglones-libres"></div></div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>15</span></div>
+</section>
+<!-- NOVELA FIN -->
+
+<!-- 7 · COMIC -->
+<section class="pagina pagina-imagen">
+  <a class="ampliar" href="img/historieta-en.jpg" target="_blank" rel="noopener"><img src="img/historieta-en.jpg" alt="Comic Hanna's Backpack, in six panels: Hanna wants to pack her backpack by herself; Dogui worries; Michiko reminds her of the rule; Sagu asks what she needs to learn today; Hanna makes her list; and she thanks God. At the bottom, Family Talk: What is one thing you can start preparing by yourself this week?"><span class="lupa">Tap to view full size</span></a>
+  <div class="folio oculto"><span>Hey! by Hanna's Universe · Issue 1</span><span>16</span></div>
+</section>
+
+<!-- 8 · COLORING -->
+<section class="pagina pintar">
+  <div class="seccion">For your kids · Coloring page</div>
+  <h2 style="font-size:40px">The monarch butterflies fly to Mexico</h2>
+  <p style="margin-top:8px;font-size:14.5px">Every fall, millions of monarch butterflies fly from Canada and the United States to the forests of Michoacán and the State of Mexico. Color yours orange and black, with its little white dots!</p>
+  <svg viewBox="0 0 700 690" role="img" aria-label="Coloring page: a monarch butterfly over flowers, with sun, clouds and a Bible verse" fill="none" stroke="#1b2433" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round">
+    <!-- sol -->
+    <g transform="translate(610 80)">
+      <circle r="42" fill="#fff"/>
+      <g stroke-width="3">
+        <path d="M0-58v-18M0 58v18M-58 0h-18M58 0h18M41-41l13-13M-41 41l-13 13M41 41l13 13M-41-41l-13-13"/>
+      </g>
+      <path d="M-14-6a4 4 0 1 0 0.1 0M14-6a4 4 0 1 0 0.1 0M-14 12q14 12 28 0"/>
+    </g>
+    <!-- nubes -->
+    <path fill="#fff" d="M60 110q0-30 30-30q10-26 40-20q24-12 42 12q30 0 28 30q0 20-24 20h-94q-22 0-22-12z"/>
+    <path fill="#fff" d="M430 60q0-22 22-22q10-20 32-14q18-8 30 10q22 0 20 22q0 14-18 14h-70q-16 0-16-10z"/>
+    <!-- mariposa -->
+    <g transform="translate(350 300)">
+      <g id="ala-en">
+        <path fill="#fff" d="M-6-30C-50-110-150-175-235-160C-270-152-262-95-235-50C-205 0-130 30-8 22Z"/>
+        <path d="M-10-24Q-110-90-222-148M-10-16Q-130-60-246-100M-10-6Q-120-20-230-52M-10 6Q-90 20-160 26"/>
+        <path fill="#fff" d="M-6 28C-90 26-175 50-190 120C-205 190-140 245-80 225C-30 208-10 130-6 50Z"/>
+        <path d="M-10 36Q-90 70-178 112M-10 44Q-80 120-150 206M-10 52Q-40 150-86 222"/>
+        <g fill="#fff" stroke-width="2.6">
+          <circle cx="-222" cy="-130" r="7"/><circle cx="-246" cy="-110" r="6"/><circle cx="-250" cy="-84" r="6"/><circle cx="-238" cy="-62" r="6"/>
+          <circle cx="-196" cy="-150" r="6"/><circle cx="-168" cy="-156" r="5"/><circle cx="-210" cy="-30" r="5"/>
+          <circle cx="-176" cy="150" r="6"/><circle cx="-168" cy="178" r="6"/><circle cx="-148" cy="204" r="6"/><circle cx="-118" cy="220" r="6"/><circle cx="-180" cy="122" r="5"/>
+        </g>
+      </g>
+      <use href="#ala-en" transform="scale(-1 1)"/>
+      <ellipse cx="0" cy="40" rx="13" ry="82" fill="#fff"/>
+      <circle cx="0" cy="-52" r="18" fill="#fff"/>
+      <path d="M-6-68Q-30-120-58-138M6-68Q30-120 58-138"/>
+      <circle cx="-60" cy="-140" r="7" fill="#fff"/><circle cx="60" cy="-140" r="7" fill="#fff"/>
+      <path d="M-7-56a2.5 2.5 0 1 0 .1 0M7-56a2.5 2.5 0 1 0 .1 0M-6-44q6 5 12 0"/>
+    </g>
+    <!-- colinas -->
+    <path fill="#fff" d="M0 610Q120 540 250 590Q380 640 480 580Q590 530 700 590V690H0Z"/>
+    <!-- flores -->
+    <g transform="translate(90 590)">
+      <path d="M0 12v28M0 30q-20-2-26-16"/>
+      <g fill="#fff"><ellipse cx="0" cy="-22" rx="11" ry="20"/><ellipse cx="0" cy="22" rx="11" ry="20" transform="rotate(0)"/><ellipse cx="-22" cy="0" rx="20" ry="11"/><ellipse cx="22" cy="0" rx="20" ry="11"/><ellipse cx="16" cy="-16" rx="10" ry="18" transform="rotate(45 16 -16)"/><ellipse cx="-16" cy="16" rx="10" ry="18" transform="rotate(45 -16 16)"/><ellipse cx="-16" cy="-16" rx="10" ry="18" transform="rotate(-45 -16 -16)"/><ellipse cx="16" cy="16" rx="10" ry="18" transform="rotate(-45 16 16)"/><circle r="12"/></g>
+    </g>
+    <g transform="translate(610 600) scale(.85)">
+      <path d="M0 12v28M0 30q20-2 26-16"/>
+      <g fill="#fff"><ellipse cx="0" cy="-22" rx="11" ry="20"/><ellipse cx="0" cy="22" rx="11" ry="20"/><ellipse cx="-22" cy="0" rx="20" ry="11"/><ellipse cx="22" cy="0" rx="20" ry="11"/><ellipse cx="16" cy="-16" rx="10" ry="18" transform="rotate(45 16 -16)"/><ellipse cx="-16" cy="16" rx="10" ry="18" transform="rotate(45 -16 16)"/><ellipse cx="-16" cy="-16" rx="10" ry="18" transform="rotate(-45 -16 -16)"/><ellipse cx="16" cy="16" rx="10" ry="18" transform="rotate(-45 16 16)"/><circle r="12"/></g>
+    </g>
+    <g transform="translate(470 630) scale(.6)">
+      <g fill="#fff"><ellipse cx="0" cy="-22" rx="11" ry="20"/><ellipse cx="0" cy="22" rx="11" ry="20"/><ellipse cx="-22" cy="0" rx="20" ry="11"/><ellipse cx="22" cy="0" rx="20" ry="11"/><circle r="12"/></g>
+    </g>
+    <!-- mariposa chiquita -->
+    <g transform="translate(96 470) rotate(-16) scale(.24)">
+      <use href="#ala-en"/><use href="#ala-en" transform="scale(-1 1)"/>
+      <ellipse cx="0" cy="40" rx="13" ry="82" fill="#fff"/>
+    </g>
+    <!-- versículo -->
+    <text x="350" y="672" text-anchor="middle" fill="#fff" stroke="#1b2433" stroke-width="1.6" font-family="Cormorant Garamond, Georgia, serif" font-weight="700" font-size="22">The LORD shall preserve thy going out and thy coming in</text>
+  </svg>
+  <p class="fuente" style="text-align:center">Psalm 121:8 · KJV</p>
+  <p class="nombre">My name: <i></i> My age: <i style="flex:.3"></i></p>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>17</span></div>
+</section>
+
+<!-- 9 · ADS -->
+<section class="pagina">
+  <div class="seccion">Ads</div>
+  <h2 style="font-size:38px;margin-top:22px">Your ad here</h2>
+  <p style="margin-top:8px;max-width:62ch">Hey! by Hanna's Universe reaches families, teachers and churches every month. If your business serves children and their families, this is your place: bookstores, schools, clothing and toys, classes, mom-run businesses.</p>
+  <p class="oferta">Launch prices · 50% off for the first 10 advertisers</p>
+  <div class="espacios">
+    <div class="espacio"><i class="formato f-completa"></i><b>Full page</b><span class="antes">$20 USD</span><span class="precio">$10 <small>USD</small></span><span>per issue</span></div>
+    <div class="espacio"><i class="formato f-media"></i><b>Half page</b><span class="antes">$12 USD</span><span class="precio">$6 <small>USD</small></span><span>per issue</span></div>
+    <div class="espacio"><i class="formato f-franja"></i><b>Banner</b><span class="antes">$8 USD</span><span class="precio">$4 <small>USD</small></span><span>at the foot of an article</span></div>
+    <div class="espacio"><i class="formato f-cuarto"></i><b>Quarter page</b><span class="antes">$6 USD</span><span class="precio">$3 <small>USD</small></span><span>per issue</span></div>
+    <div class="espacio"><i class="formato f-paquete"></i><b>3-month package</b><span class="precio">+1 <small>free</small></span><span>pay for three issues at launch prices and get the fourth</span></div>
+  </div>
+  <p class="fuente" style="margin-top:10px">Prices in US dollars. You can pay in your local currency at the day’s exchange rate.</p>
+  <div class="contacto">
+    <span>To advertise:</span> rlrangel.quintero@gmail.com · WhatsApp +1 (330) 623-5225
+  </div>
+  <div class="siguenos">
+    <img class="sello-s" src="img/sello.png" alt="Sello de Hanna's Universe">
+    <div class="s-txt"><b>Follow us</b><span class="usuario">@hannasuniverse1</span><span class="s-nota">On YouTube, TikTok, Instagram and Facebook</span></div>
+    <div class="redes"><a class="red" href="https://www.youtube.com/@hannasuniverse1" target="_blank" rel="noopener" aria-label="YouTube"><span class="ic" style="background:#e62117"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="5.5" width="20" height="13" rx="4" fill="#fff"/><path d="M10 9v6l5.2-3z" fill="#e62117"/></svg></span><span class="nom">YouTube</span></a><a class="red" href="https://www.tiktok.com/@hannasuniverse1" target="_blank" rel="noopener" aria-label="TikTok"><span class="ic" style="background:#111"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.2 3h2.9c.3 2.1 1.6 3.5 3.6 3.7v3c-1.4 0-2.6-.4-3.6-1.1v6.2a5.6 5.6 0 1 1-5.6-5.6c.3 0 .6 0 .9.1v3.1a2.6 2.6 0 1 0 1.8 2.5z" fill="#fff"/></svg></span><span class="nom">TikTok</span></a><a class="red" href="https://www.instagram.com/hannasuniverse1" target="_blank" rel="noopener" aria-label="Instagram"><span class="ic" style="background:linear-gradient(45deg,#f9a825,#e1306c 50%,#833ab4)"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3.5" y="3.5" width="17" height="17" rx="5" fill="none" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="4" fill="none" stroke="#fff" stroke-width="2"/><circle cx="17.2" cy="6.8" r="1.2" fill="#fff"/></svg></span><span class="nom">Instagram</span></a><a class="red" href="https://www.facebook.com/profile.php?id=61564731688310" target="_blank" rel="noopener" aria-label="Facebook"><span class="ic" style="background:#1877f2"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M13.4 21v-7.6h2.6l.4-3h-3V8.5c0-.9.3-1.5 1.5-1.5h1.6V4.3c-.3 0-1.2-.1-2.3-.1-2.3 0-3.9 1.4-3.9 4v2.2H7.7v3h2.6V21z" fill="#fff"/></svg></span><span class="nom">Facebook</span></a><a class="red" href="https://hannasuniverse.com" target="_blank" rel="noopener" aria-label="hannasuniverse.com"><span class="ic" style="background:#f3c74f"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="#14264a" stroke-width="1.8"/><path d="M3.5 12h17M12 3.5c2.4 2.4 3.5 5.2 3.5 8.5s-1.1 6.1-3.5 8.5c-2.4-2.4-3.5-5.2-3.5-8.5S9.6 5.9 12 3.5z" fill="none" stroke="#14264a" stroke-width="1.8"/></svg></span><span class="nom">hannasuniverse.com</span></a></div>
+    <p class="s-pie">Hey! by Hanna's Universe is free and comes out every month. Share it with another family and with your children's teacher.</p>
+  </div>
+  <div class="folio"><span>Hey! by Hanna's Universe · Issue 1</span><span>18</span></div>
+</section>
+</main>
+
+</div>
+<script>
+(function(){
+  var mesa=document.getElementById('mesa'), mains=[].slice.call(document.querySelectorAll('main.revista'));
+  var idioma='es', angosto=window.innerWidth<700, modo=angosto?'todas':'hojear', paso=0;
+  function g(k){try{return localStorage.getItem(k)}catch(e){return null}}
+  function s(k,v){try{localStorage.setItem(k,v)}catch(e){}}
+  function actual(){return mains.filter(function(m){return m.lang===idioma})[0]}
+  function doble(){return window.innerWidth>=900}
+  function pasos(){
+    var n=actual().querySelectorAll('.pagina').length, r=[[0]];
+    if(!doble()){for(var i=1;i<n;i++)r.push([i]);return r}
+    for(var i=1;i<n;i+=2)r.push(i+1<n?[i,i+1]:[i]);
+    return r;
+  }
+  function texto(p){
+    var en=idioma==='en';
+    if(p.length===1&&p[0]===0)return en?'Cover':'Portada';
+    var a=p[0]+1,b=p[p.length-1]+1;
+    return (p.length>1?(en?'Pages ':'Páginas ')+a+'–'+b:(en?'Page ':'Página ')+a)+(en?' of ':' de ')+actual().querySelectorAll('.pagina').length;
+  }
+  function pintar(dir){
+    mains.forEach(function(m){m.hidden=m.lang!==idioma;m.classList.toggle('hojear',modo==='hojear');m.style.transform='';m.classList.remove('entra-der','entra-izq')});
+    document.body.classList.toggle('modo-hojear',modo==='hojear');
+    var m=actual(), hojas=[].slice.call(m.querySelectorAll('.pagina'));
+    hojas.forEach(function(h){h.classList.remove('ver','izq','der','sola')});
+    if(modo!=='hojear'){mesa.style.width='';mesa.style.height='';return}
+    var ps=pasos(); paso=Math.max(0,Math.min(paso,ps.length-1)); var p=ps[paso];
+    if(p.length===1){hojas[p[0]].classList.add('ver','sola','der')}
+    else{hojas[p[0]].classList.add('ver','izq');hojas[p[1]].classList.add('ver','der')}
+    var w=p.length===2?1632:816, barra=document.querySelector('.barra').offsetHeight;
+    var esc=Math.min((document.documentElement.clientWidth-32)/w,(window.innerHeight-barra-48)/1056,1);
+    if(!doble())esc=Math.min((document.documentElement.clientWidth-32)/w,1);
+    m.style.width=w+'px'; m.style.transform='scale('+esc+')';
+    mesa.style.width=(w*esc)+'px'; mesa.style.height=(1056*esc)+'px';
+    if(dir){void m.offsetWidth;m.classList.add(dir>0?'entra-der':'entra-izq')}
+    document.getElementById('donde').textContent=texto(p);
+    document.getElementById('atras').disabled=paso===0;
+    document.getElementById('adelante').disabled=paso===ps.length-1;
+  }
+  function ir(d){var n=pasos().length,q=Math.max(0,Math.min(paso+d,n-1));if(q!==paso){paso=q;pintar(d)}}
+  function botones(){
+    document.querySelectorAll('[data-l]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.l===idioma?'true':'false')});
+    document.querySelectorAll('[data-m]').forEach(function(b){b.setAttribute('aria-pressed',b.dataset.m===modo?'true':'false')});
+    document.querySelectorAll('[data-es]').forEach(function(e){e.textContent=e.getAttribute('data-'+idioma)});
+    document.getElementById('atras').setAttribute('aria-label',idioma==='en'?'Previous page':'Página anterior');
+    document.getElementById('adelante').setAttribute('aria-label',idioma==='en'?'Next page':'Página siguiente');
+    document.documentElement.lang=idioma;
+    document.title="Hey! by Hanna's Universe";
+  }
+  document.querySelectorAll('[data-l]').forEach(function(b){b.addEventListener('click',function(){idioma=b.dataset.l;s('idioma',idioma);botones();pintar()})});
+  document.querySelectorAll('[data-m]').forEach(function(b){b.addEventListener('click',function(){modo=b.dataset.m;s('modo',modo);botones();pintar();window.scrollTo(0,0)})});
+  document.getElementById('atras').addEventListener('click',function(){ir(-1)});
+  document.getElementById('adelante').addEventListener('click',function(){ir(1)});
+  mains.forEach(function(m){m.addEventListener('click',function(e){
+    if(modo!=='hojear')return; var h=e.target.closest('.pagina'); if(!h)return;
+    if(h.classList.contains('izq'))ir(-1); else if(h.classList.contains('der'))ir(1);
+  })});
+  document.addEventListener('keydown',function(e){if(modo!=='hojear')return;if(e.key==='ArrowRight')ir(1);if(e.key==='ArrowLeft')ir(-1)});
+  var x0=null;
+  mesa.addEventListener('touchstart',function(e){x0=e.touches[0].clientX},{passive:true});
+  mesa.addEventListener('touchend',function(e){if(x0===null||modo!=='hojear')return;var dx=e.changedTouches[0].clientX-x0;x0=null;if(Math.abs(dx)>50)ir(dx<0?1:-1)});
+  var t; window.addEventListener('resize',function(){clearTimeout(t);t=setTimeout(function(){pintar()},120)});
+  var h=location.hash.slice(1), li=g('idioma'), mo=g('modo');
+  if(h==='en'||h==='es')idioma=h; else if(li==='en')idioma='en';
+  if(!angosto&&(mo==='hojear'||mo==='todas'))modo=mo;
+  if(angosto){var gm=document.getElementById('m-hojear');if(gm)gm.parentNode.style.display='none';}
+  botones(); pintar();
+  if(document.fonts&&document.fonts.ready)document.fonts.ready.then(function(){pintar()});
+})();
+</script>
+
+</body></html>
