@@ -1591,3 +1591,13 @@ h2 {
 .thanks-back {
   margin-top: 2rem;
 }
+
+/* Frase para las mamás en la portada */
+.hero-copy p.hero-mama {
+  margin-top: 18px;
+  padding-left: 16px;
+  border-left: 3px solid #d9a534;
+  color: #fdf6e3;
+  font-size: clamp(1rem, 1.5vw, 1.1rem);
+  font-style: italic;
+}
