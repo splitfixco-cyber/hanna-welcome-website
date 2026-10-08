@@ -181,11 +181,9 @@
               A creative and faith-centered world where children grow through
               learning, emotions, and spiritual strength.
             </p>
-            <form class="newsletter" action="https://hannasuniverse.com/contact#newsletter-form" method="post" target="_blank">
-              <input type="hidden" name="form_type" value="customer">
-              <input type="hidden" name="utf8" value="✓">
-              <input type="hidden" name="contact[tags]" value="newsletter">
-              <input type="email" name="contact[email]" placeholder="Your email" aria-label="Email address" required>
+            <form class="newsletter" action="/api/subscribe" method="post" data-lang="en" data-origen="pie">
+              <input type="text" name="empresa" tabindex="-1" autocomplete="off" aria-hidden="true" class="newsletter-trampa">
+              <input type="email" name="email" placeholder="Your email" aria-label="Email address" required>
               <button class="button" type="submit">Subscribe</button>
             </form>
           </div>

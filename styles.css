@@ -1601,3 +1601,15 @@ h2 {
   font-size: clamp(1rem, 1.5vw, 1.1rem);
   font-style: italic;
 }
+
+.newsletter-trampa {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+}
+
+.newsletter-aviso {
+  margin-top: 16px;
+  font-weight: 600;
+}

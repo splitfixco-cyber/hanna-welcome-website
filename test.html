@@ -91,6 +91,15 @@
               <button type="button" class="button button-gold" id="test-imprimir">Print their chore chart</button>
               <a class="button button-secondary" id="test-compartir" href="#" target="_blank" rel="noopener">Send it to another mom</a>
             </div>
+            <div class="test-hey">
+              <p class="eyebrow">Free every month, in your inbox</p>
+              <p>Get Hey! magazine: simple ideas like this one, a moment of faith and a coloring page for your kids.</p>
+              <form class="newsletter" action="/api/subscribe" method="post" data-lang="en" data-origen="test">
+                <input type="text" name="empresa" tabindex="-1" autocomplete="off" aria-hidden="true" class="newsletter-trampa">
+                <input type="email" name="email" placeholder="Your email" aria-label="Email address" required>
+                <button class="button" type="submit">Send it to me</button>
+              </form>
+            </div>
             <div class="test-mas">
               <a class="test-tarjeta" href="hey/#en">
                 <span class="eyebrow">Free every month</span>
@@ -121,11 +130,9 @@
               A creative and faith-centered world where children grow through
               learning, emotions, and spiritual strength.
             </p>
-            <form class="newsletter" action="https://hannasuniverse.com/contact#newsletter-form" method="post" target="_blank">
-              <input type="hidden" name="form_type" value="customer">
-              <input type="hidden" name="utf8" value="✓">
-              <input type="hidden" name="contact[tags]" value="newsletter">
-              <input type="email" name="contact[email]" placeholder="Your email" aria-label="Email address" required>
+            <form class="newsletter" action="/api/subscribe" method="post" data-lang="en" data-origen="pie">
+              <input type="text" name="empresa" tabindex="-1" autocomplete="off" aria-hidden="true" class="newsletter-trampa">
+              <input type="email" name="email" placeholder="Your email" aria-label="Email address" required>
               <button class="button" type="submit">Subscribe</button>
             </form>
           </div>

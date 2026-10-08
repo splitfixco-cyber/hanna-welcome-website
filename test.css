@@ -78,3 +78,12 @@
   .test-hoja tr.nueva td:first-child { font-weight: 700; }
   .hoja-pie { margin-top: 10px; font-size: 10pt; text-align: right; }
 }
+
+/* Suscripción a Hey! dentro del resultado */
+.test-hey { margin: 30px auto 0; padding: 22px 24px; max-width: 560px; background: #fff; border: 2px solid var(--rose); border-radius: 20px; text-align: left; }
+.test-hey .eyebrow { margin: 0 0 6px; }
+.test-hey p { margin: 0; }
+.test-hey .newsletter { margin-top: 14px; }
+.test-hey .newsletter input { color: var(--ink); background: #fff; border: 2px solid var(--sky); }
+.test-hey .newsletter input::placeholder { color: var(--muted); }
+.test-hey .newsletter .button { background: var(--ink); color: #fff; }
