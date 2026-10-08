@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Test: ¿Qué puede hacer solo tu hijo? — El Universo de Hanna</title>
+    <meta
+      name="description"
+      content="Test gratis de 2 minutos: elige la edad de tu hijo, marca lo que ya hace solo y recibe su próximo paso y su tabla de tareas para imprimir."
+    >
+    <link rel="icon" href="assets/sello.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="test.css">
+    <script defer src="/_vercel/insights/script.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="page-hero" aria-label="Test">
+        <header class="site-header">
+          <a class="brand" href="index-es.html"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">El Universo de Hanna</a>
+          <nav class="nav" aria-label="Navegación principal">
+            <a href="books-es.html">Libros</a>
+            <a href="ebooks-es.html">E-books</a>
+            <a href="hey/">Revista Hey!</a>
+            <a href="test-es.html">Test gratis</a>
+            <a href="videos-es.html">Videos</a>
+            <a href="characters-es.html">Personajes</a>
+            <a href="about-es.html">Autora</a>
+            <a href="about-es.html#charlas">Charlas</a>
+            <a href="ambassador-es.html">Embajadores</a>
+            <a href="contact-es.html">Contacto</a>
+          </nav>
+          <div class="lang-switch" aria-label="Idioma">
+            <a href="test.html" lang="en" title="View in English">EN</a>
+            <span class="lang-active">ES</span>
+            <a href="test-pt.html" lang="pt" title="Ver em português">PT</a>
+          </div>
+        </header>
+
+        <div class="page-hero-copy">
+          <p class="eyebrow">Test gratis · 2 minutos</p>
+          <h1>¿Qué puede hacer solo tu hijo a su edad?</h1>
+          <p>Elige su edad, marca lo que ya hace solo y recibe su próximo paso, con su tabla de tareas lista para imprimir.</p>
+        </div>
+      </section>
+
+      <section class="section test" id="test">
+        <div class="section-inner test-inner">
+          <div class="test-paso" data-paso="1">
+            <p class="eyebrow">Paso 1 de 2</p>
+            <h2>¿Cuántos años tiene?</h2>
+            <div class="test-edades" role="group">
+              <button type="button" data-edad="3">3</button>
+              <button type="button" data-edad="4">4</button>
+              <button type="button" data-edad="5">5</button>
+              <button type="button" data-edad="6">6</button>
+              <button type="button" data-edad="7">7</button>
+              <button type="button" data-edad="8">8</button>
+              <button type="button" data-edad="9">9</button>
+              <button type="button" data-edad="10">10</button>
+            </div>
+            <label class="test-nombre">Su nombre <span>(opcional, para su tabla)</span>
+              <input type="text" id="test-nombre" maxlength="24" autocomplete="off" placeholder="Ej. Sofía">
+            </label>
+          </div>
+
+          <div class="test-paso" data-paso="2" hidden>
+            <p class="eyebrow">Paso 2 de 2</p>
+            <h2>Marca lo que <span class="test-quien">tu hijo</span> ya hace solo</h2>
+            <ul class="test-lista" id="test-lista"></ul>
+            <div class="test-acciones">
+              <button type="button" class="button button-secondary" data-volver="1">Cambiar edad</button>
+              <button type="button" class="button button-primary" id="test-ver">Ver resultado</button>
+            </div>
+          </div>
+
+          <div class="test-paso test-resultado" data-paso="3" hidden>
+            <p class="eyebrow">Tu resultado</p>
+            <div class="test-marcador">
+              <svg viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52" class="pista"/><circle cx="60" cy="60" r="52" class="avance" id="test-anillo"/></svg>
+              <p><strong id="test-num">0</strong><span id="test-de"></span></p>
+            </div>
+            <h2 id="test-titulo"></h2>
+            <p id="test-mensaje"></p>
+            <div class="test-semana">
+              <p class="eyebrow">Esta semana practiquen</p>
+              <ul id="test-practicar"></ul>
+            </div>
+            <blockquote class="test-cita">«Primero prestamos estructura. Después esperamos que aparezca criterio.»<cite>Rosalina Rangel, <em>Equipa tus hijos para la vida</em></cite></blockquote>
+            <div class="test-acciones">
+              <button type="button" class="button button-gold" id="test-imprimir">Imprimir su tabla de tareas</button>
+              <a class="button button-secondary" id="test-compartir" href="#" target="_blank" rel="noopener">Mándaselo a otra mamá</a>
+            </div>
+            <div class="test-mas">
+              <a class="test-tarjeta" href="hey/">
+                <span class="eyebrow">Gratis cada mes</span>
+                <strong>Revista Hey!</strong>
+                <span>Ideas para papás, un momento de fe, una historieta de Hanna y una hoja para pintar.</span>
+              </a>
+              <a class="test-tarjeta" href="product-equipa-tus-hijos-para-la-vida-es.html">
+                <img src="assets/books/equipa-tus-hijos-para-la-vida.jpg" alt="">
+                <span class="eyebrow">El libro</span>
+                <strong>Equipa tus hijos para la vida</strong>
+                <span>El paso a paso para cada etapa: autonomía, responsabilidad y criterio, con fe y con calma.</span>
+              </a>
+            </div>
+            <button type="button" class="test-otra" data-volver="1">Hacer el test con otro hijo</button>
+          </div>
+        </div>
+      </section>
+
+      <div class="test-hoja" id="test-hoja" aria-hidden="true"></div>
+
+      <script>window.TEST = {"idioma": "es", "tuHijo": "tu hijo", "de": "de", "tareas": {"3-4": ["Guarda sus juguetes en su caja", "Pone su ropa sucia en el cesto", "Lleva su plato a la cocina", "Se lava las manos solo", "Se pone los zapatos", "Riega una planta", "Ayuda a poner las servilletas en la mesa"], "5-6": ["Prepara su mochila", "Tiende su cama", "Se viste solo", "Guarda sus zapatos en su lugar", "Pone los cubiertos en la mesa", "Separa la ropa por colores", "Se cepilla los dientes solo"], "7-8": ["Revisa su tarea y su agenda", "Prepara su ropa del día siguiente", "Dobla y guarda su ropa", "Se baña solo", "Prepara su merienda sencilla", "Saca la basura", "Ayuda a lavar los platos"], "9-10": ["Organiza su tiempo de tarea y de pantalla", "Prepara un desayuno sencillo", "Lava su ropa con tu guía", "Barre o aspira su cuarto", "Cuida su uniforme y sus útiles", "Hace la lista de lo que necesita para la semana", "Ayuda a un hermano menor"]}, "resultados": [{"hasta": 2, "titulo": "Tiene mucho por estrenar", "mensaje": "Elige una sola tarea para esta semana y hazla junto a {n} los primeros días. Después, dale espacio para que la haga solo."}, {"hasta": 5, "titulo": "Va muy bien encaminado", "mensaje": "{N} ya sabe hacer varias cosas solo. Suma una tarea nueva esta semana y dale tiempo para practicarla todos los días."}, {"hasta": 7, "titulo": "¡Qué hermoso camino!", "mensaje": "{N} ya hace casi todo lo de su edad. Es momento de estrenar tareas de la siguiente etapa."}], "tituloHoja": "Las tareas de {n}", "tituloHojaSin": "Mis tareas de la semana", "dias": ["L", "M", "M", "J", "V", "S", "D"], "pieHoja": "hannasuniverse.com · Equipa tus hijos para la vida", "compartir": "Mira este test: ¿qué puede hacer solo tu hijo a su edad? Te da su tabla de tareas para imprimir 💛 "};</script>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <p class="brand"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">El Universo de Hanna</p>
+            <p>
+              Un mundo creativo y centrado en la fe donde los niños crecen a
+              través del aprendizaje, las emociones y la fortaleza espiritual.
+            </p>
+            <form class="newsletter" action="https://hannasuniverse.com/contact#newsletter-form" method="post" target="_blank">
+              <input type="hidden" name="form_type" value="customer">
+              <input type="hidden" name="utf8" value="✓">
+              <input type="hidden" name="contact[tags]" value="newsletter">
+              <input type="email" name="contact[email]" placeholder="Tu correo" aria-label="Correo electrónico" required>
+              <button class="button" type="submit">Suscribirse</button>
+            </form>
+          </div>
+          <nav class="footer-links" aria-label="Pie de página">
+            <p class="footer-heading">Explora</p>
+            <a href="books-es.html">Colección de Hanna</a>
+            <a href="books-es.html#english">Libros en inglés</a>
+            <a href="books-es.html#spanish">Libros en español</a>
+            <a href="books-es.html#portuguese">Libros en portugués</a>
+            <a href="ebooks-es.html">E-books</a>
+            <a href="hey/">Revista Hey!</a>
+            <a href="test-es.html">Test gratis</a>
+            <a href="videos-es.html">Videos</a>
+            <a href="characters-es.html">Conoce a los personajes</a>
+            <a href="about-es.html">Sobre la autora</a>
+            <a href="about-es.html#charlas">Charlas y talleres</a>
+            <a href="ambassador-es.html">Programa de embajadores</a>
+            <a href="contact-es.html">Contacto</a>
+          </nav>
+          <div class="footer-social">
+            <p class="footer-heading">Síguenos</p>
+            <a href="https://www.youtube.com/@Hannasuniverse1" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.instagram.com/hannasuniverse1/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@hannasuniverse1" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=61564731688310" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.linkedin.com/in/rosalina-rangel-0690b3353/" target="_blank" rel="noopener">LinkedIn</a>
+            <a href="https://hannasuniverse.com/policies/privacy-policy" target="_blank" rel="noopener">Política de privacidad</a>
+          </div>
+        </div>
+        <p class="footer-copy">© 2026 Hanna's Universe</p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+    <script src="test.js"></script>
+  </body>
+</html>

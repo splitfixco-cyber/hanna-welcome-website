@@ -1,8 +1,35 @@
 {
   "functions": {
-    "api/*.js": { "maxDuration": 30 }
+    "api/*.js": {
+      "maxDuration": 30
+    }
   },
   "headers": [
-    { "source": "/api/(.*)", "headers": [{ "key": "Cache-Control", "value": "no-store" }] }
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "no-store"
+        }
+      ]
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/test",
+      "destination": "/test-es.html",
+      "permanent": false
+    },
+    {
+      "source": "/quiz",
+      "destination": "/test.html",
+      "permanent": false
+    },
+    {
+      "source": "/teste",
+      "destination": "/test-pt.html",
+      "permanent": false
+    }
   ]
 }
