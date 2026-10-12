@@ -8,6 +8,7 @@
     <link rel="icon" href="assets/sello.png">
     <link rel="stylesheet" href="styles.css">
     <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/meta-pixel.js"></script>
   </head>
   <body>
     <main class="page">
@@ -154,6 +155,14 @@
           });
         }
 
+        // Meta Pixel: count each paid order once, even if the page is reloaded
+        function comprado(slug) {
+          var clave = 'fb-compra-' + sid;
+          try { if (localStorage.getItem(clave)) return; localStorage.setItem(clave, '1'); } catch (e) {}
+          var valor = /^equip/.test(slug || '') ? 14.99 : 9.99;
+          if (window.fbq) fbq('track', 'Purchase', { content_ids: [slug], value: valor, currency: 'USD' }, { eventID: sid });
+        }
+
         if (!sid) { show('state-invalid'); return; }
 
         var downloadUrl = '/api/download?session_id=' + encodeURIComponent(sid);
@@ -161,6 +170,7 @@
           .then(function (r) { return r.json().then(function (d) { return { status: r.status, data: d }; }); })
           .then(function (res) {
             var d = res.data || {};
+            if (d.ok) comprado(d.slug);
             if (d.ok && d.ready) {
               if (d.title) bookEl.textContent = d.title;
               (d.formats || []).forEach(function (f) {

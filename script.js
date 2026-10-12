@@ -110,6 +110,7 @@ document.querySelectorAll("form.newsletter[data-lang]").forEach((form) => {
       const respuesta = await fetch(form.action, { method: "POST", body: datos });
       if (!respuesta.ok) throw new Error(respuesta.status);
       aviso.textContent = texto.ok;
+      if (window.fbq) fbq("track", "Lead", { content_name: form.dataset.origen || "pie" });
       form.reset();
       form.hidden = true;
     } catch {
@@ -117,4 +118,16 @@ document.querySelectorAll("form.newsletter[data-lang]").forEach((form) => {
       boton.disabled = false;
     }
   });
+});
+
+// Meta Pixel: a tap on an e-book "Buy" button (Stripe) or on an Amazon button
+const preciosEbook = { "equipa-tus-hijos-para-la-vida": 14.99, "equip-your-kids-for-life": 14.99, "equipe-seus-filhos-para-a-vida": 14.99 };
+document.addEventListener("click", (event) => {
+  const enlace = event.target.closest("a[href]");
+  if (!enlace || !window.fbq) return;
+  if (enlace.dataset.stripe) {
+    fbq("track", "InitiateCheckout", { content_ids: [enlace.dataset.stripe], value: preciosEbook[enlace.dataset.stripe] || 9.99, currency: "USD" });
+  } else if (/amazon\./.test(enlace.hostname)) {
+    fbq("trackCustom", "ClicAmazon", { page: location.pathname, link: enlace.href });
+  }
 });
