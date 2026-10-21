@@ -109,7 +109,10 @@ document.querySelectorAll("form.newsletter[data-lang]").forEach((form) => {
     try {
       const respuesta = await fetch(form.action, { method: "POST", body: datos });
       if (!respuesta.ok) throw new Error(respuesta.status);
-      aviso.textContent = texto.ok;
+      aviso.textContent = form.dataset.ok || texto.ok;
+      // A download page (e.g. coloring sheets) reveals its link once the email is saved
+      const descarga = form.dataset.descarga && document.getElementById(form.dataset.descarga);
+      if (descarga) descarga.hidden = false;
       if (window.fbq) fbq("track", "Lead", { content_name: form.dataset.origen || "pie" });
       form.reset();
       form.hidden = true;

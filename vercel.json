@@ -30,6 +30,11 @@
       "source": "/teste",
       "destination": "/test-pt.html",
       "permanent": false
+    },
+    {
+      "source": "/colorear",
+      "destination": "/colorear-es.html",
+      "permanent": false
     }
   ]
 }

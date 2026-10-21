@@ -1659,3 +1659,71 @@ h2 {
     position: relative;
   }
 }
+
+/* ---------- Hojas para colorear ---------- */
+
+.colorear {
+  background: linear-gradient(180deg, #fbfcff 0%, #edf2fb 100%);
+}
+
+.colorear-caja,
+.colorear-video {
+  max-width: 620px;
+  margin: 0 auto;
+  padding: 28px 30px;
+  background: #fff;
+  border: 2px solid var(--rose);
+  border-radius: 22px;
+  text-align: left;
+}
+
+.colorear-caja h2,
+.colorear-video h2 {
+  margin: 4px 0 10px;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+}
+
+.colorear-caja p,
+.colorear-video p {
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.colorear-caja .newsletter { margin-top: 18px; }
+.colorear-caja .newsletter input { color: var(--ink); background: #fff; border: 2px solid var(--sky); }
+.colorear-caja .newsletter input::placeholder { color: var(--muted); }
+.colorear-caja .newsletter .button { background: var(--ink); color: #fff; }
+.colorear-bajar { margin-top: 18px; }
+.colorear-bajar[hidden] { display: none; }
+
+.colorear-hojas {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 22px;
+  margin: 48px 0;
+}
+
+.colorear-hojas figure {
+  margin: 0;
+  padding: 10px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 14px 34px rgba(20, 38, 74, 0.1);
+}
+
+.colorear-hojas img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 8px;
+}
+
+.colorear-hojas figcaption {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.colorear-video .button { margin-top: 16px; }

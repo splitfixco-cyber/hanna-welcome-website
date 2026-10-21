@@ -42,7 +42,7 @@ export async function POST(request) {
   }
 
   try {
-    const mail = WELCOME[lang];
+    const mail = DESCARGAS[origen] ? DESCARGAS[origen](lang) : WELCOME[lang];
     await transport().sendMail({
       from: process.env.MAIL_FROM,
       replyTo: process.env.MAIL_REPLY_TO || undefined,
@@ -113,4 +113,23 @@ const WELCOME = {
     testUrl: `${SITE}/teste`,
     sign: 'Com carinho,<br>Rosalina Rangel · Hanna\'s Universe',
   }),
+};
+
+// Free downloads (coloring sheets): the welcome email carries the download link first.
+const DESCARGAS = {
+  'colorear-agua': () => {
+    const pdf = `${SITE}/descargas/el-ciclo-del-agua-con-hanna.pdf`;
+    const button = (href, label) =>
+      `<p style="margin:22px 0"><a href="${href}" style="background:#f3c74f;color:#14264a;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:bold">${label}</a></p>`;
+    const body = 'Aquí están tus 6 hojas para colorear del ciclo del agua, con Hanna y su abuelo en las cascadas de Chiapas. Imprímelas en tamaño carta, horizontal. Cada mes te llegará también la revista Hey!, gratis, con más hojas para pintar con tus hijos.';
+    return {
+      subject: 'Tus hojas para colorear del ciclo del agua 💧',
+      text: `Hola,\n\n${body}\n\nDescargar las hojas: ${pdf}\nVer el cuento: https://www.youtube.com/watch?v=VsjQEqBDXXc\n\nCon cariño,\nRosalina Rangel · Hanna's Universe`,
+      html:
+        `<div style="font-family:Georgia,serif;font-size:17px;line-height:1.55;color:#14264a;max-width:520px">` +
+        `<p>Hola,</p><p>${body}</p>${button(pdf, 'Descargar las hojas (PDF)')}` +
+        `<p>Antes de pintar, pueden ver juntos el cuento: <a href="https://www.youtube.com/watch?v=VsjQEqBDXXc">Hanna y el ciclo del agua</a>.</p>` +
+        `<p>Con cariño,<br>Rosalina Rangel · Hanna's Universe</p></div>`,
+    };
+  },
 };
