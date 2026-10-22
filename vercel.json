@@ -35,6 +35,11 @@
       "source": "/colorear",
       "destination": "/colorear-es.html",
       "permanent": false
+    },
+    {
+      "source": "/monarca",
+      "destination": "/colorear-es.html#monarca",
+      "permanent": false
     }
   ]
 }

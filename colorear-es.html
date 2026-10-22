@@ -3,15 +3,15 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Hojas para colorear: el ciclo del agua — El Universo de Hanna</title>
+    <title>Hojas para colorear gratis — El Universo de Hanna</title>
     <meta
       name="description"
-      content="Descarga gratis 6 hojas para colorear del ciclo del agua con Hanna y su abuelo: evaporación, condensación, precipitación, escorrentía e infiltración. Para niños de 4 a 10 años, listas para imprimir en tamaño carta."
+      content="Hojas para colorear gratis de los cuentos de Hanna, listas para imprimir en tamaño carta: el ciclo del agua y las mariposas monarca. Para niños de 4 a 10 años."
     >
     <link rel="icon" href="assets/sello.png">
     <link rel="stylesheet" href="styles.css">
-    <meta property="og:title" content="Hojas para colorear: el ciclo del agua con Hanna">
-    <meta property="og:description" content="6 hojas gratis para imprimir y colorear, con el dibujo del ciclo del agua y sus nombres.">
+    <meta property="og:title" content="Hojas para colorear de Hanna">
+    <meta property="og:description" content="Hojas gratis para imprimir y colorear: el ciclo del agua y las mariposas monarca.">
     <meta property="og:image" content="https://www.hannasuniverse.com/assets/colorear/agua-portada.jpg">
     <script defer src="/_vercel/insights/script.js"></script>
     <script src="/meta-pixel.js"></script>
@@ -42,8 +42,8 @@
 
         <div class="page-hero-copy">
           <p class="eyebrow">Gratis · para imprimir</p>
-          <h1>El ciclo del agua para colorear</h1>
-          <p>Seis hojas con Hanna y su abuelo en las cascadas de Chiapas. La última trae el ciclo del agua con sus nombres, para pintar y aprender juntos, lejos de la pantalla.</p>
+          <h1>Hojas para colorear de Hanna</h1>
+          <p>Dibujos de los cuentos de Hanna para pintar en familia, con colores y papel, lejos de la pantalla. Deja tu correo una vez y descarga todos los juegos.</p>
         </div>
       </section>
 
@@ -52,29 +52,47 @@
           <div class="colorear-caja" id="descargar">
             <p class="eyebrow">Descarga gratis</p>
             <h2>Recíbelas en tu correo</h2>
-            <p>Escribe tu correo y descarga las 6 hojas en PDF, tamaño carta. Cada mes también te llega gratis la revista Hey!, con más hojas para pintar con tus hijos.</p>
-            <form class="newsletter" action="/api/subscribe" method="post" data-lang="es" data-origen="colorear-agua" data-descarga="colorear-lista" data-ok="¡Listo! Aquí están tus hojas. También te las mandé a tu correo 💛">
+            <p>Escribe tu correo y descarga todas las hojas en PDF, tamaño carta. Cada mes también te llega gratis la revista Hey!, con más hojas para pintar con tus hijos.</p>
+            <form class="newsletter" action="/api/subscribe" method="post" data-lang="es" data-origen="colorear" data-descarga="colorear-lista" data-ok="¡Listo! Aquí están tus hojas. También te las mandé a tu correo 💛">
               <input type="text" name="empresa" tabindex="-1" autocomplete="off" aria-hidden="true" class="newsletter-trampa">
               <input type="email" name="email" placeholder="Tu correo" aria-label="Correo electrónico" required>
               <button class="button" type="submit">Quiero las hojas</button>
             </form>
-            <a class="button button-primary colorear-bajar" id="colorear-lista" href="descargas/el-ciclo-del-agua-con-hanna.pdf" download hidden>Descargar las 6 hojas (PDF)</a>
+            <div class="colorear-bajar" id="colorear-lista" hidden>
+              <a class="button button-primary" href="descargas/el-ciclo-del-agua-con-hanna.pdf" download>El ciclo del agua (PDF)</a>
+              <a class="button button-primary" href="descargas/las-mariposas-monarca-con-hanna.pdf" download>Las mariposas monarca (PDF)</a>
+            </div>
+            <p class="colorear-indice">En esta página: <a href="#agua">El ciclo del agua</a> · <a href="#monarca">Las mariposas monarca</a></p>
           </div>
 
-          <div class="colorear-hojas">
-              <figure><img src="assets/colorear/agua-1.jpg" alt="Hoja para colorear 1: ¡Abuelo! Hanna llega a visitar a su abuelo." loading="lazy" width="760" height="428"><figcaption>¡Abuelo! Hanna llega a visitar a su abuelo.</figcaption></figure>
-              <figure><img src="assets/colorear/agua-2.jpg" alt="Hoja para colorear 2: Hanna se imagina el camino del agua." loading="lazy" width="760" height="428"><figcaption>Hanna se imagina el camino del agua.</figcaption></figure>
-              <figure><img src="assets/colorear/agua-3.jpg" alt="Hoja para colorear 3: El agua del arroyo está fresquita." loading="lazy" width="760" height="428"><figcaption>El agua del arroyo está fresquita.</figcaption></figure>
-              <figure><img src="assets/colorear/agua-4.jpg" alt="Hoja para colorear 4: El abuelo encuentra a Michiko junto al río." loading="lazy" width="760" height="428"><figcaption>El abuelo encuentra a Michiko junto al río.</figcaption></figure>
-              <figure><img src="assets/colorear/agua-5.jpg" alt="Hoja para colorear 5: ¡Las cascadas! ¿A dónde va toda esta agua?" loading="lazy" width="760" height="428"><figcaption>¡Las cascadas! ¿A dónde va toda esta agua?</figcaption></figure>
-              <figure><img src="assets/colorear/agua-6.jpg" alt="Hoja para colorear 6: El ciclo del agua, con sus nombres." loading="lazy" width="760" height="428"><figcaption>El ciclo del agua, con sus nombres.</figcaption></figure>
+          <div class="colorear-juego" id="agua">
+            <p class="eyebrow">6 hojas · Hanna visita Chiapas</p>
+            <h2>El ciclo del agua</h2>
+            <p>Hanna y su abuelo en las cascadas de Chiapas. La última hoja trae el ciclo del agua con sus nombres: evaporación, condensación, precipitación, escorrentía e infiltración.</p>
+            <div class="colorear-hojas">
+              <figure><img src="assets/colorear/agua-1.jpg" alt="Hoja para colorear del ciclo del agua 1: ¡Abuelo! Hanna llega a visitar a su abuelo." loading="lazy" width="760"><figcaption>¡Abuelo! Hanna llega a visitar a su abuelo.</figcaption></figure>
+              <figure><img src="assets/colorear/agua-2.jpg" alt="Hoja para colorear del ciclo del agua 2: Hanna se imagina el camino del agua." loading="lazy" width="760"><figcaption>Hanna se imagina el camino del agua.</figcaption></figure>
+              <figure><img src="assets/colorear/agua-3.jpg" alt="Hoja para colorear del ciclo del agua 3: El agua del arroyo está fresquita." loading="lazy" width="760"><figcaption>El agua del arroyo está fresquita.</figcaption></figure>
+              <figure><img src="assets/colorear/agua-4.jpg" alt="Hoja para colorear del ciclo del agua 4: El abuelo encuentra a Michiko junto al río." loading="lazy" width="760"><figcaption>El abuelo encuentra a Michiko junto al río.</figcaption></figure>
+              <figure><img src="assets/colorear/agua-5.jpg" alt="Hoja para colorear del ciclo del agua 5: ¡Las cascadas! ¿A dónde va toda esta agua?" loading="lazy" width="760"><figcaption>¡Las cascadas! ¿A dónde va toda esta agua?</figcaption></figure>
+              <figure><img src="assets/colorear/agua-6.jpg" alt="Hoja para colorear del ciclo del agua 6: El ciclo del agua, con sus nombres." loading="lazy" width="760"><figcaption>El ciclo del agua, con sus nombres.</figcaption></figure>
+            </div>
+            <a class="button button-secondary" href="https://www.youtube.com/watch?v=VsjQEqBDXXc" target="_blank" rel="noopener">Ver el cuento del Día 15 en YouTube</a>
           </div>
 
-          <div class="colorear-video">
-            <p class="eyebrow">Primero, el cuento</p>
-            <h2>Mira a Hanna descubrir el ciclo del agua</h2>
-            <p>Vean juntos el video del Día 15 y después saquen los colores.</p>
-            <a class="button button-secondary" href="https://www.youtube.com/watch?v=VsjQEqBDXXc" target="_blank" rel="noopener">Ver el cuento en YouTube</a>
+          <div class="colorear-juego" id="monarca">
+            <p class="eyebrow">6 hojas · Hanna visita Michoacán</p>
+            <h2>Las mariposas monarca</h2>
+            <p>Cada otoño, millones de mariposas monarca llegan a los bosques de Michoacán. Hanna y sus amigos las ven cubrir los árboles, y la última hoja trae una monarca grande para pintar de naranja y negro.</p>
+            <div class="colorear-hojas">
+              <figure><img src="assets/colorear/monarca-1.jpg" alt="Hoja para colorear de las mariposas monarca 1: Hanna encuentra una mariposa monarca." loading="lazy" width="760"><figcaption>Hanna encuentra una mariposa monarca.</figcaption></figure>
+              <figure><img src="assets/colorear/monarca-2.jpg" alt="Hoja para colorear de las mariposas monarca 2: Una monarca se posa en su mano." loading="lazy" width="760"><figcaption>Una monarca se posa en su mano.</figcaption></figure>
+              <figure><img src="assets/colorear/monarca-3.jpg" alt="Hoja para colorear de las mariposas monarca 3: Dogui, Sagu y Michiko también quieren verlas." loading="lazy" width="760"><figcaption>Dogui, Sagu y Michiko también quieren verlas.</figcaption></figure>
+              <figure><img src="assets/colorear/monarca-4.jpg" alt="Hoja para colorear de las mariposas monarca 4: ¡Miles de mariposas cubren los árboles!" loading="lazy" width="760"><figcaption>¡Miles de mariposas cubren los árboles!</figcaption></figure>
+              <figure><img src="assets/colorear/monarca-5.jpg" alt="Hoja para colorear de las mariposas monarca 5: Las mariposas vuelan por el bosque." loading="lazy" width="760"><figcaption>Las mariposas vuelan por el bosque.</figcaption></figure>
+              <figure><img src="assets/colorear/monarca-6.jpg" alt="Hoja para colorear de las mariposas monarca 6: La mariposa monarca, para pintar de naranja y negro." loading="lazy" width="760"><figcaption>La mariposa monarca, para pintar de naranja y negro.</figcaption></figure>
+            </div>
+            <a class="button button-secondary" href="https://www.youtube.com/watch?v=hd95MYOst_w" target="_blank" rel="noopener">Ver el cuento del Día 8 en YouTube</a>
           </div>
         </div>
       </section>

@@ -115,21 +115,31 @@ const WELCOME = {
   }),
 };
 
-// Free downloads (coloring sheets): the welcome email carries the download link first.
+// Free downloads (coloring sheets): the welcome email carries the download links first.
+const HOJAS = {
+  agua: { nombre: 'El ciclo del agua', pdf: 'el-ciclo-del-agua-con-hanna.pdf', video: 'https://www.youtube.com/watch?v=VsjQEqBDXXc' },
+  monarca: { nombre: 'Las mariposas monarca', pdf: 'las-mariposas-monarca-con-hanna.pdf', video: 'https://www.youtube.com/watch?v=hd95MYOst_w' },
+};
+
+function hojasMail(claves) {
+  const button = (href, label) =>
+    `<p style="margin:14px 0"><a href="${href}" style="background:#f3c74f;color:#14264a;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:bold">${label}</a></p>`;
+  const hojas = claves.map((k) => ({ ...HOJAS[k], url: `${SITE}/descargas/${HOJAS[k].pdf}` }));
+  const body = 'Aquí están tus hojas para colorear de Hanna. Imprímelas en tamaño carta, horizontal. Antes de pintar, pueden ver juntos el cuento de cada una. Cada mes te llegará también la revista Hey!, gratis, con más hojas para pintar con tus hijos.';
+  return {
+    subject: 'Tus hojas para colorear de Hanna 🎨',
+    text: `Hola,\n\n${body}\n\n` + hojas.map((h) => `${h.nombre}: ${h.url}\nEl cuento: ${h.video}`).join('\n\n') +
+      `\n\nMás hojas: ${SITE}/colorear\n\nCon cariño,\nRosalina Rangel · Hanna's Universe`,
+    html:
+      `<div style="font-family:Georgia,serif;font-size:17px;line-height:1.55;color:#14264a;max-width:520px">` +
+      `<p>Hola,</p><p>${body}</p>` +
+      hojas.map((h) => `${button(h.url, `${h.nombre} (PDF)`)}<p style="margin:0 0 18px;font-size:15px">El cuento: <a href="${h.video}">${h.video.replace('https://www.', '')}</a></p>`).join('') +
+      `<p>Con cariño,<br>Rosalina Rangel · Hanna's Universe</p></div>`,
+  };
+}
+
 const DESCARGAS = {
-  'colorear-agua': () => {
-    const pdf = `${SITE}/descargas/el-ciclo-del-agua-con-hanna.pdf`;
-    const button = (href, label) =>
-      `<p style="margin:22px 0"><a href="${href}" style="background:#f3c74f;color:#14264a;padding:13px 24px;border-radius:999px;text-decoration:none;font-weight:bold">${label}</a></p>`;
-    const body = 'Aquí están tus 6 hojas para colorear del ciclo del agua, con Hanna y su abuelo en las cascadas de Chiapas. Imprímelas en tamaño carta, horizontal. Cada mes te llegará también la revista Hey!, gratis, con más hojas para pintar con tus hijos.';
-    return {
-      subject: 'Tus hojas para colorear del ciclo del agua 💧',
-      text: `Hola,\n\n${body}\n\nDescargar las hojas: ${pdf}\nVer el cuento: https://www.youtube.com/watch?v=VsjQEqBDXXc\n\nCon cariño,\nRosalina Rangel · Hanna's Universe`,
-      html:
-        `<div style="font-family:Georgia,serif;font-size:17px;line-height:1.55;color:#14264a;max-width:520px">` +
-        `<p>Hola,</p><p>${body}</p>${button(pdf, 'Descargar las hojas (PDF)')}` +
-        `<p>Antes de pintar, pueden ver juntos el cuento: <a href="https://www.youtube.com/watch?v=VsjQEqBDXXc">Hanna y el ciclo del agua</a>.</p>` +
-        `<p>Con cariño,<br>Rosalina Rangel · Hanna's Universe</p></div>`,
-    };
-  },
+  colorear: () => hojasMail(['agua', 'monarca']),
+  // Older form on the page before the monarch set; kept so a cached page still works
+  'colorear-agua': () => hojasMail(['agua']),
 };

@@ -1666,8 +1666,7 @@ h2 {
   background: linear-gradient(180deg, #fbfcff 0%, #edf2fb 100%);
 }
 
-.colorear-caja,
-.colorear-video {
+.colorear-caja {
   max-width: 620px;
   margin: 0 auto;
   padding: 28px 30px;
@@ -1677,14 +1676,12 @@ h2 {
   text-align: left;
 }
 
-.colorear-caja h2,
-.colorear-video h2 {
+.colorear-caja h2 {
   margin: 4px 0 10px;
   font-size: clamp(1.5rem, 3vw, 2rem);
 }
 
-.colorear-caja p,
-.colorear-video p {
+.colorear-caja p {
   margin: 0;
   color: var(--muted);
   line-height: 1.6;
@@ -1694,8 +1691,29 @@ h2 {
 .colorear-caja .newsletter input { color: var(--ink); background: #fff; border: 2px solid var(--sky); }
 .colorear-caja .newsletter input::placeholder { color: var(--muted); }
 .colorear-caja .newsletter .button { background: var(--ink); color: #fff; }
-.colorear-bajar { margin-top: 18px; }
+.colorear-bajar { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 18px; }
 .colorear-bajar[hidden] { display: none; }
+.colorear-indice { margin-top: 16px !important; font-size: 0.95rem; }
+.colorear-indice a { color: var(--ink); font-weight: 700; }
+
+.colorear-juego {
+  margin-top: 64px;
+  scroll-margin-top: 24px;
+}
+
+.colorear-juego > h2 {
+  margin: 4px 0 10px;
+  font-size: clamp(1.8rem, 4vw, 2.6rem);
+}
+
+.colorear-juego > p:not(.eyebrow) {
+  max-width: 700px;
+  margin: 0;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.colorear-juego .colorear-hojas { margin: 28px 0 24px; }
 
 .colorear-hojas {
   display: grid;
@@ -1726,4 +1744,3 @@ h2 {
   font-weight: 600;
 }
 
-.colorear-video .button { margin-top: 16px; }
