@@ -119,6 +119,7 @@ const WELCOME = {
 const HOJAS = {
   agua: { nombre: 'El ciclo del agua', pdf: 'el-ciclo-del-agua-con-hanna.pdf', video: 'https://www.youtube.com/watch?v=VsjQEqBDXXc' },
   monarca: { nombre: 'Las mariposas monarca', pdf: 'las-mariposas-monarca-con-hanna.pdf', video: 'https://www.youtube.com/watch?v=hd95MYOst_w' },
+  luciernagas: { nombre: 'Las luciérnagas', pdf: 'las-luciernagas-con-hanna.pdf', video: 'https://www.youtube.com/watch?v=DcsBfDWsC9E' },
 };
 
 function hojasMail(claves) {
@@ -139,7 +140,7 @@ function hojasMail(claves) {
 }
 
 const DESCARGAS = {
-  colorear: () => hojasMail(['agua', 'monarca']),
+  colorear: () => hojasMail(['agua', 'monarca', 'luciernagas']),
   // Older form on the page before the monarch set; kept so a cached page still works
   'colorear-agua': () => hojasMail(['agua']),
 };

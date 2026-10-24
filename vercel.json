@@ -40,6 +40,11 @@
       "source": "/monarca",
       "destination": "/colorear-es.html#monarca",
       "permanent": false
+    },
+    {
+      "source": "/luciernagas",
+      "destination": "/colorear-es.html#luciernagas",
+      "permanent": false
     }
   ]
 }
