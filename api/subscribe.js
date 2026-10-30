@@ -120,6 +120,7 @@ const HOJAS = {
   agua: { nombre: 'El ciclo del agua', pdf: 'el-ciclo-del-agua-con-hanna.pdf', video: 'https://www.youtube.com/watch?v=VsjQEqBDXXc' },
   monarca: { nombre: 'Las mariposas monarca', pdf: 'las-mariposas-monarca-con-hanna.pdf', video: 'https://www.youtube.com/watch?v=hd95MYOst_w' },
   luciernagas: { nombre: 'Las luciérnagas', pdf: 'las-luciernagas-con-hanna.pdf', video: 'https://www.youtube.com/watch?v=DcsBfDWsC9E' },
+  numeros: { nombre: 'Michiko enseña los números', pdf: 'michiko-ensena-los-numeros.pdf' },
 };
 
 function hojasMail(claves) {
@@ -129,18 +130,18 @@ function hojasMail(claves) {
   const body = 'Aquí están tus hojas para colorear de Hanna. Imprímelas en tamaño carta, horizontal. Antes de pintar, pueden ver juntos el cuento de cada una. Cada mes te llegará también la revista Hey!, gratis, con más hojas para pintar con tus hijos.';
   return {
     subject: 'Tus hojas para colorear de Hanna 🎨',
-    text: `Hola,\n\n${body}\n\n` + hojas.map((h) => `${h.nombre}: ${h.url}\nEl cuento: ${h.video}`).join('\n\n') +
+    text: `Hola,\n\n${body}\n\n` + hojas.map((h) => `${h.nombre}: ${h.url}` + (h.video ? `\nEl cuento: ${h.video}` : '')).join('\n\n') +
       `\n\nMás hojas: ${SITE}/colorear\n\nCon cariño,\nRosalina Rangel · Hanna's Universe`,
     html:
       `<div style="font-family:Georgia,serif;font-size:17px;line-height:1.55;color:#14264a;max-width:520px">` +
       `<p>Hola,</p><p>${body}</p>` +
-      hojas.map((h) => `${button(h.url, `${h.nombre} (PDF)`)}<p style="margin:0 0 18px;font-size:15px">El cuento: <a href="${h.video}">${h.video.replace('https://www.', '')}</a></p>`).join('') +
+      hojas.map((h) => button(h.url, `${h.nombre} (PDF)`) + (h.video ? `<p style="margin:0 0 18px;font-size:15px">El cuento: <a href="${h.video}">${h.video.replace('https://www.', '')}</a></p>` : '')).join('') +
       `<p>Con cariño,<br>Rosalina Rangel · Hanna's Universe</p></div>`,
   };
 }
 
 const DESCARGAS = {
-  colorear: () => hojasMail(['agua', 'monarca', 'luciernagas']),
+  colorear: () => hojasMail(['agua', 'monarca', 'luciernagas', 'numeros']),
   // Older form on the page before the monarch set; kept so a cached page still works
   'colorear-agua': () => hojasMail(['agua']),
 };

@@ -45,6 +45,11 @@
       "source": "/luciernagas",
       "destination": "/colorear-es.html#luciernagas",
       "permanent": false
+    },
+    {
+      "source": "/numeros",
+      "destination": "/colorear-es.html#numeros",
+      "permanent": false
     }
   ]
 }
