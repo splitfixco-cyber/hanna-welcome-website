@@ -50,6 +50,11 @@
       "source": "/numeros",
       "destination": "/colorear-es.html#numeros",
       "permanent": false
+    },
+    {
+      "source": "/tarjetas",
+      "destination": "/tarjetas-es.html",
+      "permanent": false
     }
   ]
 }
