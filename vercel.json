@@ -55,6 +55,11 @@
       "source": "/tarjetas",
       "destination": "/tarjetas-es.html",
       "permanent": false
+    },
+    {
+      "source": "/cards",
+      "destination": "/cards.html",
+      "permanent": false
     }
   ]
 }
