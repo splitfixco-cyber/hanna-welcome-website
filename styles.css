@@ -1776,18 +1776,20 @@ h2 {
 .tarjetas-bajar .colorear-bajar { margin-top: 8px; }
 .tarjetas-bajar[hidden] { display: none; }
 .tarjetas-gratis-vistas {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 300px));
+  display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   gap: 28px;
   margin: 36px auto 0;
 }
+.tarjetas-gratis-vistas > figure { width: 300px; margin: 0; }
 .tarjetas-gratis-vistas figcaption { margin-top: 8px; color: var(--muted); font-size: 0.95rem; font-weight: 600; text-align: center; }
 .paquete-ancho { grid-template-columns: minmax(260px, 560px) 1fr; }
 @media (max-width: 720px) {
   .paquete-ancho { grid-template-columns: 1fr; }
   .paquete-ancho .tarjeta-vista { max-width: 100%; }
-  .tarjetas-gratis-vistas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
+  .tarjetas-gratis-vistas { gap: 14px; }
+  .tarjetas-gratis-vistas > figure { width: calc(50% - 7px); }
 }
 
 /* Escoger tarjetas */
