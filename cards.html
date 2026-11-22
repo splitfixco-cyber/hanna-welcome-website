@@ -48,26 +48,35 @@
 
       <section class="section colorear tarjetas">
         <div class="section-inner colorear-inner">
-          <div class="tarjeta-gratis" id="free">
-            <figure class="tarjeta-vista">
-              <img src="assets/tarjetas/hanna-and-dogui.jpg" alt="Free card: Hanna and Dogui walk hand in hand through a snowy village. Love, Joy and Peace at Christmas." width="760" height="1140">
-            </figure>
-            <div class="colorear-caja">
-              <p class="eyebrow">Free</p>
-              <h2>Hanna and Dogui in the village</h2>
-              <p>Enter your email to download it as a folded card to write inside, as a 4×6 card, and as an image for your phone.</p>
-              <form class="newsletter" action="/api/subscribe" method="post" data-lang="en" data-origen="christmas-cards" data-descarga="card-download" data-ok="Done! Here is your card. Merry Christmas 💛">
-                <input type="text" name="empresa" tabindex="-1" autocomplete="off" aria-hidden="true" class="newsletter-trampa">
-                <input type="email" name="email" placeholder="Your email" aria-label="Email address" required>
-                <button class="button" type="submit">Get the card</button>
-              </form>
-              <div class="colorear-bajar" id="card-download" hidden>
-                <a class="button button-primary" href="descargas/christmas-card-hanna-and-dogui-folded.pdf" download>Folded card (PDF)</a>
-                <a class="button button-primary" href="descargas/christmas-card-hanna-and-dogui.pdf" download>Two 4×6 cards (PDF)</a>
-                <a class="button button-primary" href="descargas/christmas-card-hanna-and-dogui.jpg" download>For WhatsApp (image)</a>
+          <div class="colorear-caja tarjetas-caja" id="free">
+            <p class="eyebrow">Free</p>
+            <h2>Two cards as a gift</h2>
+            <p>Enter your email to download both cards as a folded card to write inside, as a 4×6 card, and as an image for your phone.</p>
+            <form class="newsletter" action="/api/subscribe" method="post" data-lang="en" data-origen="christmas-cards" data-descarga="card-download" data-ok="Done! Here are your cards. Merry Christmas 💛">
+              <input type="text" name="empresa" tabindex="-1" autocomplete="off" aria-hidden="true" class="newsletter-trampa">
+              <input type="email" name="email" placeholder="Your email" aria-label="Email address" required>
+              <button class="button" type="submit">Get the cards</button>
+            </form>
+            <div class="tarjetas-bajar" id="card-download" hidden>
+              <p><b>Hanna and Dogui in the village</b></p>
+              <div class="colorear-bajar">
+                <a class="button button-primary" href="descargas/christmas-card-hanna-and-dogui-folded.pdf" download>Folded (PDF)</a>
+                <a class="button button-primary" href="descargas/christmas-card-hanna-and-dogui.pdf" download>4×6 (PDF)</a>
+                <a class="button button-primary" href="descargas/christmas-card-hanna-and-dogui.jpg" download>WhatsApp (image)</a>
               </div>
-              <p class="tarjeta-nota">Folded card: print on letter cardstock, double-sided, flipping on the short edge, and fold it in half. 4×6 card: cut along the marks, or have the image printed as a 4×6 photo at Walgreens, CVS or Walmart.</p>
+              <p><b>Hanna by the Christmas tree</b></p>
+              <div class="colorear-bajar">
+                <a class="button button-primary" href="descargas/christmas-card-hanna-christmas-tree-folded.pdf" download>Folded (PDF)</a>
+                <a class="button button-primary" href="descargas/christmas-card-hanna-christmas-tree.pdf" download>4×6 (PDF)</a>
+                <a class="button button-primary" href="descargas/christmas-card-hanna-christmas-tree.jpg" download>WhatsApp (image)</a>
+              </div>
             </div>
+            <p class="tarjeta-nota">Folded card: print on letter cardstock, double-sided, flipping on the short edge, and fold it in half. 4×6 card: cut along the marks, or have the image printed as a 4×6 photo at Walgreens, CVS or Walmart.</p>
+          </div>
+
+          <div class="tarjetas-gratis-vistas">
+            <figure class="tarjeta-vista"><img src="assets/tarjetas/hanna-and-dogui.jpg" alt="Free card: Hanna and Dogui walk hand in hand through a snowy village. Love, Joy and Peace at Christmas." width="760" height="1140" loading="lazy"><figcaption>Hanna and Dogui in the village</figcaption></figure>
+            <figure class="tarjeta-vista"><img src="assets/tarjetas/hanna-christmas-tree.jpg" alt="Free card: Hanna in a red coat and Santa hat by a lit Christmas tree, with a little mouse and an egg friend. Merry Christmas and Happy New Year." width="760" height="1140" loading="lazy"><figcaption>Hanna by the Christmas tree</figcaption></figure>
           </div>
 
           <div class="colorear-juego escoger" id="escoger" data-lang="en">
