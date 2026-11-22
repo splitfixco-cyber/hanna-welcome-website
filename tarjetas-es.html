@@ -76,44 +76,25 @@
           </div>
 
           <div class="tarjetas-gratis-vistas">
-            <figure class="tarjeta-vista"><img src="assets/tarjetas/hanna-y-dogui.jpg" alt="Tarjeta gratis: Hanna y Dogui caminan de la mano por un pueblo nevado. Feliz Navidad." width="760" height="1140" loading="lazy"><figcaption>Hanna y Dogui en el pueblo</figcaption></figure>
+            <figure class="tarjeta-vista"><img src="assets/tarjetas/hanna-y-dogui.jpg" alt="Tarjeta gratis: Hanna y Dogui caminan de la mano por un pueblo nevado. Amor y paz en esta Navidad." width="760" height="1140" loading="lazy"><figcaption>Hanna y Dogui en el pueblo</figcaption></figure>
             <figure class="tarjeta-vista"><img src="assets/tarjetas/lucas-2-11.jpg" alt="Tarjeta gratis: Hanna con abrigo verde y un farol encendido. Feliz Navidad. Lucas 2:11." width="760" height="1140" loading="lazy"><figcaption>Hanna y su farol · Lucas 2:11</figcaption></figure>
           </div>
 
-          <div class="colorear-juego" id="paquetes">
-            <p class="eyebrow">Paquetes · $5 cada uno</p>
+          <div class="colorear-juego escoger" id="escoger" data-lang="es">
+            <p class="eyebrow">Escoge tus tarjetas</p>
             <h2>Una tarjeta para cada persona que quieres</h2>
-            <p>Cada tarjeta viene de tres maneras: doblada para escribir adentro, en tamaño 4×6 y en imagen para WhatsApp. Te llegan a tu correo en cuanto pagas.</p>
-
-            <article class="paquete paquete-ancho" id="paquete-familia">
-              <figure class="tarjeta-vista">
-                <img src="assets/tarjetas/paquete-para-mi-familia.jpg" alt="Muestra del paquete Para mi familia: tarjetas para mamá, abuela, abuelo, hermana, hermano, sobrina, mejor amigo y mejor amiga." loading="lazy" width="1230" height="912">
-              </figure>
-              <div class="paquete-info">
-                <p class="eyebrow">8 tarjetas</p>
-                <h3>Para mi familia</h3>
-                <p>Mamá, abuela, abuelo, hermana, hermano, sobrina, mejor amigo y mejor amiga. Cada una con su mensaje de cariño y la firma de Hanna's Universe.</p>
-                <div class="book-buy">
-                  <span class="price">$5</span>
-                  <span class="button button-secondary paquete-pronto" aria-disabled="true">Muy pronto</span>
-                </div>
-              </div>
-            </article>
-
-            <article class="paquete" id="paquete-luz">
-              <figure class="tarjeta-vista">
-                <img src="assets/tarjetas/isaias-9-6-muestra.jpg" alt="Muestra del paquete: Hanna con abrigo rojo y gorro navideño, con su farol. Isaías 9:6 NTV." loading="lazy" width="760" height="1140">
-              </figure>
-              <div class="paquete-info">
-                <p class="eyebrow">Con versículos</p>
-                <h3>La luz de la Navidad</h3>
-                <p>«Pues nos ha nacido un niño, un hijo se nos ha dado… y será llamado: Consejero Maravilloso, Dios Poderoso, Padre Eterno, Príncipe de Paz.» Isaías 9:6</p>
-                <div class="book-buy">
-                  <span class="price">$5</span>
-                  <span class="button button-secondary paquete-pronto" aria-disabled="true">Muy pronto</span>
-                </div>
-              </div>
-            </article>
+            <p>Toca las tarjetas que quieras: 1 tarjeta por $2, o hasta 6 por $5. Cada una viene doblada para escribir adentro, en tamaño 4×6 y en imagen para WhatsApp, y te llegan a tu correo en cuanto pagas.</p>
+            <div class="escoger-rejilla"></div>
+            <div class="escoger-barra">
+              <p class="escoger-resumen" aria-live="polite"></p>
+              <a class="button button-primary escoger-pagar" hidden>Pagar</a>
+            </div>
+            <div class="escoger-coleccion">
+              <h3>Toda la colección · $10</h3>
+              <p>Todas las tarjetas, en español y en inglés, y las que vayan saliendo esta Navidad. Para maestras, iglesias y familias grandes.</p>
+              <a class="button button-secondary escoger-todas">Llevarme todas por $10</a>
+            </div>
+            <p class="tarjeta-nota">¿Las quieres en inglés? <a href="cards.html#escoger">Míralas aquí</a>.</p>
           </div>
         </div>
       </section>
@@ -163,5 +144,6 @@
       </footer>
     </main>
     <script src="script.js"></script>
+    <script type="module" src="tarjetas-escoger.js"></script>
   </body>
 </html>

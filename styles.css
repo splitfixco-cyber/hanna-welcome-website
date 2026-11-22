@@ -1789,3 +1789,55 @@ h2 {
   .paquete-ancho .tarjeta-vista { max-width: 100%; }
   .tarjetas-gratis-vistas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 14px; }
 }
+
+/* Escoger tarjetas */
+.escoger-rejilla {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 16px;
+  margin: 28px 0 0;
+}
+.escoger-tarjeta {
+  padding: 6px;
+  background: #fff;
+  border: 3px solid transparent;
+  border-radius: 10px;
+  cursor: pointer;
+  font: inherit;
+  color: var(--ink);
+  text-align: center;
+}
+.escoger-tarjeta img { width: 100%; height: auto; display: block; border-radius: 6px; }
+.escoger-tarjeta span { display: block; margin-top: 6px; font-weight: 600; font-size: 0.95rem; }
+.escoger-tarjeta[aria-pressed="true"] { border-color: var(--leaf); background: #fff8e6; }
+.escoger-tarjeta[aria-pressed="true"] span::before { content: "✓ "; color: var(--leaf); }
+.escoger-barra {
+  position: sticky;
+  bottom: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+  padding: 14px 18px;
+  background: var(--ink);
+  color: #fff;
+  border-radius: 12px;
+  z-index: 5;
+}
+.escoger-barra .escoger-resumen { margin: 0 !important; color: #fff !important; font-weight: 600; }
+.escoger-pagar[hidden] { display: none; }
+.escoger-pagar[aria-disabled="true"], .escoger-todas[aria-disabled="true"] { opacity: 0.7; cursor: default; }
+.escoger-coleccion { margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--sky); }
+.escoger-coleccion h3 { margin: 0 0 8px; font-size: clamp(1.3rem, 3vw, 1.7rem); }
+.escoger-coleccion p { margin: 0 0 16px; color: var(--muted); line-height: 1.6; max-width: 700px; }
+@media (max-width: 720px) {
+  .escoger-rejilla { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+  .escoger-tarjeta span { font-size: 0.8rem; }
+}
+.gracias-lista { list-style: none; padding: 0; margin: 28px 0 0; display: grid; gap: 20px; }
+.gracias-tarjeta { display: flex; gap: 18px; align-items: center; text-align: left; }
+.gracias-tarjeta img { width: 110px; height: auto; border-radius: 6px; flex: none; }
+.gracias-tarjeta h3 { margin: 0 0 6px; }
+.gracias-tarjeta .colorear-bajar { margin-top: 0; }

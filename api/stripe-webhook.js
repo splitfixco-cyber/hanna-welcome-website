@@ -3,6 +3,7 @@
 // enough, and always a download link that keeps working (thanks.html with their session id).
 import nodemailer from 'nodemailer';
 import { stripe, resolveOrder, fetchEbookFile, thanksUrl, json, FORMATS } from '../lib/ebooks.js';
+import { resolverPedido, graciasUrl, POR_ID } from '../lib/tarjetas.js';
 
 const MAX_ATTACH_BYTES = 20 * 1024 * 1024; // Gmail/Outlook reject larger attachments; fall back to link only
 
@@ -25,6 +26,15 @@ export async function POST(request) {
 
   const session = event.data.object;
   if (session.payment_status !== 'paid') return json({ received: true, skipped: 'not_paid_yet' });
+
+  // Christmas cards (tarjetas) are paid through their own payment links: email the download page and stop here.
+  let pedido = null;
+  try {
+    pedido = await resolverPedido(session.id);
+  } catch (err) {
+    console.error('card order lookup failed, treating as e-book', err);
+  }
+  if (pedido?.esTarjetas) return enviarTarjetas(pedido);
 
   const order = await resolveOrder(session.id);
   if (!order?.book) {
@@ -142,4 +152,66 @@ export function buildEmail({ order, attachment }) {
 </div>`;
   const text = lines.filter((l, i) => l !== '' || lines[i - 1] !== '').join('\n');
   return { subject: c.subject(title), text, html };
+}
+
+const TARJETAS_COPY = {
+  es: {
+    subject: 'Tus tarjetas de Navidad de Hanna',
+    hi: (n) => (n ? `Hola ${n},` : 'Hola,'),
+    thanks: 'Gracias por tu compra. Tus tarjetas de Navidad están listas:',
+    how: 'Cada una viene de tres maneras: doblada para escribir adentro, en tamaño 4×6 y en imagen para WhatsApp. Descárgalas desde este enlace:',
+    button: 'Descargar mis tarjetas',
+    keep: 'Guarda este correo: el enlace seguirá funcionando si necesitas las tarjetas de nuevo.',
+    books: 'Si te gustó Hanna, conoce sus libros en papel en hannasuniverse.com.',
+    sign: 'Con cariño y feliz Navidad,<br>Rosalina Rangel · Hanna\'s Universe',
+  },
+  en: {
+    subject: "Your Christmas cards from Hanna",
+    hi: (n) => (n ? `Hi ${n},` : 'Hello,'),
+    thanks: 'Thank you for your purchase. Your Christmas cards are ready:',
+    how: 'Each one comes three ways: folded to write inside, 4×6, and as an image for WhatsApp. Download them from this link:',
+    button: 'Download my cards',
+    keep: 'Keep this email: the link keeps working if you need the cards again.',
+    books: 'If you love Hanna, meet her printed books at hannasuniverse.com.',
+    sign: "With love and a merry Christmas,<br>Rosalina Rangel · Hanna's Universe",
+  },
+};
+
+async function enviarTarjetas(pedido) {
+  if (!pedido.email) {
+    console.error('paid card order without a customer email', pedido.id);
+    return json({ received: true, skipped: 'no_email' });
+  }
+  const c = TARJETAS_COPY[pedido.lang] || TARJETAS_COPY.es;
+  const url = graciasUrl(pedido.id);
+  const firstName = pedido.name ? pedido.name.split(' ')[0] : '';
+  const lista = pedido.ids.map((id) => POR_ID[id].nombre);
+  const strip = (s) => s.replace(/<br>/g, '\n').replace(/<[^>]+>/g, '');
+  const text = [c.hi(firstName), '', c.thanks, lista.join(', '), '', c.how, url, '', c.keep, c.books, '', strip(c.sign)].join('\n');
+  const html = `
+<div style="font-family:Georgia,'Times New Roman',serif;max-width:560px;margin:0 auto;padding:32px 24px;color:#3a2d24;background:#fbf7f0;">
+  <p style="font-size:18px;margin:0 0 16px;">${c.hi(firstName)}</p>
+  <p style="font-size:16px;line-height:1.5;margin:0 0 8px;">${c.thanks}</p>
+  <p style="font-size:16px;line-height:1.5;margin:0 0 16px;"><b>${lista.join(' · ')}</b></p>
+  <p style="font-size:16px;line-height:1.5;margin:0 0 20px;">${c.how}</p>
+  <p style="margin:0 0 24px;"><a href="${url}" style="display:inline-block;background:#14264a;color:#fff;text-decoration:none;padding:14px 26px;border-radius:8px;font-size:16px;">${c.button}</a></p>
+  <p style="font-size:13px;line-height:1.5;color:#6b5a4e;margin:0 0 8px;word-break:break-all;">${url}</p>
+  <p style="font-size:14px;line-height:1.5;color:#6b5a4e;margin:0 0 8px;">${c.keep}</p>
+  <p style="font-size:14px;line-height:1.5;color:#6b5a4e;margin:0 0 24px;">${c.books}</p>
+  <p style="font-size:15px;line-height:1.5;margin:0;">${c.sign}</p>
+</div>`;
+  try {
+    await transport().sendMail({
+      from: process.env.MAIL_FROM,
+      replyTo: process.env.MAIL_REPLY_TO || undefined,
+      to: pedido.email,
+      subject: c.subject,
+      text,
+      html,
+    });
+  } catch (err) {
+    console.error('card email send failed', err);
+    return json({ error: 'email_failed' }, 500);
+  }
+  return json({ received: true, emailed: pedido.email, tarjetas: pedido.ids.length });
 }

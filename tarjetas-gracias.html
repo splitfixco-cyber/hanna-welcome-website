@@ -1,0 +1,189 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Gracias · Thank you — Hanna's Universe</title>
+    <meta name="robots" content="noindex">
+    <link rel="icon" href="assets/sello.png">
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="/_vercel/insights/script.js"></script>
+    <script src="/meta-pixel.js"></script>
+  </head>
+  <body>
+    <main class="page">
+      <section class="page-hero" aria-label="Thank you">
+        <header class="site-header">
+          <a class="brand" href="index.html"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">Hanna's Universe</a>
+          <nav class="nav" aria-label="Primary navigation">
+            <a href="books.html">Books</a>
+            <a href="ebooks.html">E-books</a>
+            <a href="videos.html">Videos</a>
+            <a href="characters.html">Characters</a>
+            <a href="about.html">Author</a>
+            <a href="about.html#talks">Talks</a>
+            <a href="ambassador.html">Ambassador</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+        </header>
+
+        <div class="page-hero-copy">
+          <p class="eyebrow">Gracias · Thank you</p>
+          <h1 id="thanks-title">Tus tarjetas de Navidad</h1>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-inner thanks-inner">
+          <div id="state-checking" class="thanks-state">
+            <p>Confirmando tu pago… · Confirming your payment…</p>
+          </div>
+
+          <div id="state-ready" class="thanks-state" hidden>
+            <div id="lista-es" hidden>
+              <h2>¡Gracias por tu compra!</h2>
+              <p>Descarga cada tarjeta como quieras: doblada para escribir adentro (imprime a doble cara volteando por el borde corto y dóblala), en tamaño 4×6 (recórtala o llévala a imprimir como foto) o en imagen para WhatsApp. También te mandamos este enlace a tu correo.</p>
+            </div>
+            <div id="lista-en" hidden>
+              <h2>Thank you for your purchase!</h2>
+              <p>Download each card the way you like: folded to write inside (print double-sided, flipping on the short edge, and fold it), 4×6 (cut it out or print it as a photo), or as an image for WhatsApp. We also emailed you this link.</p>
+            </div>
+            <ul id="tarjetas-lista" class="gracias-lista"></ul>
+          </div>
+
+          <div id="state-error" class="thanks-state" hidden>
+            <h2>No pudimos encontrar tu pedido · We could not find your order</h2>
+            <p>Si ya pagaste, revisa tu correo: ahí está el enlace para descargar tus tarjetas. ¿No llegó? Escríbenos desde la <a href="contact-es.html">página de contacto</a>.</p>
+            <p>If you already paid, check your email for the download link. Did not get it? Write to us from the <a href="contact.html">contact page</a>.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer class="site-footer">
+        <div class="footer-inner">
+          <div class="footer-brand">
+            <p class="brand"><img class="brand-seal" src="assets/sello.png" alt="" width="44" height="44">Hanna's Universe</p>
+            <p>
+              A creative and faith-centered world where children grow through
+              learning, emotions, and spiritual strength.
+            </p>
+          </div>
+          <nav class="footer-links" aria-label="Footer">
+            <p class="footer-heading">Explore</p>
+            <a href="books.html">Hanna's Collection</a>
+            <a href="ebooks.html">E-books</a>
+            <a href="videos.html">Videos</a>
+            <a href="characters.html">Meet the Characters</a>
+            <a href="about.html">About the Author</a>
+            <a href="contact.html">Contact</a>
+          </nav>
+          <div class="footer-social">
+            <p class="footer-heading">Follow</p>
+            <a href="https://www.youtube.com/@Hannasuniverse1" target="_blank" rel="noopener">YouTube</a>
+            <a href="https://www.instagram.com/hannasuniverse1/" target="_blank" rel="noopener">Instagram</a>
+            <a href="https://www.tiktok.com/@hannasuniverse1" target="_blank" rel="noopener">TikTok</a>
+            <a href="https://www.facebook.com/profile.php?id=61564731688310" target="_blank" rel="noopener">Facebook</a>
+            <a href="https://www.pinterest.com/HannasUniverse/" target="_blank" rel="noopener">Pinterest</a>
+            <a href="https://hannasuniverse.com/policies/privacy-policy" target="_blank" rel="noopener">Privacy Policy</a>
+          </div>
+        </div>
+        <p class="footer-copy">© 2026 Hanna's Universe</p>
+      </footer>
+    </main>
+    <script src="script.js"></script>
+    <script>
+    (function () {
+      var sid = new URLSearchParams(location.search).get('session_id');
+      var $ = function (id) { return document.getElementById(id); };
+      function mostrar(id) { ['state-checking', 'state-ready', 'state-error'].forEach(function (x) { $(x).hidden = x !== id; }); }
+      var F = {
+        es: { titulo: '¡Tus tarjetas están listas!', doblada: 'Doblada (PDF)', '4x6': '4×6 (PDF)', whatsapp: 'WhatsApp (imagen)' },
+        en: { titulo: 'Your cards are ready!', doblada: 'Folded (PDF)', '4x6': '4×6 (PDF)', whatsapp: 'WhatsApp (image)' }
+      };
+      if (!sid) { mostrar('state-error'); return; }
+      var intentos = 0;
+      function revisar() {
+        fetch('/api/tarjetas-descarga?check=1&session_id=' + encodeURIComponent(sid)).then(function (r) { return r.json(); }).then(function (d) {
+          if (!d.ok && d.error === 'unpaid' && intentos++ < 10) { setTimeout(revisar, 3000); return; }
+          if (!d.ok || !d.tarjetas.length) { mostrar('state-error'); return; }
+          var f = F[d.lang] || F.es;
+          document.documentElement.lang = d.lang;
+          $('thanks-title').textContent = f.titulo;
+          $('lista-es').hidden = d.lang !== 'es'; $('lista-en').hidden = d.lang !== 'en';
+          var ul = $('tarjetas-lista');
+          d.tarjetas.forEach(function (t) {
+            var li = document.createElement('li');
+            li.className = 'gracias-tarjeta';
+            var img = '<img src="assets/tarjetas/mini/' + t.id + '.jpg" alt="" width="120" height="180">';
+            var botones = ['doblada', '4x6', 'whatsapp'].map(function (fm) {
+              return '<a class="button button-primary" href="/api/tarjetas-descarga?session_id=' + encodeURIComponent(sid) + '&id=' + t.id + '&formato=' + fm + '">' + (F[t.lang] || f)[fm] + '</a>';
+            }).join('');
+            li.innerHTML = img + '<div><h3>' + t.nombre + '</h3><p class="colorear-bajar">' + botones + '</p></div>';
+            ul.appendChild(li);
+          });
+          mostrar('state-ready');
+        }).catch(function () { mostrar('state-error'); });
+      }
+      revisar();
+    })();
+    </script>
+    <script>
+      (function () {
+        var titles = {
+          'the-essence-of-raising-children': 'The Essence of Raising Children',
+          'la-esencia-de-criar': 'La Esencia de Criar',
+          'a-essencia-de-criar-filhos': 'A Essência de Criar Filhos',
+          'equip-your-kids-for-life': 'Equip Your Kids for Life',
+          'equipa-tus-hijos-para-la-vida': 'Equipa tus hijos para la vida',
+          'equipe-seus-filhos-para-a-vida': 'Equipe seus filhos para a vida'
+        };
+        var params = new URLSearchParams(location.search);
+        var sid = params.get('session_id');
+        var book = params.get('book');
+        var bookEl = document.getElementById('thanks-book');
+        if (book && titles[book]) bookEl.textContent = titles[book];
+
+        function show(id) {
+          ['state-checking', 'state-ready', 'state-pending', 'state-invalid'].forEach(function (s) {
+            document.getElementById(s).hidden = (s !== id);
+          });
+        }
+
+        // Meta Pixel: count each paid order once, even if the page is reloaded
+        function comprado(slug) {
+          var clave = 'fb-compra-' + sid;
+          try { if (localStorage.getItem(clave)) return; localStorage.setItem(clave, '1'); } catch (e) {}
+          var valor = /^equip/.test(slug || '') ? 14.99 : 9.99;
+          if (window.fbq) fbq('track', 'Purchase', { content_ids: [slug], value: valor, currency: 'USD' }, { eventID: sid });
+        }
+
+        if (!sid) { show('state-invalid'); return; }
+
+        var downloadUrl = '/api/download?session_id=' + encodeURIComponent(sid);
+        fetch(downloadUrl + '&check=1', { cache: 'no-store' })
+          .then(function (r) { return r.json().then(function (d) { return { status: r.status, data: d }; }); })
+          .then(function (res) {
+            var d = res.data || {};
+            if (d.ok) comprado(d.slug);
+            if (d.ok && d.ready) {
+              if (d.title) bookEl.textContent = d.title;
+              (d.formats || []).forEach(function (f) {
+                var a = document.getElementById('download-' + f);
+                if (a) { a.setAttribute('href', downloadUrl + '&format=' + f); a.hidden = false; }
+              });
+              show('state-ready');
+            } else if (d.ok) {
+              if (d.title) bookEl.textContent = d.title;
+              show('state-pending');
+            } else if (d.error === 'not_found' || d.error === 'unpaid' || d.error === 'missing_session') {
+              show('state-invalid');
+            } else {
+              show('state-pending');
+            }
+          })
+          .catch(function () { show('state-pending'); });
+
+      })();
+    </script>
+  </body>
+</html>

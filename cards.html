@@ -50,7 +50,7 @@
         <div class="section-inner colorear-inner">
           <div class="tarjeta-gratis" id="free">
             <figure class="tarjeta-vista">
-              <img src="assets/tarjetas/hanna-and-dogui.jpg" alt="Free card: Hanna and Dogui walk hand in hand through a snowy village. Merry Christmas." width="760" height="1140">
+              <img src="assets/tarjetas/hanna-and-dogui.jpg" alt="Free card: Hanna and Dogui walk hand in hand through a snowy village. Love, Joy and Peace at Christmas." width="760" height="1140">
             </figure>
             <div class="colorear-caja">
               <p class="eyebrow">Free</p>
@@ -70,25 +70,21 @@
             </div>
           </div>
 
-          <div class="colorear-juego" id="packs">
-            <p class="eyebrow">Packs · $5 each</p>
+          <div class="colorear-juego escoger" id="escoger" data-lang="en">
+            <p class="eyebrow">Pick your cards</p>
             <h2>A card for everyone you love</h2>
-            <p>Every card comes three ways: folded to write inside, 4×6, and as an image for WhatsApp. They arrive in your email as soon as you pay.</p>
-
-            <article class="paquete paquete-ancho" id="pack-family">
-              <figure class="tarjeta-vista">
-                <img src="assets/tarjetas/pack-for-my-family.jpg" alt="Sample of the For My Family pack: cards for Mom, Grandma, Grandpa, Sister, Brother, Niece and Nephew." loading="lazy" width="1230" height="912">
-              </figure>
-              <div class="paquete-info">
-                <p class="eyebrow">7 cards</p>
-                <h3>For My Family</h3>
-                <p>Mom, Grandma, Grandpa, Sister, Brother, Niece and Nephew. Each one with a loving message and the Hanna's Universe signature.</p>
-                <div class="book-buy">
-                  <span class="price">$5</span>
-                  <span class="button button-secondary paquete-pronto" aria-disabled="true">Coming soon</span>
-                </div>
-              </div>
-            </article>
+            <p>Tap the cards you want: 1 card for $2, or up to 6 for $5. Each one comes folded to write inside, 4×6, and as an image for WhatsApp, and they arrive in your email as soon as you pay.</p>
+            <div class="escoger-rejilla"></div>
+            <div class="escoger-barra">
+              <p class="escoger-resumen" aria-live="polite"></p>
+              <a class="button button-primary escoger-pagar" hidden>Pay</a>
+            </div>
+            <div class="escoger-coleccion">
+              <h3>The whole collection · $10</h3>
+              <p>Every card, in English and Spanish, plus the new ones we add this Christmas. For teachers, churches and big families.</p>
+              <a class="button button-secondary escoger-todas">Get them all for $10</a>
+            </div>
+            <p class="tarjeta-nota">Want them in Spanish? <a href="tarjetas-es.html#escoger">See them here</a>.</p>
           </div>
         </div>
       </section>
@@ -138,5 +134,6 @@
       </footer>
     </main>
     <script src="script.js"></script>
+    <script type="module" src="tarjetas-escoger.js"></script>
   </body>
 </html>
