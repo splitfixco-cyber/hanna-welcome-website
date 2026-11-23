@@ -60,6 +60,36 @@
       "source": "/cards",
       "destination": "/cards.html",
       "permanent": false
+    },
+    {
+      "source": "/assets/books/trilingual-vol1.png",
+      "destination": "/assets/books/trilingual-vol1.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/assets/books/trilingual-vol2.png",
+      "destination": "/assets/books/trilingual-vol2.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/assets/books/coloring-book.png",
+      "destination": "/assets/books/coloring-book.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/assets/books/promises-of-god.png",
+      "destination": "/assets/books/promises-of-god.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/assets/books/21-day-devotional.png",
+      "destination": "/assets/books/21-day-devotional.jpg",
+      "permanent": true
+    },
+    {
+      "source": "/assets/hero-welcome.png",
+      "destination": "/assets/hero-welcome.jpg",
+      "permanent": true
     }
   ]
 }

@@ -4,7 +4,8 @@
   "type": "module",
   "description": "Hanna's Universe website. Static pages plus two Vercel functions for e-book delivery (Stripe Payment Links).",
   "scripts": {
-    "upload-ebooks": "node scripts/upload-ebooks.mjs"
+    "upload-ebooks": "node scripts/upload-ebooks.mjs",
+    "sitemap": "node scripts/sitemap.mjs"
   },
   "dependencies": {
     "@vercel/blob": "^2.8.0",

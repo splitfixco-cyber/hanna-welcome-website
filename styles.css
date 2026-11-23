@@ -75,7 +75,7 @@ img {
   position: relative;
   min-height: 100svh;
   overflow: hidden;
-  background: #fffefc url("assets/hero-welcome.png") center bottom / cover no-repeat;
+  background: #fffefc url("assets/hero-welcome.jpg") center bottom / cover no-repeat;
   isolation: isolate;
 }
 

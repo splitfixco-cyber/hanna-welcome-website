@@ -41,3 +41,4 @@ and paste the new link into the Buy button on the three `ebooks*.html` pages.
 2. Add the slug to `EBOOKS` in `lib/ebooks.js` and to the `titles` map in `thanks.html`.
 3. Upload `<slug>.pdf` with the upload script.
 4. Add the card and Buy button to the three `ebooks*.html` pages.
+5. Add the "Buy the e-book" button and the e-book price to the book's product pages, and the e-book offer to the JSON-LD block of its main page (see `docs/SEO.md`).
