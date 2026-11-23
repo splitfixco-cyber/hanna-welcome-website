@@ -140,7 +140,68 @@ function hojasMail(claves) {
   };
 }
 
+// Free Christmas cards: the email carries every card in its three versions, then the cards for sale.
+const TARJETAS_GRATIS = {
+  es: [
+    { nombre: 'Hanna y Dogui en el pueblo', base: 'tarjeta-navidad-hanna-y-dogui', doblada: '-doblada' },
+    { nombre: 'Hanna y su farol · Lucas 2:11', base: 'tarjeta-navidad-hanna-lucas-2-11', doblada: '-doblada' },
+    { nombre: 'Hanna junto al árbol', base: 'tarjeta-navidad-hanna-arbol', doblada: '-doblada' },
+  ],
+  en: [
+    { nombre: 'Hanna and Dogui in the village', base: 'christmas-card-hanna-and-dogui', doblada: '-folded' },
+    { nombre: 'Hanna by the Christmas tree', base: 'christmas-card-hanna-christmas-tree', doblada: '-folded' },
+  ],
+};
+const TARJETAS_TEXTO = {
+  es: {
+    subject: 'Tus tarjetas de Navidad de Hanna 🎄',
+    hi: 'Hola,',
+    body: 'Aquí están tus tarjetas de Navidad gratis. Cada una viene en tres versiones: doblada para escribir por dentro (imprímela a doble cara, volteando por el borde corto), en tamaño 4×6 y en imagen para mandar por WhatsApp.',
+    formatos: ['Doblada (PDF)', '4×6 (PDF)', 'WhatsApp (imagen)'],
+    mas: '¿Quieres una para mamá, papá, los abuelos o tus amigos? Escoge la tuya aquí:',
+    masUrl: '/tarjetas#escoger',
+    hey: 'Cada mes te llegará también la revista Hey!, gratis.',
+    sign: 'Feliz Navidad,',
+  },
+  en: {
+    subject: 'Your Christmas cards from Hanna 🎄',
+    hi: 'Hello,',
+    body: 'Here are your free Christmas cards. Each one comes in three versions: folded to write inside (print double-sided, flipping on the short edge), 4×6, and an image to send by text or WhatsApp.',
+    formatos: ['Folded (PDF)', '4×6 (PDF)', 'WhatsApp (image)'],
+    mas: 'Want one for Mom, Dad, the grandparents or your friends? Pick yours here:',
+    masUrl: '/cards#escoger',
+    hey: 'Every month you will also get Hey! magazine, free.',
+    sign: 'Merry Christmas,',
+  },
+};
+
+function tarjetasMail(lang) {
+  const L = lang === 'en' ? 'en' : 'es';
+  const t = TARJETAS_TEXTO[L];
+  const cards = TARJETAS_GRATIS[L].map((c) => ({
+    nombre: c.nombre,
+    links: [`${c.base}${c.doblada}.pdf`, `${c.base}.pdf`, `${c.base}.jpg`].map((f) => `${SITE}/descargas/${f}`),
+  }));
+  const mas = `${SITE}${t.masUrl}`;
+  const link = (href, label) =>
+    `<a href="${href}" style="display:inline-block;margin:4px 6px 4px 0;background:#f3c74f;color:#14264a;padding:10px 16px;border-radius:999px;text-decoration:none;font-weight:bold;font-size:15px">${label}</a>`;
+  return {
+    subject: t.subject,
+    text: `${t.hi}\n\n${t.body}\n\n` +
+      cards.map((c) => `${c.nombre}\n` + c.links.map((u, i) => `${t.formatos[i]}: ${u}`).join('\n')).join('\n\n') +
+      `\n\n${t.mas} ${mas}\n\n${t.hey}\n\n${t.sign}\nRosalina Rangel · Hanna's Universe`,
+    html:
+      `<div style="font-family:Georgia,serif;font-size:17px;line-height:1.55;color:#14264a;max-width:520px">` +
+      `<p>${t.hi}</p><p>${t.body}</p>` +
+      cards.map((c) => `<p style="margin:18px 0 4px"><b>${c.nombre}</b></p><p style="margin:0">` + c.links.map((u, i) => link(u, t.formatos[i])).join('') + '</p>').join('') +
+      `<p style="margin-top:24px">${t.mas} <a href="${mas}">${mas.replace('https://www.', '')}</a></p>` +
+      `<p>${t.hey}</p><p>${t.sign}<br>Rosalina Rangel · Hanna's Universe</p></div>`,
+  };
+}
+
 const DESCARGAS = {
+  'tarjetas-navidad': () => tarjetasMail('es'),
+  'christmas-cards': () => tarjetasMail('en'),
   colorear: () => hojasMail(['agua', 'monarca', 'luciernagas', 'numeros']),
   // Older form on the page before the monarch set; kept so a cached page still works
   'colorear-agua': () => hojasMail(['agua']),
