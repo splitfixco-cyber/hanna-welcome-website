@@ -20,6 +20,11 @@ export const TARJETAS = [
   { id: 'es-hogar',      lang: 'es', nombre: 'Alegría a tu hogar' },
   { id: 'es-nacimiento', lang: 'es', nombre: 'El nacimiento' },
   { id: 'es-isaias',     lang: 'es', nombre: 'Isaías 9:6' },
+  { id: 'es-pesebre',    lang: 'es', nombre: 'El pesebre · Lucas 2:11' },
+  { id: 'es-santa',      lang: 'es', nombre: 'Bendiciones navideñas' },
+  { id: 'es-amigo-nieve',lang: 'es', nombre: 'Para mi amigo' },
+  { id: 'es-jefe',       lang: 'es', nombre: 'Para mi jefe' },
+  { id: 'es-gato',       lang: 'es', nombre: 'El gato del farol' },
   { id: 'en-mom',        lang: 'en', nombre: 'Mom' },
   { id: 'en-dad',        lang: 'en', nombre: 'Dad' },
   { id: 'en-husband',    lang: 'en', nombre: 'Husband' },
@@ -35,6 +40,11 @@ export const TARJETAS = [
   { id: 'en-friend',     lang: 'en', nombre: 'Best Friend' },
   { id: 'en-home',       lang: 'en', nombre: 'Joy to Your Home' },
   { id: 'en-nativity',   lang: 'en', nombre: 'The Nativity' },
+  { id: 'en-manger',     lang: 'en', nombre: 'The Manger · Luke 2:11' },
+  { id: 'en-santa',      lang: 'en', nombre: 'Christmas Blessings' },
+  { id: 'en-friend-snow',lang: 'en', nombre: 'For My Friend' },
+  { id: 'en-boss',       lang: 'en', nombre: 'For My Boss' },
+  { id: 'en-cat',        lang: 'en', nombre: 'The Lantern Cat' },
 ];
 
 // Precios: 1 tarjeta $2, de 2 a 6 tarjetas $5, toda la colección (español e inglés) $10.

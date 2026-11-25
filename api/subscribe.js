@@ -146,10 +146,14 @@ const TARJETAS_GRATIS = {
     { nombre: 'Hanna y Dogui en el pueblo', base: 'tarjeta-navidad-hanna-y-dogui', doblada: '-doblada' },
     { nombre: 'Hanna y su farol · Lucas 2:11', base: 'tarjeta-navidad-hanna-lucas-2-11', doblada: '-doblada' },
     { nombre: 'Hanna junto al árbol', base: 'tarjeta-navidad-hanna-arbol', doblada: '-doblada' },
+    { nombre: 'La estrella · Felices Fiestas', base: 'tarjeta-navidad-estrella', doblada: '-doblada' },
+    { nombre: 'Esquiando en la nieve', base: 'tarjeta-navidad-esquiando', doblada: '-doblada' },
   ],
   en: [
     { nombre: 'Hanna and Dogui in the village', base: 'christmas-card-hanna-and-dogui', doblada: '-folded' },
     { nombre: 'Hanna by the Christmas tree', base: 'christmas-card-hanna-christmas-tree', doblada: '-folded' },
+    { nombre: 'The star · Happy Holidays', base: 'christmas-card-star', doblada: '-folded' },
+    { nombre: 'Skiing in the snow', base: 'christmas-card-skiing', doblada: '-folded' },
   ],
 };
 const TARJETAS_TEXTO = {
